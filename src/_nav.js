@@ -26,6 +26,12 @@ const _nav = [
     to: '/ParkingYardGateIn',
     icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
   },
+  {
+    component: CNavItem,
+    name: 'Vendor Creation Home',
+    to: '/VendorCreationHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
 ]
 
 export default _nav
