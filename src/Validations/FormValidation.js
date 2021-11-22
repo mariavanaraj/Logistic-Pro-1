@@ -1,10 +1,13 @@
-export default function validate(values) {
+export default function validate(values, isTouched) {
   const errors = {}
-  if (!values.vehicleType) {
+  if (isTouched.vehicleType && !values.vehicleType) {
     errors.vehicleType = 'required'
   }
-  if (!values.OdometerKm) {
+  if (isTouched.OdometerKm && !values.OdometerKm) {
     errors.OdometerKm = 'required'
+  }
+  if (isTouched.odometerPhoto && values.odometerPhoto.length > 0) {
+    errors.odometerPhoto = 'Choose The File'
   }
 
   return errors

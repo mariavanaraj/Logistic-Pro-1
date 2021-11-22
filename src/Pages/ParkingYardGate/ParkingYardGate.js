@@ -27,13 +27,20 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
-  const { values, errors, handleChange, handleSubmit, onChange, onBlurOut } = useForm(
+  const formValues = {
+    vehicleType: '',
+    OdometerKm: '',
+    odometerPhoto: '',
+  }
+
+  const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
     login,
-    validate
+    validate,
+    formValues
   )
+
   function login() {
-    //request section to API And Call Back
-    alert('submited')
+    alert('No Errors CallBack Called')
   }
   return (
     <>
@@ -43,12 +50,20 @@ const ParkingYardGate = () => {
             <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
               <CRow>
                 <CCol md={3}>
-                  <CFormLabel htmlFor="vehicleType">Vehicle Type*</CFormLabel>
+                  <CFormLabel htmlFor="vehicleType">
+                    Vehicle Type*{' '}
+                    {errors.vehicleType && (
+                      <span className="help text-danger">{errors.vehicleType}</span>
+                    )}
+                  </CFormLabel>
+
                   <CFormSelect
                     size="sm"
                     name="vehicleType"
-                    value={values.vehicleType || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
                     onChange={handleChange}
+                    value={values.vehicleType}
                     className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
@@ -60,7 +75,6 @@ const ParkingYardGate = () => {
 
                     <option value="3">Hire</option>
                   </CFormSelect>
-                  {errors.vehicleType && <p className="help text-danger">{errors.vehicleType}</p>}
                 </CCol>
 
                 <CCol md={3}>
@@ -101,11 +115,17 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer Km*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">
+                    Odometer Km*{' '}
+                    {errors.OdometerKm && (
+                      <span className="help text-danger">{errors.OdometerKm}</span>
+                    )}
+                  </CFormLabel>
                   <CFormInput
-                    onChange={handleChange}
                     name="OdometerKm"
-                    value={values.OdometerKm || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
                     className={`${errors.OdometerKm && 'is-invalid'}`}
                     size="sm"
                     id="inputAddress"
@@ -114,8 +134,23 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="formFileSm">Odometer Photo*</CFormLabel>
-                  <CFormInput type="file" size="sm" id="formFileSm" />
+                  <CFormLabel htmlFor="formFileSm">
+                    Odometer Photo*{' '}
+                    {errors.odometerPhoto && (
+                      <span className="help text-danger">{errors.odometerPhoto}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput
+                    type="file"
+                    name="odometerPhoto"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.odometerPhoto}
+                    className={`${errors.odometerPhoto && 'is-invalid'}`}
+                    size="sm"
+                    id="formFileSm"
+                  />
                 </CCol>
                 <CCol
                   xs={12}
@@ -132,10 +167,22 @@ const ParkingYardGate = () => {
                   md={3}
                   style={{ display: 'flex', justifyContent: 'space-between' }}
                 >
-                  <CButton size="sm" color="warning" className="mx-3 text-white" type="submit">
+                  <CButton
+                    size="sm"
+                    color="warning"
+                    disabled={enableSubmit}
+                    className="mx-3 text-white"
+                    type="submit"
+                  >
                     Wait OutSide
                   </CButton>
-                  <CButton size="sm" color="warning" className="mx-3 text-white" type="submit">
+                  <CButton
+                    size="sm"
+                    disabled={enableSubmit}
+                    color="warning"
+                    className="mx-3 text-white"
+                    type="submit"
+                  >
                     Gate In
                   </CButton>
                 </CCol>
