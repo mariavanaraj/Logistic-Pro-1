@@ -1,25 +1,9 @@
-import {
-  CButton,
-  CCard,
-  CCardImage,
-  CCol,
-  CForm,
-  CFormInput,
-  CFormLabel,
-  CFormSelect,
-  CModal,
-  CModalBody,
-  CModalFooter,
-  CModalHeader,
-  CModalTitle,
-  CRow,
-} from '@coreui/react'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import useForm from 'src/Hooks/useForm'
-import VendorRequesrValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
-
-const VendorCreationRequest = () => {
+import { CButton, CCard, CCardImage, CCol, CForm, CFormInput, CFormLabel, CFormSelect, CModal, CModalBody, CModalFooter, CModalHeader, CModalTitle, CRow } from "@coreui/react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import useForm from "src/Hooks/useForm";
+import VendorRequestValidation from "src/Validations/VendorCreation/VendorRequestValidation";
+const VendorCreationApproval = () => {
   const formValues = {
     vehicleType: '',
     OdometerKm: '',
@@ -37,7 +21,7 @@ const VendorCreationRequest = () => {
   const [TDSFormBack, setTDSFormBack] = useState(false)
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
     login,
-    VendorRequesrValidation,
+    VendorRequestValidation,
     formValues
   )
 
@@ -403,28 +387,28 @@ const VendorCreationRequest = () => {
               Aadhar No
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" />
+            <CFormInput size="sm" id="inputAddress" value="" readOnly/>
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Bank A/c No
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" />
+            <CFormInput size="sm" id="inputAddress" value="" readOnly/>
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               IFSC Code No
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" />
+            <CFormInput size="sm" id="inputAddress" value="" readOnly/>
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Vendor pin code
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" />
+            <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
         </CRow>
         <CRow>
@@ -433,7 +417,7 @@ const VendorCreationRequest = () => {
               Vendor Address
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" />
+            <CFormInput size="sm" id="inputAddress" value="" readOnly/>
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -454,24 +438,7 @@ const VendorCreationRequest = () => {
               GST Registeration
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormSelect
-              size="sm"
-              name="vehicleType"
-              onFocus={onFocus}
-              onBlur={onBlur}
-              onChange={handleChange}
-              value={values.vehicleType}
-              className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
-              aria-label="Small select example"
-            >
-              <option value="">Select Vehicle Types</option>
-
-              <option value="1">Own</option>
-
-              <option value="2">Contract</option>
-
-              <option value="3">Hire</option>
-            </CFormSelect>
+            <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
         </CRow>
         <CRow>
@@ -480,7 +447,7 @@ const VendorCreationRequest = () => {
               GST Registeration No
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" />
+            <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -510,7 +477,7 @@ const VendorCreationRequest = () => {
               Bank Name
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" />
+            <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -531,20 +498,7 @@ const VendorCreationRequest = () => {
               GST Tax Code
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormSelect
-              size="sm"
-              name="vehicleType"
-              className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
-              aria-label="Small select example"
-            >
-              <option value="">Select Vehicle Types</option>
-
-              <option value="1">Own</option>
-
-              <option value="2">Contract</option>
-
-              <option value="3">Hire</option>
-            </CFormSelect>
+            <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
         </CRow>
         <CRow>
@@ -553,41 +507,14 @@ const VendorCreationRequest = () => {
               TDS%
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormSelect
-              size="sm"
-              name="vehicleType"
-              className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
-              aria-label="Small select example"
-            >
-              <option value="">Select Vehicle Types</option>
-
-              <option value="1">Own</option>
-
-              <option value="2">Contract</option>
-
-              <option value="3">Hire</option>
-            </CFormSelect>
+            <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-
 Payment Terms 3 Days
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormSelect
-              size="sm"
-              name="vehicleType"
-              className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
-              aria-label="Small select example"
-            >
-              <option value="">Select Vehicle Types</option>
-
-              <option value="1">Own</option>
-
-              <option value="2">Contract</option>
-
-              <option value="3">Hire</option>
-            </CFormSelect>
+            <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -609,9 +536,9 @@ Payment Terms 3 Days
               color="warning"
 
               className="mx-3 text-white"
-              type="submit"
+              type="button"
             >
-              <Link className="text-white" to="/VendorCreationHome" >
+              <Link className="text-white" to="/VendorCreationApprovalHome" >
               Pervious
               </Link>
             </CButton>
@@ -629,7 +556,7 @@ Payment Terms 3 Days
               className="mx-3 text-white"
               type="submit"
             >
-              Submit
+              Approve
             </CButton>
             <CButton
               size="sm"
@@ -637,13 +564,12 @@ Payment Terms 3 Days
               className="mx-3 text-white"
               type="submit"
             >
-              Cancel
+              Reject
             </CButton>
           </CCol>
         </CRow>
       </CForm>
-    </CCard>
-  )
+    </CCard> );
 }
 
-export default VendorCreationRequest
+export default VendorCreationApproval;
