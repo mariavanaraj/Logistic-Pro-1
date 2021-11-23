@@ -19,8 +19,9 @@ import { AppHeaderDropdown } from './header/index'
 import { logo } from 'src/assets/brand/logo'
 
 const AppHeader = () => {
-  const dispatch = useDispatch()
-  const sidebarShow = useSelector((state) => state.changeState.sidebarShow)
+  const dispatch = useDispatch();
+  const sidebarShow = useSelector((state) => state.changeState.sidebarShow);
+  const title = document.title;
 
   return (
     <CHeader position="sticky" className="mb-4 pt-3">
@@ -32,38 +33,14 @@ const AppHeader = () => {
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
         <CHeaderBrand className="mx-auto d-md-none" to="/">
-          {/* <CIcon icon={logo} height={48} alt="Logo" /> */}
           <h3>Logistics Pro</h3>
         </CHeaderBrand>
-        {/* <CHeaderNav className="d-none d-md-flex me-auto text-center "> */}
-        {/* <CNavItem>
-            <CNavLink to="/dashboard" component={NavLink} activeClassName="active">
-              Dashboard
-            </CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">Users</CNavLink>
-          </CNavItem>
-          <CNavItem>
-            <CNavLink href="#">Settings</CNavLink>
-          </CNavItem> */}
-        <h2 className="text-white">Parking Yard Gate-In</h2>
-        {/* </CHeaderNav> */}
-        {/* <CHeaderNav>
-          <CNavItem>
-            <CNavLink href="#">
-              <CIcon icon={cilEnvelopeOpen} size="lg" />
-            </CNavLink>
-          </CNavItem>
-        </CHeaderNav> */}
+        <h2 className="text-white">{title}</h2>
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
         </CHeaderNav>
       </CContainer>
       <CHeaderDivider />
-      {/* <CContainer fluid>
-        <AppBreadcrumb />
-      </CContainer> */}
     </CHeader>
   )
 }

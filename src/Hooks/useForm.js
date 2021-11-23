@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 
 const useForm = (callback, validate, formValues) => {
-  const [values, setValues] = useState(formValues)
-  const [errors, setErrors] = useState({})
-  const [isTouched, setIsTouched] = useState({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [values, setValues] = useState(formValues);
+  const [errors, setErrors] = useState({});
+  const [isTouched, setIsTouched] = useState({});
+  const [screenTyp, setscreenTyp] = useState('ownContract');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [enableSubmit, setEnableSubmit] = useState(true)
 
   useEffect(() => {
@@ -28,13 +29,14 @@ const useForm = (callback, validate, formValues) => {
   }
 
   const handleChange = (event) => {
-    event.persist()
+    event.persist();
     setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
     setValues((values) => ({
       ...values,
       [event.target.name]: event.target.value,
-    }))
+    }));
   }
+
   const onFocus = (event) => {
     event.persist()
     setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
@@ -48,6 +50,19 @@ const useForm = (callback, validate, formValues) => {
     setErrors(validate(values, isTouched))
     chechFormFieldMatchs()
   }
+
+
+
+  const onClick = (event) => {
+    const yardType = event.target.value;
+    yardType === 'hire'
+      ? setscreenTyp(yardType)
+      : setscreenTyp(yardType);
+
+    console.log(yardType);
+
+  }
+
   return {
     handleChange,
     handleSubmit,
@@ -57,6 +72,7 @@ const useForm = (callback, validate, formValues) => {
     errors,
     enableSubmit,
     onBlur,
+    onClick
   }
 }
 
