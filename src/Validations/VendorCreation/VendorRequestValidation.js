@@ -1,4 +1,4 @@
-export default function VendorRequesrValidation(values, isTouched) {
+export default function VendorRequestValidation(values, isTouched) {
   const errors = {}
   if (isTouched.vehicleType && !values.vehicleType) {
     errors.vehicleType = 'required'

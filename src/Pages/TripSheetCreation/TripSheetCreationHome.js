@@ -1,8 +1,8 @@
-import { CButton, CCard, CContainer } from '@coreui/react'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import CustomTable from 'src/components/customComponent/CustomTable'
-const VendorCreationHome = () => {
+import { CButton, CCard, CContainer } from "@coreui/react";
+import { Link } from "react-router-dom";
+import CustomTable from "src/components/customComponent/CustomTable";
+import React from "react";
+const TripSheetCreationHome = () => {
   const columns = [
     {
       name: 'S.No',
@@ -77,8 +77,8 @@ const VendorCreationHome = () => {
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
         <CButton className="badge text-white" color="warning">
-          <Link className="text-white" to="/VendorCreationHome/VendorCreationRequest">
-            Vendor Creation App
+          <Link className="text-white" to="/TripSheetCreationHome/TripSheetCreationFG">
+            TripSheet FG
           </Link>
         </CButton>
       ),
@@ -96,7 +96,9 @@ const VendorCreationHome = () => {
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
         <CButton className="badge text-white" color="warning">
-          Gate In
+          <Link className="text-white" to="/TripSheetCreationHome/TripSheetCreationSTO">
+            TripSheet STO
+          </Link>
         </CButton>
       ),
     },
@@ -120,11 +122,11 @@ const VendorCreationHome = () => {
   ]
   return (
     <CCard className="mt-4">
-      <CContainer className="mt-2">
-        <CustomTable columns={columns} data={data} />
-      </CContainer>
-    </CCard>
-  )
+    <CContainer className="mt-2">
+      <CustomTable columns={columns} data={data} />
+    </CContainer>
+  </CCard>
+    );
 }
 
-export default VendorCreationHome
+export default TripSheetCreationHome;
