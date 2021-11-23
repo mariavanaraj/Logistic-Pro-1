@@ -29,8 +29,7 @@ import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
   const formValues = {
     vehicleType: '',
-    OdometerKm: '',
-    odometerPhoto: '',
+    OdometerKm: ''
   }
 
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
@@ -143,11 +142,6 @@ const ParkingYardGate = () => {
                   <CFormInput
                     type="file"
                     name="odometerPhoto"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    value={values.odometerPhoto}
-                    className={`${errors.odometerPhoto && 'is-invalid'}`}
                     size="sm"
                     id="formFileSm"
                   />

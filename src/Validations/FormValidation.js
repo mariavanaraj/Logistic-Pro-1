@@ -3,12 +3,16 @@ export default function validate(values, isTouched) {
   if (isTouched.vehicleType && !values.vehicleType) {
     errors.vehicleType = 'required'
   }
+  if (isTouched.DefectType && !values.DefectType) {
+    errors.DefectType = 'required'
+  }
+  if (isTouched.DefectType2 && !values.DefectType2) {
+    errors.DefectType2 = 'required'
+  }
   if (isTouched.OdometerKm && !values.OdometerKm) {
     errors.OdometerKm = 'required'
   }
-  if (isTouched.odometerPhoto && values.odometerPhoto.length > 0) {
-    errors.odometerPhoto = 'Choose The File'
-  }
+
 
   return errors
 }

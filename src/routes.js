@@ -1,9 +1,10 @@
 import React from 'react'
-import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
-
+import TSClossure from './Pages/TripsheetClossure/TSClossure'
+import TSClossureSto from './Pages/TripsheetClossure/TSClossureSto'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
+  { path: '/TSClossure', exact: true, name: 'Test', component: TSClossure },
+  { path: '/TSClossure-sto', exact: true, name: 'Test', component: TSClossureSto },
 ]
 
 export default routes

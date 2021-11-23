@@ -16,15 +16,22 @@ import {
   cilPuzzle,
   cilSpeedometer,
   cilStar,
+  cilSpreadsheet,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
   {
     component: CNavItem,
-    name: 'Yard Gate-In',
-    to: '/ParkingYardGateIn',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    name: 'TS Closure - FG',
+    to: '/TSClossure',
+    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'TS Closure - STO',
+    to: '/TSClossure-sto',
+    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
   },
 ]
 
