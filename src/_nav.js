@@ -39,6 +39,36 @@ const _nav = [
     to: '/DocVerifyVendorNotAvail',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },
+  {
+    component: CNavItem,
+    name: 'Vendor Creation Home',
+    to: '/VendorCreationHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Vendor Creation Approval',
+    to: '/VendorCreationApprovalHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Vendor Creation Confrimation',
+    to: '/VendorCreationConfrimationHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'TripSheet Creation Home',
+    to: '/TripSheetCreationHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'TripSheet SettleMent Home',
+    to: '/TripSheetSettleMentHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
 ]
 
 export default _nav
