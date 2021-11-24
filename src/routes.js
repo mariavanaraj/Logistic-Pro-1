@@ -1,8 +1,20 @@
 import React from 'react'
+// import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
+import Gateout from './Pages/Gateout/Gateout'
+import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
+// import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
+import RjSalesOrderCreation from './Pages/RjSalesOrderCreation/RjSalesOrderCreation'
+import VehicleAssignmentFoods from './Pages/VehicleAssignmentFoods/VehicleAssignmentFoods'
+import VehicleAssignmentConsumer from './Pages/VehicleAssignmentConsumer/VehicleAssignmentConsumer'
+import AdvanceRequestCreation from './Pages/AdvanceRequestCreation/AdvanceRequestCreation'
+import DiCreation from './Pages/DiCreation/DiCreation'
+import DiConfirmation from './Pages/DiConfirmation/DiConfirmation'
 import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGateIn'
 import hire from './Pages/ParkingYardGate/hire'
 import vehicleInspection from './Pages/VehicleInspection/vehicleInspection'
 import vehicleMaintainence from './Pages/VehicleMaintainence/vehicleMaintainence'
+
+import DocVerify from './Pages/DocumentVerification/DocsVerify'
 import DocVerifyVendorAvail from './Pages/DocumentVerification/DocVerifyVendorAvail'
 import DocVerifyVendorNotAvail from './Pages/DocumentVerification/DocVerifyVendorNotAvail'
 // import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
@@ -24,7 +36,8 @@ import TSClossureSto from './Pages/TripsheetClossure/TSClossureSto'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
-  { path: '/hire', exact: true, name: 'Test', component: hire },
+  { path: '/Gateout', exact: true, name: 'Test', component: Gateout },
+  { path: '/AllCommonTable', exact: true, name: 'Test', component: AllCommonTable },
   {
     path: '/vehicleInspection',
     exact: true,
@@ -38,17 +51,36 @@ const routes = [
     component: vehicleMaintainence,
   },
   {
-    path: '/DocVerifyVendorAvail',
+    path: '/DocsVerify',
+    exact: true,
+    name: 'DocVerify',
+    component: DocVerify,
+  },
+  {
+    path: '/DocsVerify/DocVerifyVendorAvail',
     exact: true,
     name: 'DocVerifyVendorAvail',
     component: DocVerifyVendorAvail,
   },
   {
-    path: '/DocVerifyVendorNotAvail',
+    path: '/DocsVerify/DocVerifyVendorNotAvail',
     exact: true,
     name: 'DocVerifyVendorNotAvail',
     component: DocVerifyVendorNotAvail,
   },
+  { path: '/RjSalesOrderCreation', exact: true, name: 'Test', component: RjSalesOrderCreation },
+  { path: '/VehicleAssignmentFoods', exact: true, name: 'Test', component: VehicleAssignmentFoods },
+  {
+    path: '/VehicleAssignmentConsumer',
+    exact: true,
+    name: 'Test',
+    component: VehicleAssignmentConsumer,
+  },
+  { path: '/AdvanceRequestCreation', exact: true, name: 'Test', component: AdvanceRequestCreation },
+  { path: '/DiCreation', exact: true, name: 'Test', component: DiCreation },
+  { path: '/DiConfirmation', exact: true, name: 'Test', component: DiConfirmation },
+  { path: '/hire', exact: true, name: 'Test', component: hire },
+
   {
     path: '/VendorCreationHome',
     exact: true,

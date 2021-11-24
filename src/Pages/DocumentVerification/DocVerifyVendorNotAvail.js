@@ -30,10 +30,12 @@ import {
   CModalFooter,
 } from '@coreui/react'
 import { cilInput, cilDescription, cilCheckCircle, cilCog } from '@coreui/icons'
+
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
+import { Link } from 'react-router-dom'
 
 const DocVerifyVendorNotAvail = () => {
   const formValues = {
@@ -259,6 +261,7 @@ const DocVerifyVendorNotAvail = () => {
 
               <CRow>
                 <CCol>
+                  <Link to="/DocsVerify">
                   <CButton
                     md={9}
                     size="sm"
@@ -269,6 +272,7 @@ const DocVerifyVendorNotAvail = () => {
                   >
                     Previous
                   </CButton>
+                  </Link>
                 </CCol>
 
                 <CCol

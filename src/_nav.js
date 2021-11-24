@@ -1,6 +1,15 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
 import {
+  cilApplications,
+  cilBell,
+  cilBrowser,
+  cilCalculator,
+  cilChartPie,
+  cilCheck,
+  cilCursor,
+  cilDrop,
+  cilGauge,
   cilInput,
   cilDescription,
   cilCheckCircle,
@@ -11,65 +20,105 @@ import {
   cilSpeedometer,
   cilStar,
   cilSpreadsheet,
+  cilBoltCircle,
+  cilPen,
+  cilPenAlt,
+  cilThumbUp,
+  cilOpentype
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 //*This page is added by Exciteon - David
 const _nav = [
+  // {
+  //   component: CNavItem,
+  //   name: 'Yard Gate-In',
+  //   to: '/ParkingYardGateIn',
+  //   icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  // },
   {
+    component: CNavItem,
+    name: 'Gate-out',
+    to: '/Gateout',
+    icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
+  }, {
     component: CNavItem,
     name: 'Yard Gate-In',
     to: '/ParkingYardGateIn',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Vehicle Inspection',
-    to: '/vehicleInspection',
-    icon: <CIcon icon={cilCheckCircle} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Vehicle Maintainence',
     to: '/vehicleMaintainence',
     icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
-  },    
-  {
-    component: CNavItem,
-    name: 'Document Verify',
-    to: '/DocVerifyVendorAvail',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Document Verify Not',
-    to: '/DocVerifyVendorNotAvail',
-    icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+    name: 'Doc. Verification',
+    to: '/DocsVerify',
+    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
   },
   //*This page is added by Exciteon - David
   {
     component: CNavItem,
     name: 'Vendor Creation Req.',
     to: '/VendorCreationHome',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilPen} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Vendor Creation App.',
     to: '/VendorCreationApprovalHome',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilPenAlt} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Vendor Creation Conf.',
     to: '/VendorCreationConfrimationHome',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilThumbUp} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'TS Creation',
     to: '/TripSheetCreationHome',
+    icon: <CIcon icon={cilOpentype} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'RJ SO creation',
+    to: '/RjSalesOrderCreation',
+    icon: <CIcon icon={cilCheckCircle} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'V.Assign-Foods',
+    to: '/VehicleAssignmentFoods',
     icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Adv. Req. Creation',
+    to: '/AdvanceRequestCreation',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'V.Assign-Consumer',
+    to: '/VehicleAssignmentConsumer',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Di Creation',
+    to: '/DiCreation',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Di Conf.',
+    to: '/DiConfirmation',
+    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
