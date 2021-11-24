@@ -4,7 +4,13 @@ import {
   cilInput,
   cilDescription,
   cilCheckCircle,
-  cilCog
+  cilCog,
+  cilNotes,
+  cilPencil,
+  cilPuzzle,
+  cilSpeedometer,
+  cilStar,
+  cilSpreadsheet,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -38,6 +44,48 @@ const _nav = [
     name: 'Document Verify Not',
     to: '/DocVerifyVendorNotAvail',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Vendor Creation Req.',
+    to: '/VendorCreationHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Vendor Creation App.',
+    to: '/VendorCreationApprovalHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Vendor Creation Conf.',
+    to: '/VendorCreationConfrimationHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'TS Creation',
+    to: '/TripSheetCreationHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'TS Closure - FG',
+    to: '/TSClossure',
+    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'TS Closure - STO',
+    to: '/TSClossure-sto',
+    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'TS SettleMent',
+    to: '/TripSheetSettleMentHome',
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
   },
 ]
 
