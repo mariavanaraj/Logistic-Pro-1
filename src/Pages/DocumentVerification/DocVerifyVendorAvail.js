@@ -29,6 +29,7 @@ import {
   CModalFooter,
 } from '@coreui/react'
 import { React, useState } from 'react'
+import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm.js'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
@@ -93,17 +94,14 @@ const DocVerifyVendorAvail = () => {
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
                   <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
                 </CCol>
-
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dMob">Driver Mobile No</CFormLabel>
                   <CFormInput name="dMob" size="sm" id="" value="9135362456" readOnly />
                 </CCol>
-
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="odoMeter">Odometer KM</CFormLabel>
                   <CFormInput name="odoMeter" size="sm" id="" value="275" readOnly />
                 </CCol>
-
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="odoImg">Odometer Photo</CFormLabel>
 
@@ -117,7 +115,8 @@ const DocVerifyVendorAvail = () => {
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                     </span>
                   </CButton>
-                </CCol>              </CRow>
+                </CCol>{' '}
+              </CRow>
 
               <CModal visible={visible} onClose={() => setVisible(false)}>
                 <CModalHeader>
@@ -274,16 +273,18 @@ const DocVerifyVendorAvail = () => {
 
               <CRow>
                 <CCol>
-                  <CButton
-                    md={9}
-                    size="sm"
-                    color="primary"
-                    disabled=""
-                    className="text-white"
-                    type="submit"
-                  >
-                    Previous
-                  </CButton>
+                  <Link to="/DocsVerify">
+                    <CButton
+                      md={9}
+                      size="sm"
+                      color="primary"
+                      disabled=""
+                      className="text-white"
+                      type="submit"
+                    >
+                      Previous
+                    </CButton>
+                  </Link>
                 </CCol>
 
                 <CCol
