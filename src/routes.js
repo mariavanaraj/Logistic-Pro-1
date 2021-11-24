@@ -1,5 +1,8 @@
 import React from 'react'
 // import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
+import Gateout from './Pages/Gateout/Gateout'
+import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
+// import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
 import RjSalesOrderCreation from './Pages/RjSalesOrderCreation/RjSalesOrderCreation'
 import VehicleAssignmentFoods from './Pages/VehicleAssignmentFoods/VehicleAssignmentFoods'
 import VehicleAssignmentConsumer from './Pages/VehicleAssignmentConsumer/VehicleAssignmentConsumer'
@@ -33,6 +36,8 @@ import TSClossureSto from './Pages/TripsheetClossure/TSClossureSto'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
+  { path: '/Gateout', exact: true, name: 'Test', component: Gateout },
+  { path: '/AllCommonTable', exact: true, name: 'Test', component: AllCommonTable },
   {
     path: '/vehicleInspection',
     exact: true,

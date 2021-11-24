@@ -1,6 +1,15 @@
 import React from 'react'
 import CIcon from '@coreui/icons-react'
 import {
+  cilApplications,
+  cilBell,
+  cilBrowser,
+  cilCalculator,
+  cilChartPie,
+  cilCheck,
+  cilCursor,
+  cilDrop,
+  cilGauge,
   cilInput,
   cilDescription,
   cilCheckCircle,
@@ -20,17 +29,22 @@ import {
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
+  // {
+  //   component: CNavItem,
+  //   name: 'Yard Gate-In',
+  //   to: '/ParkingYardGateIn',
+  //   icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  // },
   {
+    component: CNavItem,
+    name: 'Gate-out',
+    to: '/Gateout',
+    icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
+  }, {
     component: CNavItem,
     name: 'Yard Gate-In',
     to: '/ParkingYardGateIn',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
-  },
-  {
-    component: CNavItem,
-    name: 'Vehicle Inspection',
-    to: '/vehicleInspection',
-    icon: <CIcon icon={cilCheckCircle} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
