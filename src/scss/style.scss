@@ -17,4 +17,10 @@ $enable-rtl: true;
 // If you want to add custom CSS you can put it here.
 @import "custom";
 
+> .btn,
+> .btn-group {
+  margin: .25rem .125rem;
+  border-color: #b1b7c1;
+}
+
 
