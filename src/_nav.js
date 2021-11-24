@@ -14,6 +14,7 @@ import {
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
+//*This page is added by Exciteon - David
 const _nav = [
   {
     component: CNavItem,
@@ -45,6 +46,7 @@ const _nav = [
     to: '/DocVerifyVendorNotAvail',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },
+  //*This page is added by Exciteon - David
   {
     component: CNavItem,
     name: 'Vendor Creation Req.',
