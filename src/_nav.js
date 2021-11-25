@@ -24,28 +24,53 @@ import {
   cilPen,
   cilPenAlt,
   cilThumbUp,
-  cilOpentype
+  cilOpentype,
+  cilInbox,
+  cilNewspaper,
+  cil3d,
+  cilRecycle,
+  cilBackspace,
+  cilChevronLeft,
+  cilChevronDoubleLeft,
+  cilFastfood,
+  cilWeightlifitng,
+  cilAssistiveListeningSystem,
+  cilReload,
+  cilAperture,
+  cilDataTransferDown,
+  cilMoney,
+  cilCash,
+  cilAccountLogout,
+  cilPaw,
+  cilPenNib,
+  cilCheckAlt,
+  cilFactorySlash,
+  cilAddressBook,
+  cil4k,
+  cibPlaystation4,
+  cilLevelDown,
+  cibOpenCollective,
+  cilControl,
+  cilBattery5,
+  cilInfo,
+  cilAirplay
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 //*This page is added by Exciteon - David
 const _nav = [
-  // {
-  //   component: CNavItem,
-  //   name: 'Yard Gate-In',
-  //   to: '/ParkingYardGateIn',
-  //   icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
-  // },
+
   {
-    component: CNavItem,
-    name: 'Gate-out',
-    to: '/Gateout',
-    icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
-  }, {
     component: CNavItem,
     name: 'Yard Gate-In',
     to: '/ParkingYardGateIn',
-    icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Vehicle Inspection',
+    to: '/vehicleInspection',
+    icon: <CIcon icon={cilAirplay} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
@@ -59,7 +84,7 @@ const _nav = [
     to: '/DocsVerify',
     icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
   },
-  //*This page is added by Exciteon - David
+
   {
     component: CNavItem,
     name: 'Vendor Creation Req.',
@@ -82,62 +107,68 @@ const _nav = [
     component: CNavItem,
     name: 'TS Creation',
     to: '/TripSheetCreationHome',
-    icon: <CIcon icon={cilOpentype} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilNewspaper} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'RJ SO creation',
     to: '/RjSalesOrderCreation',
-    icon: <CIcon icon={cilCheckCircle} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilChevronDoubleLeft} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'V.Assign-Foods',
+    name: 'V.Assign Foods',
     to: '/VehicleAssignmentFoods',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilInbox} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Adv. Req. Creation',
     to: '/AdvanceRequestCreation',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilCash} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'V.Assign-Consumer',
+    name: 'V.Assign Consumer',
     to: '/VehicleAssignmentConsumer',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilCheckCircle} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Di Creation',
     to: '/DiCreation',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilPenNib} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'Di Conf.',
     to: '/DiConfirmation',
-    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilCheck} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'TS Closure - FG',
     to: '/TSClossure',
-    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilFactorySlash} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'TS Closure - STO',
     to: '/TSClossure-sto',
-    icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilAddressBook} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
     name: 'TS SettleMent',
     to: '/TripSheetSettleMentHome',
-    icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilBrowser} customClassName="nav-icon" />,
   },
+  // {
+  //   component: CNavItem,
+  //   name: 'Gate-out',
+  //   to: '/Gateout',
+  //   icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
+  // }, 
 ]
 
 export default _nav

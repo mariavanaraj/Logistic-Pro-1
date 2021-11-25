@@ -67,7 +67,7 @@ const DocVerifyVendorAvail = () => {
           </CNav>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
             <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol md={3}>
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
                   <CFormInput name="vType" size="sm" id="" value="Own" readOnly />
@@ -89,7 +89,7 @@ const DocVerifyVendorAvail = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-1">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
                   <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
@@ -115,31 +115,10 @@ const DocVerifyVendorAvail = () => {
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                     </span>
                   </CButton>
-                </CCol>{' '}
+                </CCol>
               </CRow>
 
-              <CModal visible={visible} onClose={() => setVisible(false)}>
-                <CModalHeader>
-                  <CModalTitle>Odometer Photo</CModalTitle>
-                </CModalHeader>
-
-                <CModalBody>
-                  <img
-                    src="https://media-exp1.licdn.com/dms/image/C560BAQEhfRQblzW2Jw/company-logo_200_200/0/1597849191912?e=2159024400&v=beta&t=GfooSG4SaLjwT3-7D7uTYkhI_3ZT8q64wR-d0e_Ti_s"
-                    alt=""
-                  />
-                </CModalBody>
-
-                <CModalFooter>
-                  <CButton color="secondary" onClick={() => setVisible(false)}>
-                    Close
-                  </CButton>
-
-                  {/* <CButton color="primary">Save changes</CButton> */}
-                </CModalFooter>
-              </CModal>
-
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
                   <CFormInput
@@ -180,7 +159,7 @@ const DocVerifyVendorAvail = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerMob">Owner Mobile No.</CFormLabel>
                   <CFormInput
@@ -205,7 +184,7 @@ const DocVerifyVendorAvail = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="rcFront">RC Copy - Front</CFormLabel>
                   <CFormInput type="file" name="rcFront" size="sm" id="" />
@@ -224,7 +203,7 @@ const DocVerifyVendorAvail = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="TDSfront">TDS Dec. Form - Front</CFormLabel>
                   <CFormInput type="file" name="TDSfront" size="sm" id="" />
@@ -318,6 +297,27 @@ const DocVerifyVendorAvail = () => {
           </CTabPane>
         </CTabContent>
       </CCard>
+
+      {/* Modal Area */}
+      <CModal visible={visible} onClose={() => setVisible(false)}>
+        <CModalHeader>
+          <CModalTitle>Odometer Photo</CModalTitle>
+        </CModalHeader>
+
+        <CModalBody>
+          <img
+            src="https://media-exp1.licdn.com/dms/image/C560BAQEhfRQblzW2Jw/company-logo_200_200/0/1597849191912?e=2159024400&v=beta&t=GfooSG4SaLjwT3-7D7uTYkhI_3ZT8q64wR-d0e_Ti_s"
+            alt=""
+          />
+        </CModalBody>
+
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setVisible(false)}>
+            Close
+          </CButton>
+        </CModalFooter>
+      </CModal>
+      {/* Modal Area */}
     </>
   )
 }

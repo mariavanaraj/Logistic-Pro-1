@@ -821,7 +821,7 @@ $input-color: #000 !default;
 // $form-check-min-height:                   $font-size-base * $line-height-base !default;
 // $form-check-padding-start:                $form-check-input-width + .5em !default;
 // $form-check-margin-bottom:                .125rem !default;
-$form-check-label-font-size:                  0.8rem !default;
+$form-check-label-font-size: 0.8rem !default;
 // $form-check-label-color:                  unset !default;
 // $form-check-label-cursor:                 null !default;
 // $form-check-transition:                   null !default;
@@ -1611,11 +1611,11 @@ $breadcrumb-active-color: #fff !default;
 
 // scss-docs-start sidebar-variables
 $sidebar-width: 13rem !default;
-// $sidebar-widths: (
-//   sm: 12rem,
-//   lg: 20rem,
-//   xl: 24rem
-// ) !default;
+$sidebar-widths: (
+  sm: 12rem,
+  lg: 20rem,
+  xl: 24rem,
+) !default;
 // $sidebar-padding-y:                        0 !default;
 // $sidebar-padding-x:                        0 !default;
 // $sidebar-color:                            $high-emphasis-inverse !default;
@@ -1635,7 +1635,7 @@ $sidebar-brand-font-weight: 600 !default;
 $sidebar-header-bg: #fff !default;
 // $sidebar-header-height-transition:         height .15s, padding .15s !default;
 
-// $sidebar-narrow-width:                     4rem !default;
+$sidebar-narrow-width: 50rem !default;
 
 $sidebar-backdrop-bg: #fff !default;
 // $sidebar-backdrop-opacity:                 .5 !default;
@@ -1665,7 +1665,7 @@ $sidebar-nav-link-active-bg: #4d3227 !default;
 // $sidebar-nav-link-disabled-color:          $disabled-inverse !default;
 // $sidebar-nav-link-disabled-icon-color:     $sidebar-nav-link-icon-color !default;
 
-$sidebar-nav-icon-width: 3rem !default;
+$sidebar-nav-icon-width: 2rem !default;
 // $sidebar-nav-icon-height:                  1.25rem !default;
 // $sidebar-nav-icon-font-size:               $sidebar-nav-icon-height !default;
 

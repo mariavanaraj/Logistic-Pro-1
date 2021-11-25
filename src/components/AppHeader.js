@@ -24,10 +24,10 @@ const AppHeader = () => {
   const title = document.title;
 
   return (
-    <CHeader position="sticky" className="mb-4 pt-3">
+    <CHeader position="sticky" className="mb-3 p-0 pt-3">
       <CContainer fluid>
         <CHeaderToggler
-          className="ps-1"
+          className=""
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
         >
           <CIcon icon={cilMenu} size="lg" />
@@ -35,7 +35,7 @@ const AppHeader = () => {
         <CHeaderBrand className="mx-auto d-md-none" to="/">
           <h3>Logistics Pro</h3>
         </CHeaderBrand>
-        <h2 className="text-white">{title}</h2>
+        <h3 className="text-white d-md-block d-none">{title}</h3>
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
         </CHeaderNav>

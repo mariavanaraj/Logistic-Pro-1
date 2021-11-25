@@ -1,7 +1,7 @@
-import React from "react";
-import { CButton, CCard, CContainer } from "@coreui/react";
-import { Link } from "react-router-dom";
-import CustomTable from "src/components/customComponent/CustomTable";
+import React from 'react'
+import { CButton, CCard, CContainer } from '@coreui/react'
+import { Link } from 'react-router-dom'
+import CustomTable from 'src/components/customComponent/CustomTable'
 
 const DocsVerify = () => {
   const columns = [
@@ -79,7 +79,7 @@ const DocsVerify = () => {
       Action: (
         <CButton className="badge text-white" color="warning">
           <Link className="text-white" to="/DocsVerify/DocVerifyVendorAvail">
-            Hire Vendor
+            Hire Avail
           </Link>
         </CButton>
       ),
@@ -98,7 +98,7 @@ const DocsVerify = () => {
       Action: (
         <CButton className="badge text-white" color="warning">
           <Link className="text-white" to="/DocsVerify/DocVerifyVendorNotAvail">
-            Hire Vendor Not
+            Hire Not Avail
           </Link>
         </CButton>
       ),
@@ -115,19 +115,21 @@ const DocsVerify = () => {
       Screen_Duration: '1 Hrs 07 Mins',
       Overall_Duration: '2 Hrs 55 Mins',
       Action: (
-        <CButton className="badge text-white" color="warning">
-          Gate Out
-        </CButton>
+        <Link to="/Gateout">
+          <CButton className="badge text-white" color="warning">
+            Gate Out
+          </CButton>
+        </Link>
       ),
     },
   ]
   return (
     <CCard className="mt-4">
-    <CContainer className="mt-2">
-      <CustomTable columns={columns} data={data} />
-    </CContainer>
-  </CCard>
-    );
+      <CContainer className="mt-2">
+        <CustomTable columns={columns} data={data} />
+      </CContainer>
+    </CCard>
+  )
 }
 
-export default DocsVerify;
+export default DocsVerify

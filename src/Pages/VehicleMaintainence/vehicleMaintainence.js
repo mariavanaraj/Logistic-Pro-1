@@ -23,6 +23,7 @@ import {
   CFormFloating,
 } from '@coreui/react'
 import { React, useState } from 'react'
+import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
@@ -128,15 +129,17 @@ const VehicleMaintainence = () => {
                   >
                     Maintenence
                   </CButton>
-                  <CButton
-                    size="sm"
-                    disabled=""
-                    color="warning"
-                    className="mx-3 text-white"
-                    type="button"
-                  >
-                    Gate Out
-                  </CButton>
+                  <Link to="/Gateout">
+                    <CButton
+                      size="sm"
+                      disabled=""
+                      color="warning"
+                      className="mx-3 text-white"
+                      type="button"
+                    >
+                      Gate Out
+                    </CButton>
+                  </Link>
                 </CCol>
               </CRow>
             </CForm>

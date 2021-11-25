@@ -54,7 +54,7 @@ const ParkingYardGate = () => {
           <CTabContent>
             <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
               <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-                <CRow>
+                <CRow className="mb-md-2">
                   <CCol md={3}>
                     <CFormLabel htmlFor="vType">
                       Vehicle Type*{' '}
@@ -76,7 +76,7 @@ const ParkingYardGate = () => {
 
                   <CCol md={3}>
                     <CFormLabel htmlFor="vNum">Vehicle No*</CFormLabel>
-                    <CFormSelect size="sm" name="vNum" className="mb-3" aria-label="Small select example">
+                    <CFormSelect size="sm" name="vNum" className="" aria-label="Small select example">
                       <option hidden>Select Vehicle No</option>
 
                       <option value="1">TN45AT8614</option>
@@ -94,7 +94,7 @@ const ParkingYardGate = () => {
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
-                    <CFormSelect name="dName" size="sm" className="mb-3" aria-label="Small select example">
+                    <CFormSelect name="dName" size="sm" className="" aria-label="Small select example">
                       <option hidden>Select Driver</option>
 
                       <option value="1">Mari Muthu</option>
@@ -105,6 +105,7 @@ const ParkingYardGate = () => {
                     </CFormSelect>
                   </CCol>
                 </CRow>
+
                 <CRow>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="dMob">Driver Mobile No*</CFormLabel>
@@ -156,9 +157,10 @@ const ParkingYardGate = () => {
                     style={{ display: 'flex', justifyContent: 'space-between' }}
                   ></CCol>
                 </CRow>
-                <CRow>
+                
+                <CRow className="mb-mt-2">
                   <CCol
-                    className="mt-3 offset-md-9 py-2"
+                    className="offset-md-9 py-2"
                     xs={12}
                     sm={12}
                     md={3}
