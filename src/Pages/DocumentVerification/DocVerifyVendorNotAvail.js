@@ -69,7 +69,7 @@ const DocVerifyVendorNotAvail = () => {
           </CNav>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
             <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol md={3}>
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
                   <CFormInput name="vType" size="sm" id="" value="Own" readOnly />
@@ -91,14 +91,14 @@ const DocVerifyVendorNotAvail = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-1">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
                   <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dMob">Driver Mobile No</CFormLabel>
+                  <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
                   <CFormInput name="dMob" size="sm" id="" value="9135362456" readOnly />
                 </CCol>
 
@@ -114,34 +114,41 @@ const DocVerifyVendorNotAvail = () => {
                   </CButton> */}
                   <CFormLabel htmlFor="odoImg">Odometer Photo</CFormLabel>
 
-                    <CButton onClick={() => setVisible(!visible)} className="w-100" color="info" size="sm">
-                      <span className="float-start"><i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View</span>
-                    </CButton>
+                  <CButton
+                    onClick={() => setVisible(!visible)}
+                    className="w-100"
+                    color="info"
+                    size="sm"
+                  >
+                    <span className="float-start">
+                      <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                    </span>
+                  </CButton>
+
+                  <CModal alignment="center" visible={visible} onClose={() => setVisible(false)}>
+                    <CModalHeader>
+                      <CModalTitle>Odometer Photo</CModalTitle>
+                    </CModalHeader>
+
+                    <CModalBody>
+                      <img
+                        src="https://media-exp1.licdn.com/dms/image/C560BAQEhfRQblzW2Jw/company-logo_200_200/0/1597849191912?e=2159024400&v=beta&t=GfooSG4SaLjwT3-7D7uTYkhI_3ZT8q64wR-d0e_Ti_s"
+                        alt=""
+                      />
+                    </CModalBody>
+
+                    <CModalFooter>
+                      <CButton color="secondary" onClick={() => setVisible(false)}>
+                        Close
+                      </CButton>
+
+                      {/* <CButton color="primary">Save changes</CButton> */}
+                    </CModalFooter>
+                  </CModal>
                 </CCol>
               </CRow>
 
-              <CModal alignment="center" visible={visible} onClose={() => setVisible(false)}>
-                <CModalHeader>
-                  <CModalTitle>Odometer Photo</CModalTitle>
-                </CModalHeader>
-
-                <CModalBody>
-                  <img
-                    src="https://media-exp1.licdn.com/dms/image/C560BAQEhfRQblzW2Jw/company-logo_200_200/0/1597849191912?e=2159024400&v=beta&t=GfooSG4SaLjwT3-7D7uTYkhI_3ZT8q64wR-d0e_Ti_s"
-                    alt=""
-                  />
-                </CModalBody>
-
-                <CModalFooter>
-                  <CButton color="secondary" onClick={() => setVisible(false)}>
-                    Close
-                  </CButton>
-
-                  {/* <CButton color="primary">Save changes</CButton> */}
-                </CModalFooter>
-              </CModal>
-
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
                   <CFormInput
@@ -172,7 +179,7 @@ const DocVerifyVendorNotAvail = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerMob">Owner Mobile No.</CFormLabel>
                   <CFormInput name="ownerName" size="sm" id="" value="" />
@@ -191,7 +198,7 @@ const DocVerifyVendorNotAvail = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="license">License Copy</CFormLabel>
                   <CFormInput type="file" name="license" size="sm" id="" />
@@ -210,7 +217,7 @@ const DocVerifyVendorNotAvail = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="transportShed">Transporter Shed Sheet</CFormLabel>
                   <CFormInput type="file" name="transportShed" size="sm" id="" />
@@ -262,16 +269,16 @@ const DocVerifyVendorNotAvail = () => {
               <CRow>
                 <CCol>
                   <Link to="/DocsVerify">
-                  <CButton
-                    md={9}
-                    size="sm"
-                    color="primary"
-                    disabled=""
-                    className="text-white"
-                    type="submit"
-                  >
-                    Previous
-                  </CButton>
+                    <CButton
+                      md={9}
+                      size="sm"
+                      color="primary"
+                      disabled=""
+                      className="text-white"
+                      type="submit"
+                    >
+                      Previous
+                    </CButton>
                   </Link>
                 </CCol>
 
@@ -280,22 +287,22 @@ const DocVerifyVendorNotAvail = () => {
                   xs={12}
                   sm={12}
                   md={3}
-                  style={{ display: 'flex', justifyContent: 'space-between' }}
+                  style={{ display: 'flex', justifyContent: 'flex-end' }}
                 >
                   <CButton
                     size="sm"
                     color="warning"
                     disabled=""
-                    className="text-white"
+                    className="mx-3 px-3 text-white"
                     type="submit"
                   >
                     Accept
                   </CButton>
                   <CButton
                     size="sm"
-                    disabled={enableSubmit}
+                    // disabled={enableSubmit}
                     color="warning"
-                    className="text-white"
+                    className="px-3 text-white"
                     type="submit"
                   >
                     Reject

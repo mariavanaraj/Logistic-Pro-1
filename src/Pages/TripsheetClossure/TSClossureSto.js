@@ -71,11 +71,11 @@ const TSClossureSto = () => {
             </CNav>
 
             <CTabPane role="tabpanel" aria-labelledby="Page1-tab" visible={activeKey === 1}>
-              <CRow className="mb-md-3 mt-3">
+              <CRow className="mb-md-2 mt-3">
                 <CCol md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle No*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle No.*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
-                    <option hidden>Select Vehicle No</option>
+                    <option hidden>Select</option>
 
                     <option value="1">TN45AT8614</option>
 
@@ -90,7 +90,7 @@ const TSClossureSto = () => {
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet No</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -101,7 +101,7 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
@@ -120,7 +120,7 @@ const TSClossureSto = () => {
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Cell No</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Driver Cell No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -131,11 +131,21 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Opening Odometer Photo</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="View" readOnly />
+                  {/* <CFormInput size="sm" id="inputAddress" value="View" readOnly /> */}
+                  <CButton
+                    // onClick={() => setVisible(!visible)}
+                    className="w-100"
+                    color="info"
+                    size="sm"
+                  >
+                    <span className="float-start">
+                      <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                    </span>
+                  </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Closing KM</CFormLabel>
@@ -154,7 +164,7 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Other Charges*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
@@ -178,9 +188,9 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Misc Exp</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Misc Exp.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" />
                 </CCol>
@@ -190,7 +200,7 @@ const TSClossureSto = () => {
                   <CFormInput size="sm" id="inputAddress" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Diesel Qty</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Diesel Qty.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -201,7 +211,7 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Amount</CFormLabel>
 
@@ -216,9 +226,9 @@ const TSClossureSto = () => {
             </CTabPane>
 
             <CTabPane role="tabpanel" aria-labelledby="Page2-tab" visible={activeKey === 2}>
-              <CRow className="mb-md-3 mt-3" hidden>
+              <CRow className="mb-md-2 mt-3" hidden>
                 <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Invoice No</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                 </CCol>
@@ -250,9 +260,9 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3" hidden>
+              <CRow className="mb-md-2" hidden>
                 <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Invoice No</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                 </CCol>
@@ -284,9 +294,9 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3" hidden>
+              <CRow className="mb-md-2" hidden>
                 <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Invoice No</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                 </CCol>

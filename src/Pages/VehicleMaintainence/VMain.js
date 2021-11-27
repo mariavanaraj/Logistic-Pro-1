@@ -1,8 +1,9 @@
-import { CButton, CCard, CContainer } from "@coreui/react";
-import React from "react";
-import { Link } from "react-router-dom";
-import CustomTable from "src/components/customComponent/CustomTable";
-const VendorCreationConfrimationHome = () => {
+import React from 'react'
+import { CButton, CCard, CContainer } from '@coreui/react'
+import { Link } from 'react-router-dom'
+import CustomTable from 'src/components/customComponent/CustomTable'
+
+const DocsVerify = () => {
   const columns = [
     {
       name: 'S.No',
@@ -16,7 +17,6 @@ const VendorCreationConfrimationHome = () => {
       sortable: true,
       center: true,
     },
-    
     {
       name: 'Vehicle Type',
       selector: (row) => row.Vehicle_Type,
@@ -36,8 +36,8 @@ const VendorCreationConfrimationHome = () => {
       center: true,
     },
     {
-      name: 'Driver Cell',
-      selector: (row) => row.Driver_Name,
+      name: 'Driver Cell No',
+      selector: (row) => row.Driver_Cell,
       sortable: true,
       center: true,
     },
@@ -72,14 +72,14 @@ const VendorCreationConfrimationHome = () => {
       Vehicle_Type: 'own',
       Vehicle_No: 'TN45AT8417',
       Driver_Name: 'Saravana',
-      Driver_Cell: '9876523547',
-      Waiting_At: <span className="badge rounded-pill bg-info">DI Creation</span>,
+      Driver_Cell: '9443194657',
+      Waiting_At: <span className="badge rounded-pill bg-info">Vehicle Main.</span>,
       Screen_Duration: '0 Hrs 07 Mins',
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
-        <CButton className="badge text-white" color="warning">
-          <Link className="text-white" to="/VendorCreationConfrimationHome/VendorCreationConfrimation">
-            Vendor Creation Confrimation
+        <CButton className="badge" color="warning">
+          <Link className="text-white" to="/VMain/vehicleMaintainence">
+            Vehicle Main.
           </Link>
         </CButton>
       ),
@@ -91,25 +91,26 @@ const VendorCreationConfrimationHome = () => {
       Vehicle_Type: 'contract',
       Vehicle_No: 'TN54AT8417',
       Driver_Name: 'David',
-      Driver_Cell: '7896542358',
-      Waiting_At: <span className="badge rounded-pill bg-info">Waiting</span>,
+      Driver_Cell: '9952159806',
+      Waiting_At: <span className="badge rounded-pill bg-info">Vehicle Main.</span>,
       Screen_Duration: '0 Hrs 07 Mins',
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
-        <CButton className="badge text-white" color="warning">
-          Gate In
+        <CButton className="badge" color="warning">
+          <Link className="text-white" to="/VMain/vehicleMaintainence">
+            Vehicle Main.
+          </Link>
         </CButton>
       ),
     },
-    
   ]
   return (
     <CCard className="mt-4">
-  <CContainer className="mt-2">
-    <CustomTable   columns={columns} data={data} />
-  </CContainer>
-</CCard>
-   );
+      <CContainer className="mt-2">
+        <CustomTable columns={columns} data={data} />
+      </CContainer>
+    </CCard>
+  )
 }
 
-export default VendorCreationConfrimationHome;
+export default DocsVerify

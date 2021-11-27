@@ -41,7 +41,7 @@ const VehicleInspection = () => {
   }
 
   const border = {
-    borderColor:'#b1b7c1'
+    borderColor: '#b1b7c1',
   }
 
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
@@ -62,37 +62,62 @@ const VehicleInspection = () => {
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
             <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-              <CRow className="mb-md-3">
+              <CRow className="mb-md-2">
                 <CCol md={3}>
-                  <CFormLabel htmlFor="vType">Vehicle Type*</CFormLabel>
-                  <CFormInput name="vType" size="sm" id="" value="" readOnly />
+                  <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
+                  <CFormInput
+                    name="vType"
+                    size="sm"
+                    id=""
+                    value="Contract"
+                    placeholder=""
+                    readOnly
+                  />
                 </CCol>
 
                 <CCol md={3}>
-                  <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
-                  <CFormInput name="vNum" size="sm" id="" value="" readOnly />
+                  <CFormLabel htmlFor="vNum">Vehicle Number</CFormLabel>
+                  <CFormInput
+                    name="vNum"
+                    size="sm"
+                    id=""
+                    value="TN90AE3902"
+                    placeholder=""
+                    readOnly
+                  />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
-                  <CFormInput name="vCap" size="sm" id="" value="" readOnly />
+                  <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS</CFormLabel>
+                  <CFormInput name="vCap" size="sm" id="" value="10" placeholder="10" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="vaNum">VA Number*</CFormLabel>
-                  <CFormInput name="vaNum" size="sm" id="" value="" readOnly />
+                  <CFormLabel htmlFor="vaNum">VA Number</CFormLabel>
+                  <CFormInput name="vaNum" size="sm" id="" value="11113" placeholder="" readOnly />
                 </CCol>
               </CRow>
 
-              <CRow className="">
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
-                  <CFormInput name="dName" size="sm" id="" value="" readOnly />
+                  <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
+                  <CFormInput
+                    name="dName"
+                    size="sm"
+                    id=""
+                    value="TN90AE3902"
+                    placeholder=""
+                    readOnly
+                  />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dMob">Driver Mobile No*</CFormLabel>
-                  <CFormInput name="dMob" size="sm" id="" value="" readOnly />
+                  <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
+                  <CFormInput name="dMob" size="sm" id="" value="9443194657" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="dMob">Odometer KM</CFormLabel>
+                  <CFormInput name="dMob" size="sm" id="" value="189736" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -109,36 +134,38 @@ const VehicleInspection = () => {
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                     </span>
                   </CButton>
-                </CCol>
+                  <CModal visible={visible} onClose={() => setVisible(false)}>
+                    <CModalHeader>
+                      <CModalTitle>Odometer Photo</CModalTitle>
+                    </CModalHeader>
 
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time*</CFormLabel>
-                  <CFormInput name="gateInDateTime" size="sm" id="" value="" readOnly />
+                    <CModalBody>
+                      <img
+                        src="https://media-exp1.licdn.com/dms/image/C560BAQEhfRQblzW2Jw/company-logo_200_200/0/1597849191912?e=2159024400&v=beta&t=GfooSG4SaLjwT3-7D7uTYkhI_3ZT8q64wR-d0e_Ti_s"
+                        alt=""
+                      />
+                    </CModalBody>
+
+                    <CModalFooter>
+                      <CButton color="secondary" onClick={() => setVisible(false)}>
+                        Close
+                      </CButton>
+                    </CModalFooter>
+                  </CModal>
                 </CCol>
               </CRow>
 
-              <CModal visible={visible} onClose={() => setVisible(false)}>
-                <CModalHeader>
-                  <CModalTitle>Odometer Photo</CModalTitle>
-                </CModalHeader>
-
-                <CModalBody>
-                  <img
-                    src="https://media-exp1.licdn.com/dms/image/C560BAQEhfRQblzW2Jw/company-logo_200_200/0/1597849191912?e=2159024400&v=beta&t=GfooSG4SaLjwT3-7D7uTYkhI_3ZT8q64wR-d0e_Ti_s"
-                    alt=""
+              <CRow className="mb-md-2">
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time*</CFormLabel>
+                  <CFormInput
+                    name="gateInDateTime"
+                    size="sm"
+                    id=""
+                    value="21 Sep 2021 12:00:00 PM"
+                    readOnly
                   />
-                </CModalBody>
-
-                <CModalFooter>
-                  <CButton color="secondary" onClick={() => setVisible(false)}>
-                    Close
-                  </CButton>
-
-                  {/* <CButton color="primary">Save changes</CButton> */}
-                </CModalFooter>
-              </CModal>
-
-              <CRow className="mb-md-3">
+                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="truckClean">Truck Clean *</CFormLabel>
                   <CFormSelect size="sm" name="truckClean" className="">
@@ -169,7 +196,9 @@ const VehicleInspection = () => {
                     <option value="2">No</option>
                   </CFormSelect>
                 </CCol>
+              </CRow>
 
+              <CRow className="mb-md-2">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="tarSRF">Tarpaulin – SRF</CFormLabel>
                   <CFormSelect
@@ -184,9 +213,6 @@ const VehicleInspection = () => {
                     <option value="2">2</option>
                   </CFormSelect>
                 </CCol>
-              </CRow>
-
-              <CRow className="mb-md-3">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="nonSRF">Non – SRF *</CFormLabel>
                   <CFormSelect
@@ -229,6 +255,9 @@ const VehicleInspection = () => {
                     <option value="2">No</option>
                   </CFormSelect>
                 </CCol>
+              </CRow>
+
+              <CRow className="mb-md-3">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
                   <CFormSelect
@@ -243,12 +272,9 @@ const VehicleInspection = () => {
                     <option value="2">No</option>
                   </CFormSelect>
                 </CCol>
-              </CRow>
-
-              <CRow className="mb-md-3">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
-                  <CFormInput name="vFitLoad" size="sm" id="" value="No" />
+                  <CFormInput name="vFitLoad" size="sm" id="" value="No" readOnly />
                 </CCol>
               </CRow>
 
@@ -267,26 +293,25 @@ const VehicleInspection = () => {
                 </CCol>
 
                 <CCol
-                  className=""
+                  className="pull-right"
                   xs={12}
                   sm={12}
                   md={3}
-                  style={{ display: 'flex', justifyContent: 'space-between' }}
+                  style={{ display: 'flex', justifyContent: 'flex-end' }}
                 >
                   <CButton
                     size="sm"
                     color="warning"
-                    disabled=""
-                    className="text-white"
+                    className="mx-1 px-2 text-white"
                     type="submit"
                   >
                     Accept
                   </CButton>
+
                   <CButton
                     size="sm"
-                    disabled={enableSubmit}
                     color="warning"
-                    className="text-white"
+                    className="mx-1 px-2 text-white"
                     type="submit"
                   >
                     Reject
@@ -294,9 +319,8 @@ const VehicleInspection = () => {
 
                   <CButton
                     size="sm"
-                    disabled={enableSubmit}
                     color="warning"
-                    className="text-white"
+                    className="mx-1 px-2 text-white"
                     type="submit"
                   >
                     Cancel

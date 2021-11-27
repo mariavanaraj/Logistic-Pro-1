@@ -17,12 +17,6 @@ const VendorCreationApprovalHome = () => {
       center: true,
     },
     {
-      name: 'Tripsheet No',
-      selector: (row) => row.Tripsheet_No,
-      sortable: true,
-      center: true,
-    },
-    {
       name: 'Vehicle Type',
       selector: (row) => row.Vehicle_Type,
       sortable: true,
@@ -37,6 +31,12 @@ const VendorCreationApprovalHome = () => {
     {
       name: 'Driver Name',
       selector: (row) => row.Driver_Name,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Driver Cell',
+      selector: (row) => row.Driver_Cell,
       sortable: true,
       center: true,
     },
@@ -68,10 +68,10 @@ const VendorCreationApprovalHome = () => {
       id: 1,
       sno: 1,
       VA_No: 12000,
-      Tripsheet_No: 102556,
       Vehicle_Type: 'own',
       Vehicle_No: 'TN45AT8417',
       Driver_Name: 'Saravana',
+      Driver_Cell: '986578932',
       Waiting_At: <span className="badge rounded-pill bg-info">DI Creation</span>,
       Screen_Duration: '0 Hrs 07 Mins',
       Overall_Duration: '0 Hrs 55 Mins',
@@ -87,33 +87,16 @@ const VendorCreationApprovalHome = () => {
       id: 2,
       sno: 2,
       VA_No: 12070,
-      Tripsheet_No: 102501,
       Vehicle_Type: 'contract',
       Vehicle_No: 'TN54AT8417',
       Driver_Name: 'David',
+      Driver_Cell: '9876542356',
       Waiting_At: <span className="badge rounded-pill bg-info">Waiting</span>,
       Screen_Duration: '0 Hrs 07 Mins',
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
         <CButton className="badge text-white" color="warning">
           Gate In
-        </CButton>
-      ),
-    },
-    {
-      id: 3,
-      sno: 3,
-      VA_No: 12018,
-      Tripsheet_No: 102501,
-      Vehicle_Type: 'Hire',
-      Vehicle_No: 'TN54CT8417',
-      Driver_Name: 'Alvin',
-      Waiting_At: <span className="badge rounded-pill bg-info">Ts Creation</span>,
-      Screen_Duration: '1 Hrs 07 Mins',
-      Overall_Duration: '2 Hrs 55 Mins',
-      Action: (
-        <CButton className="badge text-white" color="warning">
-          Gate Out
         </CButton>
       ),
     },

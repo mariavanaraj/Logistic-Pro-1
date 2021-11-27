@@ -11,8 +11,10 @@ import DiCreation from './Pages/DiCreation/DiCreation'
 import DiConfirmation from './Pages/DiConfirmation/DiConfirmation'
 import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGateIn'
 import hire from './Pages/ParkingYardGate/hire'
+import vInspection from './Pages/VehicleInspection/vInspection'
 import vehicleInspection from './Pages/VehicleInspection/vehicleInspection'
 import vehicleMaintainence from './Pages/VehicleMaintainence/vehicleMaintainence'
+import VMain from './Pages/VehicleMaintainence/VMain'
 
 import DocVerify from './Pages/DocumentVerification/DocsVerify'
 import DocVerifyVendorAvail from './Pages/DocumentVerification/DocVerifyVendorAvail'
@@ -33,19 +35,32 @@ import VendorCreationRequest from './Pages/VendorCreationRequest/VendorCreationR
 import TSClossure from './Pages/TripsheetClossure/TSClossure'
 import TSClossureSto from './Pages/TripsheetClossure/TSClossureSto'
 
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
   { path: '/Gateout', exact: true, name: 'Test', component: Gateout },
   { path: '/AllCommonTable', exact: true, name: 'Test', component: AllCommonTable },
   {
-    path: '/vehicleInspection',
+    path: '/vInspection',
+    exact: true,
+    name: 'vInspection',
+    component: vInspection,
+  },
+  {
+    path: '/vInspection/vehicleInspection',
     exact: true,
     name: 'vehicleInspection',
     component: vehicleInspection,
   },
   {
-    path: '/vehicleMaintainence',
+    path: '/VMain',
+    exact: true,
+    name: 'VMain',
+    component: VMain,
+  },
+  {
+    path: '/VMain/vehicleMaintainence',
     exact: true,
     name: 'vehicleMaintainence',
     component: vehicleMaintainence,

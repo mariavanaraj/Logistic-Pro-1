@@ -116,7 +116,7 @@ const TSClossure = () => {
                 </CNav>
 
                 <CTabPane role="tabpanel" aria-labelledby="Page1-tab" visible={activeKey === 1}>
-                  <CRow className="mb-md-3 mt-3">
+                  <CRow className="mb-md-2 mt-3">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
 
@@ -138,14 +138,14 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="NAGARAJ" readOnly />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Driver Cell No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Driver Cell No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="8525097921" readOnly />
                     </CCol>
@@ -183,7 +183,7 @@ const TSClossure = () => {
                       </CButton>
                     </CModalFooter>
                   </CModal>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
 
@@ -215,13 +215,13 @@ const TSClossure = () => {
                       />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Tripsheet No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="700012" readOnly />
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
 
@@ -233,7 +233,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="BBBBB" readOnly />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Owner Cell No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Owner Cell No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="1234567890" readOnly />
                     </CCol>
@@ -249,7 +249,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
 
@@ -288,7 +288,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Budgeted KM</CFormLabel>
 
@@ -300,7 +300,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="8880" readOnly />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Diff KM</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Diff. KM</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="80" readOnly />
                     </CCol>
@@ -311,7 +311,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Budged Mileage</CFormLabel>
 
@@ -335,14 +335,14 @@ const TSClossure = () => {
                   </CRow>
                 </CTabPane>
                 <CTabPane role="tabpanel" aria-labelledby="Page2-tab" visible={activeKey === 2}>
-                  <CRow className="mb-md-3  mt-3" hidden>
+                  <CRow className="mb-md-2" hidden>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Invoice No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                     </CCol>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Customer No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Customer No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="111111" readOnly />
                     </CCol>
@@ -377,7 +377,7 @@ const TSClossure = () => {
                         onBlur={onBlur}
                         onChange={handleChange}
                         value={values.DefectType}
-                        className={`mb-3 ${errors.DefectType && 'is-invalid'}`}
+                        className={`${errors.DefectType && 'is-invalid'}`}
                         aria-label="Small select example"
                       >
                         <option value="">Select Types</option>
@@ -388,7 +388,7 @@ const TSClossure = () => {
 
                         <option value="3">Halting Charges</option>
 
-                        <option value="4">Low Tonage</option>
+                        <option value="4">Low Tonnage</option>
                       </CFormSelect>
                     </CCol>
                     <CCol xs={12} md={2} hidden>
@@ -398,14 +398,14 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3" hidden>
+                  <CRow className="mb-md-2" hidden>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Invoice No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="123459" readOnly />
                     </CCol>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Customer No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Customer No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="444444" readOnly />
                     </CCol>
@@ -451,7 +451,7 @@ const TSClossure = () => {
 
                         <option value="3">Halting Charges</option>
 
-                        <option value="4">Low Tonage</option>
+                        <option value="4">Low Tonnage</option>
                       </CFormSelect>
                     </CCol>
                     <CCol xs={12} md={2} hidden>
@@ -463,7 +463,7 @@ const TSClossure = () => {
                 </CTabPane>
 
                 <CTabPane role="tabpanel" aria-labelledby="Page3-tab" visible={activeKey === 3}>
-                  <CRow className="mb-md-3  mt-3">
+                  <CRow className="mb-md-2  mt-3">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Unloading Charges (Excess)</CFormLabel>
 
@@ -480,13 +480,13 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Low Tonage</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Low Tonnage</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" />
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Freight Charges</CFormLabel>
 
@@ -511,7 +511,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Halting Charges</CFormLabel>
 
@@ -525,7 +525,7 @@ const TSClossure = () => {
                   </CRow>
                   <CRow>
                     <CCol
-                      className="mt-3 offset-md-9 py-2"
+                      className="offset-md-9"
                       xs={12}
                       sm={12}
                       md={3}
@@ -604,7 +604,7 @@ const TSClossure = () => {
                 </CNav>
 
                 <CTabPane role="tabpanel" aria-labelledby="Page1-tab" visible={activeKey1 === 1}>
-                  <CRow className="mb-md-3  mt-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
 
@@ -626,7 +626,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
@@ -660,7 +660,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
 
@@ -692,13 +692,13 @@ const TSClossure = () => {
                       />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Tripsheet No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="700012" readOnly />
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
 
@@ -710,7 +710,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="BBBBB" readOnly />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Owner Cell No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Owner Cell No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="1234567890" readOnly />
                     </CCol>
@@ -726,7 +726,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
 
@@ -765,7 +765,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Budgeted KM</CFormLabel>
 
@@ -777,7 +777,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="8880" readOnly />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Diff KM</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Diff. KM</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="80" readOnly />
                     </CCol>
@@ -788,7 +788,7 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Budged Mileage</CFormLabel>
 
@@ -800,7 +800,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="27" readOnly />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Diff Mileage</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Diff. Mileage</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="2" readOnly />
                     </CCol>
@@ -813,14 +813,14 @@ const TSClossure = () => {
                 </CTabPane>
 
                 <CTabPane role="tabpanel" aria-labelledby="Page2-tab" visible={activeKey1 === 2}>
-                  <CRow className="mb-md-3  mt-3" hidden>
+                  <CRow className="mb-md-2  mt-3" hidden>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Invoice No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                     </CCol>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Customer No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Customer No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="111111" readOnly />
                     </CCol>
@@ -855,7 +855,7 @@ const TSClossure = () => {
                         onBlur={onBlur}
                         onChange={handleChange}
                         value={values.DefectType}
-                        className={`mb-3 ${errors.DefectType && 'is-invalid'}`}
+                        className={`${errors.DefectType && 'is-invalid'}`}
                         aria-label="Small select example"
                       >
                         <option value="">Select Types</option>
@@ -866,7 +866,7 @@ const TSClossure = () => {
 
                         <option value="3">Halting Charges</option>
 
-                        <option value="4">Low Tonage</option>
+                        <option value="4">Low Tonnage</option>
                       </CFormSelect>
                     </CCol>
                     <CCol xs={12} md={2} hidden>
@@ -876,14 +876,14 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3" hidden>
+                  <CRow className="mb-md-1" hidden>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Invoice No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                     </CCol>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Customer No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Customer No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="111111" readOnly />
                     </CCol>
@@ -918,7 +918,7 @@ const TSClossure = () => {
                         onBlur={onBlur}
                         onChange={handleChange}
                         value={values.DefectType}
-                        className={`mb-3 ${errors.DefectType && 'is-invalid'}`}
+                        className={`${errors.DefectType && 'is-invalid'}`}
                         aria-label="Small select example"
                       >
                         <option value="">Select Types</option>
@@ -929,7 +929,7 @@ const TSClossure = () => {
 
                         <option value="3">Halting Charges</option>
 
-                        <option value="4">Low Tonage</option>
+                        <option value="4">Low Tonnage</option>
                       </CFormSelect>
                     </CCol>
                     <CCol xs={12} md={2} hidden>
@@ -939,9 +939,9 @@ const TSClossure = () => {
                     </CCol>
                   </CRow>
 
-                  <CRow className="mb-md-3" hidden>
+                  <CRow className="mb-md-1" hidden>
                     <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">Invoice No</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                     </CCol>
@@ -981,7 +981,7 @@ const TSClossure = () => {
                         onBlur={onBlur}
                         onChange={handleChange}
                         value={values.DefectType}
-                        className={`mb-3 ${errors.DefectType && 'is-invalid'}`}
+                        className={`${errors.DefectType && 'is-invalid'}`}
                         aria-label="Small select example"
                       >
                         <option value="">Select Types</option>
@@ -1004,7 +1004,7 @@ const TSClossure = () => {
                 </CTabPane>
 
                 <CTabPane role="tabpanel" aria-labelledby="Page3-tab" visible={activeKey1 === 3}>
-                  <CRow className="mb-md-3  mt-3">
+                  <CRow className="mb-md-2 mt-3">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Halting Charges</CFormLabel>
 
@@ -1026,7 +1026,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Municipal Charges</CFormLabel>
 
@@ -1048,7 +1048,7 @@ const TSClossure = () => {
                       <CFormInput type="file" size="sm" id="inputAddress" />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Port Entry Fee</CFormLabel>
 
@@ -1070,7 +1070,7 @@ const TSClossure = () => {
                       <CFormInput type="file" size="sm" id="inputAddress" />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Subdelivery Charges</CFormLabel>
 
@@ -1092,14 +1092,14 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Weighment Charges</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Low Tonage Charges</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Low Tonnage Charges</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" />
                     </CCol>
@@ -1110,12 +1110,12 @@ const TSClossure = () => {
                       <CFormInput type="file" size="sm" id="inputAddress" />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Bunk Diesel in Ltr</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Bunk Diesel in Ltr.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Bunk Diesel Amount</CFormLabel>
 
@@ -1125,7 +1125,7 @@ const TSClossure = () => {
                 </CTabPane>
 
                 <CTabPane role="tabpanel" aria-labelledby="Page3-tab" visible={activeKey1 === 4}>
-                  <CRow className="mb-md-3  mt-3">
+                  <CRow className="mb-md-2  mt-3">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Customer Name</CFormLabel>
 
@@ -1147,14 +1147,14 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">HSN Code</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Order Qty</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Order Qty.</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
@@ -1169,9 +1169,9 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Adavance Amt</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Advance Amt</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
@@ -1191,7 +1191,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Loading Point</CFormLabel>
 
@@ -1203,7 +1203,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
                     <CCol xs={12} md={3}>
-                      <CFormLabel htmlFor="inputAddress">Unloaing Point</CFormLabel>
+                      <CFormLabel htmlFor="inputAddress">Unloading Point</CFormLabel>
 
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
@@ -1213,7 +1213,7 @@ const TSClossure = () => {
                       <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
                     </CCol>
                   </CRow>
-                  <CRow className="mb-md-3">
+                  <CRow className="mb-md-2">
                     <CCol xs={12} md={3}>
                       <CFormLabel htmlFor="inputAddress">Delivery Date</CFormLabel>
 
@@ -1236,7 +1236,7 @@ const TSClossure = () => {
                   </CRow>
                   <CRow>
                     <CCol
-                      className="mt-3 offset-md-9 py-2"
+                      className="mt-3 offset-md-9"
                       xs={12}
                       sm={12}
                       md={3}

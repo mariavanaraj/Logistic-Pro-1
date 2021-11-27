@@ -69,13 +69,14 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Vehicle Inspection',
-    to: '/vehicleInspection',
+    to: '/vInspection',
     icon: <CIcon icon={cilAirplay} customClassName="nav-icon" />,
   },
+
   {
     component: CNavItem,
     name: 'Vehicle Maintainence',
-    to: '/vehicleMaintainence',
+    to: '/VMain',
     icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
   },
   {

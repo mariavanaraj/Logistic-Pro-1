@@ -95,7 +95,7 @@ const DocVerifyVendorAvail = () => {
                   <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dMob">Driver Mobile No</CFormLabel>
+                  <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
                   <CFormInput name="dMob" size="sm" id="" value="9135362456" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
@@ -271,22 +271,22 @@ const DocVerifyVendorAvail = () => {
                   xs={12}
                   sm={12}
                   md={3}
-                  style={{ display: 'flex', justifyContent: 'space-between' }}
+                  style={{ display: 'flex', justifyContent: 'flex-end' }}
                 >
                   <CButton
                     size="sm"
                     color="warning"
                     disabled=""
-                    className="text-white"
+                    className="mx-3 px-3 text-white"
                     type="submit"
                   >
                     Accept
                   </CButton>
                   <CButton
                     size="sm"
-                    disabled={enableSubmit}
+                    // disabled={enableSubmit}
                     color="warning"
-                    className="text-white"
+                    className="px-3 text-white"
                     type="submit"
                   >
                     Reject

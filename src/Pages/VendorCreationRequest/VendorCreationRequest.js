@@ -84,13 +84,17 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setAdharVisible(!adharvisible)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
           </CRow>
 
@@ -104,13 +108,18 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+
+              <CButton
                 onClick={() => setBankPassbook(!BankPassbook)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -119,13 +128,17 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setPanCard(!PanCard)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -134,13 +147,17 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setLicence(!PanCard)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -149,13 +166,17 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setRcFront(!RcFront)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
           </CRow>
 
@@ -164,18 +185,22 @@ const VendorCreationRequest = () => {
           <CRow className="mb-md-2">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Rc Copy Back
+                RC Copy Back
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setRcBank(!RcBank)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -184,13 +209,17 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setInsurance(!Insurance)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -199,13 +228,17 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -214,13 +247,17 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setTDSFormFront(!TDSFormFront)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
           </CRow>
 
@@ -234,13 +271,17 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setTDSFormBack(!TDSFormFront)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -529,15 +570,15 @@ const VendorCreationRequest = () => {
             <CCol className="" xs={12} sm={12} md={3}>
               <CButton size="sm" color="primary" className="text-white" type="button">
                 <Link className="text-white" to="/VendorCreationHome">
-                  Pervious
+                  Previous
                 </Link>
               </CButton>
             </CCol>
-            <CCol className="offset-md-6 d-md-flex justify-content-between" xs={12} sm={12} md={3}>
-              <CButton size="sm" color="warning" className="text-white" type="submit">
+            <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>
+              <CButton size="sm" color="warning" className="mx-3 px-3 text-white" type="submit">
                 Submit
               </CButton>
-              <CButton size="sm" color="warning" className="text-white" type="submit">
+              <CButton size="sm" color="warning" className="px-3 text-white" type="submit">
                 Cancel
               </CButton>
             </CCol>

@@ -680,13 +680,13 @@ const TripSheetSettleMentFG = () => {
         >
           <CButton
             size="sm"
-            color="warning"
+            color="primary"
 
             className="mx-3 text-white"
             type="button"
           >
             <Link className="text-white" to="/TripSheetSettleMentHome" >
-            Pervious
+            Previous
             </Link>
           </CButton>
         </CCol>

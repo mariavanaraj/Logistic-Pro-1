@@ -82,13 +82,17 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setAdharVisible(!adharvisible)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
               <CModal visible={adharvisible} onClose={() => setAdharVisible(false)}>
                 <CModalHeader>
                   <CModalTitle>Adhar Card</CModalTitle>
@@ -119,13 +123,17 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setBankPassbook(!BankPassbook)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
               <CModal visible={BankPassbook} onClose={() => setBankPassbook(false)}>
                 <CModalHeader>
                   <CModalTitle>Bank Passbook</CModalTitle>
@@ -151,13 +159,17 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setPanCard(!PanCard)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
               <CModal visible={PanCard} onClose={() => setPanCard(false)}>
                 <CModalHeader>
                   <CModalTitle>Pan Card</CModalTitle>
@@ -183,13 +195,18 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+
+              <CButton
                 onClick={() => setLicence(!PanCard)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
               <CModal visible={Licence} onClose={() => setLicence(false)}>
                 <CModalHeader>
                   <CModalTitle>Pan Card</CModalTitle>
@@ -215,13 +232,18 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setRcFront(!RcFront)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+
               <CModal visible={RcFront} onClose={() => setRcFront(false)}>
                 <CModalHeader>
                   <CModalTitle>Pan Card</CModalTitle>
@@ -247,21 +269,26 @@ const VendorCreationApproval = () => {
           <CRow className="mb-md-2">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Rc Copy Back
+                RC Copy Back
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setRcBank(!RcBank)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+
               <CModal visible={RcBank} onClose={() => setRcBank(false)}>
                 <CModalHeader>
-                  <CModalTitle>Rc Copy Back</CModalTitle>
+                  <CModalTitle>RC Copy Back</CModalTitle>
                 </CModalHeader>
                 <CModalBody>
                   <CCardImage
@@ -284,13 +311,18 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setInsurance(!Insurance)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+
               <CModal visible={Insurance} onClose={() => setInsurance(false)}>
                 <CModalHeader>
                   <CModalTitle>Insurance</CModalTitle>
@@ -316,13 +348,18 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              
+              <CButton
                 onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
               <CModal visible={TransporterShedSheet} onClose={() => setTransporterShedSheet(false)}>
                 <CModalHeader>
                   <CModalTitle>Transporter Shed Sheet</CModalTitle>
@@ -348,13 +385,18 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
+              <CButton
                 onClick={() => setTDSFormFront(!TDSFormFront)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+
               <CModal visible={TDSFormFront} onClose={() => setTDSFormFront(false)}>
                 <CModalHeader>
                   <CModalTitle>TDS Declaration Fomr</CModalTitle>
@@ -385,13 +427,18 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput
-                onClick={() => setTDSFormBack(!TDSFormFront)}
+              <CButton
+                onClick={() =>setTDSFormBack(!TDSFormFront)}
+                className="w-100"
+                color="info"
                 size="sm"
                 id="inputAddress"
-                value="view"
-                readOnly
-              />
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+              
               <CModal visible={TDSFormBack} onClose={() => setTDSFormBack(false)}>
                 <CModalHeader>
                   <CModalTitle>TDS Declaration Form Back</CModalTitle>
@@ -641,15 +688,15 @@ const VendorCreationApproval = () => {
             <CCol className="" xs={12} sm={12} md={3}>
               <CButton size="sm" color="primary" className="text-white" type="button">
                 <Link className="text-white" to="/VendorCreationApprovalHome">
-                  Pervious
+                  Previous
                 </Link>
               </CButton>
             </CCol>
-            <CCol className="offset-md-6 d-md-flex justify-content-between" xs={12} sm={12} md={3}>
-              <CButton size="sm" color="warning" className="text-white" type="submit">
+            <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>
+              <CButton size="sm" color="warning" className="mx-3 px-3 text-white" type="submit">
                 Approve
               </CButton>
-              <CButton size="sm" color="warning" className="text-white" type="submit">
+              <CButton size="sm" color="warning" className="px-3 text-white" type="submit">
                 Reject
               </CButton>
             </CCol>

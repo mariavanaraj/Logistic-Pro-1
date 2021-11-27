@@ -32,20 +32,128 @@ const ParkingYardGate = () => {
     vehicleType: '',
     OdometerKm: '',
     odometerPhoto: '',
-
   }
 
-  const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur,onClick } = useForm(
-    login,
-    validate,
-    formValues
-  )
+  const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur, onClick } =
+    useForm(login, validate, formValues)
 
   function login() {
     alert('No Errors CallBack Called')
   }
 
-  // document.title=('Parking Yard Gate-In');
+  const columns = [
+    {
+      name: 'S.No',
+      selector: (row) => row.sno,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'VA No',
+      selector: (row) => row.VA_No,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Tripsheet No',
+      selector: (row) => row.Tripsheet_No,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Vehicle Type',
+      selector: (row) => row.Vehicle_Type,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Vehicle No',
+      selector: (row) => row.Vehicle_No,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Driver Name',
+      selector: (row) => row.Driver_Name,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Waiting At',
+      selector: (row) => row.Waiting_At,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Screen Duration',
+      selector: (row) => row.Screen_Duration,
+      center: true,
+    },
+    {
+      name: ' Overall Duration',
+      selector: (row) => row.Overall_Duration,
+      center: true,
+    },
+    {
+      name: 'Action',
+      selector: (row) => row.Action,
+      center: true,
+    },
+  ]
+
+  const data = [
+    {
+      id: 1,
+      sno: 1,
+      VA_No: 12000,
+      Tripsheet_No: 102556,
+      Vehicle_Type: 'own',
+      Vehicle_No: 'TN45AT8417',
+      Driver_Name: 'Saravana',
+      Waiting_At: <span className="badge rounded-pill bg-info">DI Creation</span>,
+      Screen_Duration: '0 Hrs 07 Mins',
+      Overall_Duration: '0 Hrs 55 Mins',
+      Action: (
+        <CButton className="badge text-white" color="warning">
+          Vehicle Insp
+        </CButton>
+      ),
+    },
+    {
+      id: 2,
+      sno: 2,
+      VA_No: 12070,
+      Tripsheet_No: 102501,
+      Vehicle_Type: 'contract',
+      Vehicle_No: 'TN54AT8417',
+      Driver_Name: 'David',
+      Waiting_At: <span className="badge rounded-pill bg-info">Waiting</span>,
+      Screen_Duration: '0 Hrs 07 Mins',
+      Overall_Duration: '0 Hrs 55 Mins',
+      Action: (
+        <CButton className="badge text-white" color="warning">
+          Gate In
+        </CButton>
+      ),
+    },
+    {
+      id: 3,
+      sno: 3,
+      VA_No: 12018,
+      Tripsheet_No: 102501,
+      Vehicle_Type: 'Hire',
+      Vehicle_No: 'TN54CT8417',
+      Driver_Name: 'Alvin',
+      Waiting_At: <span className="badge rounded-pill bg-info">Ts Creation</span>,
+      Screen_Duration: '1 Hrs 07 Mins',
+      Overall_Duration: '2 Hrs 55 Mins',
+      Action: (
+        <CButton className="badge text-white" color="warning">
+          Gate Out
+        </CButton>
+      ),
+    },
+  ]
 
   return (
     <>
@@ -69,14 +177,20 @@ const ParkingYardGate = () => {
                       onChange={onClick}
                       aria-label="Small select example"
                     >
-                      <option value="ownContract">Own or Contract</option>
+                      <option value="own">Own</option>
+                      <option value="contract">Contract</option>
                       <option value="hire">Hire</option>
                     </CFormSelect>
                   </CCol>
 
                   <CCol md={3}>
-                    <CFormLabel htmlFor="vNum">Vehicle No*</CFormLabel>
-                    <CFormSelect size="sm" name="vNum" className="" aria-label="Small select example">
+                    <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
+                    <CFormSelect
+                      size="sm"
+                      name="vNum"
+                      className=""
+                      aria-label="Small select example"
+                    >
                       <option hidden>Select Vehicle No</option>
 
                       <option value="1">TN45AT8614</option>
@@ -88,13 +202,18 @@ const ParkingYardGate = () => {
                   </CCol>
 
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="vCap">Vehicle Capacity*</CFormLabel>
+                    <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
 
                     <CFormInput name="vCap" size="sm" id="inputAddress" value="" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
-                    <CFormSelect name="dName" size="sm" className="" aria-label="Small select example">
+                    <CFormSelect
+                      name="dName"
+                      size="sm"
+                      className=""
+                      aria-label="Small select example"
+                    >
                       <option hidden>Select Driver</option>
 
                       <option value="1">Mari Muthu</option>
@@ -108,7 +227,7 @@ const ParkingYardGate = () => {
 
                 <CRow>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="dMob">Driver Mobile No*</CFormLabel>
+                    <CFormLabel htmlFor="dMob">Driver Contact Number*</CFormLabel>
                     <CFormInput name="dMob" size="sm" id="inputAddress" value="" readOnly />
                   </CCol>
 
@@ -127,7 +246,7 @@ const ParkingYardGate = () => {
                       className={`${errors.OdometerKm && 'is-invalid'}`}
                       size="sm"
                       id="inputAddress"
-                      placeholder="Km on Odometer"
+                      placeholder=""
                     />
                   </CCol>
 
@@ -157,29 +276,29 @@ const ParkingYardGate = () => {
                     style={{ display: 'flex', justifyContent: 'space-between' }}
                   ></CCol>
                 </CRow>
-                
+
                 <CRow className="mb-mt-2">
                   <CCol
-                    className="offset-md-9 py-2"
+                    className="offset-md-9 text-right"
                     xs={12}
                     sm={12}
                     md={3}
-                    style={{ display: 'flex', justifyContent: 'space-between' }}
+                    style={{ display: 'flex', justifyContent: 'flex-end' }}
                   >
                     <CButton
                       size="sm"
                       color="warning"
-                      disabled={enableSubmit}
-                      className="mx-3 text-white"
+                      // disabled={enableSubmit}
+                      className="mx-1 text-white"
                       type="submit"
                     >
                       Wait OutSide
                     </CButton>
                     <CButton
                       size="sm"
-                      disabled={enableSubmit}
+                      // disabled={enableSubmit}
                       color="warning"
-                      className="mx-3 text-white"
+                      className="mx-1 text-white"
                       type="submit"
                     >
                       Gate In
@@ -192,7 +311,7 @@ const ParkingYardGate = () => {
         </CCard>
         <CCard className="mt-4">
           <CContainer className="mt-2">
-            <CustomTable />
+            <CustomTable columns={columns} data={data} />
           </CContainer>
         </CCard>
       </CContainer>

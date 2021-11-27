@@ -22,11 +22,11 @@ const TripSheetCreationFG = () => {
   }
   return (
     <CCard>
-    <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-      <CRow>
+    <CForm className="row m-2 p-1" onSubmit={handleSubmit}>
+      <CRow className="mb-md-2">
         <CCol xs={12} md={3}>
           <CFormLabel htmlFor="inputAddress">
-            Vechile Type
+            Vehicle Type
             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
           </CFormLabel>
           <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -55,7 +55,7 @@ const TripSheetCreationFG = () => {
           <CFormInput size="sm" id="inputAddress" value="" readOnly />
         </CCol>
       </CRow>
-      <CRow>
+      <CRow className="mb-md-2">
         <CCol xs={12} md={3}>
           <CFormLabel htmlFor="inputAddress">
           Driver Name
@@ -110,7 +110,7 @@ const TripSheetCreationFG = () => {
             </CModal>
         </CCol>
       </CRow>
-      <CRow>
+      <CRow className="mb-md-2">
         <CCol xs={12} md={3}>
           <CFormLabel htmlFor="inputAddress">
           Gate-In Time
@@ -143,44 +143,43 @@ const TripSheetCreationFG = () => {
           <CFormInput size="sm" id="inputAddress" value="" readOnly />
         </CCol>
       </CRow>
-      <CRow>
+      <CRow className="mb-md-2">
         <CCol xs={12} md={3}>
           <CFormLabel htmlFor="inputAddress">
           Owner Name
 
             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
           </CFormLabel>
-          <CFormInput size="sm" id="inputAddress" type="time" value="" readOnly />
+          <CFormInput size="sm" id="inputAddress" type="text" value="" readOnly />
         </CCol>
         <CCol xs={12} md={3}>
           <CFormLabel htmlFor="inputAddress">
           Owner Cell No
             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
           </CFormLabel>
-          <CFormInput size="sm" id="inputAddress" type="time" value="" readOnly />
+          <CFormInput size="sm" id="inputAddress" type="text" value="" readOnly />
         </CCol>
       </CRow>
-      <CRow>
+      <CRow className="mt-md-3">
       <CCol
-          className="mt-3 py-2"
+          className=""
           xs={12}
           sm={12}
           md={3}
         >
           <CButton
             size="sm"
-            color="warning"
-
-            className="mx-3 text-white"
+            color="primary"
+            className="text-white"
             type="button"
           >
             <Link className="text-white" to="/TripSheetCreationHome" >
-            Pervious
+            Previous
             </Link>
           </CButton>
         </CCol>
         <CCol
-          className="mt-3 offset-md-5  py-2"
+          className="offset-md-5 d-md-flex justify-content-end"
           xs={12}
           sm={12}
           md={4}
@@ -197,7 +196,7 @@ const TripSheetCreationFG = () => {
           <CButton
             size="sm"
             color="warning"
-            className="mx-3 text-white"
+            className="text-white"
             type="submit"
           >
             Cancel

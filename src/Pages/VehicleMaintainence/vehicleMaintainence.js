@@ -65,10 +65,6 @@ const VehicleMaintainence = () => {
                   <CFormSelect
                     size="sm"
                     name="maintenenceType"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    value={values.vehicleType}
                     className=""
                   >
                     <option value="" hidden>
@@ -84,10 +80,6 @@ const VehicleMaintainence = () => {
                   <CFormSelect
                     size="sm"
                     name="maintenenceBy"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    value={values.vehicleType}
                     className=""
                   >
                     <option value="" hidden>
@@ -117,7 +109,7 @@ const VehicleMaintainence = () => {
                   className=""
                   xs={12}
                   sm={12}
-                  md={5}
+                  md={3}
                   style={{ display: 'flex-sm', justifyContent: 'right' }}
                 >
                   <CButton
@@ -127,29 +119,13 @@ const VehicleMaintainence = () => {
                     className="mx-3 text-white"
                     type="button"
                   >
-                    Maintenence
+                    Maintenence Start
                   </CButton>
-                  <Link to="/Gateout">
-                    <CButton
-                      size="sm"
-                      disabled=""
-                      color="warning"
-                      className="mx-3 text-white"
-                      type="button"
-                    >
-                      Gate Out
-                    </CButton>
-                  </Link>
                 </CCol>
               </CRow>
             </CForm>
           </CTabPane>
         </CTabContent>
-      </CCard>
-      <CCard className="mt-4">
-        <CContainer className="mt-2">
-          <CustomTable />
-        </CContainer>
       </CCard>
     </>
   )
