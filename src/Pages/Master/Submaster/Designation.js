@@ -33,7 +33,7 @@ import useForm from 'src/Hooks/useForm.js'
 import validate from 'src/Validations/FormValidation'
 
 
-const Division = () => {
+const Designation = () => {
     const formValues = {
         vehicleType: '',
         OdometerKm: '',
@@ -65,7 +65,7 @@ const Division = () => {
                             <CRow className="mb-md-3">
 
                                 <CCol md={3}>
-                                    <center><CFormLabel htmlFor="vNum">Division*</CFormLabel></center>
+                                    <center><CFormLabel htmlFor="vNum">Designation*</CFormLabel></center>
                                     <CFormInput
                                         name="vNum"
                                         size="sm"
@@ -99,4 +99,4 @@ const Division = () => {
     )
 }
 
-export default Division
+export default Designation

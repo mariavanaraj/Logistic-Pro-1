@@ -173,32 +173,103 @@ const _nav = [
     icon: <CIcon icon={cilTruck} customClassName="nav-icon" />,
     items: [
       {
-        component: CNavItem,
-        name: 'Vehicle Master',
-        to: '/VehicleMaster',
-      },
-      {
-        component: CNavItem,
-        name: 'Driver Master',
-        to: '/DriverMaster',
+        component: CNavGroup,
+        name: 'Main Master',
+        to: '/Master',
+        icon: <CIcon icon={cilBell} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Vehicle Master',
+            to: '/VehicleMaster',
+          },
+          {
+            component: CNavItem,
+            name: 'Driver Master',
+            to: '/DriverMaster',
 
-      },
-      {
-        component: CNavItem,
-        name: 'Shed Master',
-        to: '/ShedMaster',
+          },
+          {
+            component: CNavItem,
+            name: 'Shed Master',
+            to: '/ShedMaster',
 
-      },
-      {
-        component: CNavItem,
-        name: 'Diesel Vendor Master',
-        to: '/DieselVendorMaster',
+          },
+          {
+            component: CNavItem,
+            name: 'Diesel Vendor Master',
+            to: '/DieselVendorMaster',
 
+          },
+          {
+            component: CNavItem,
+            name: 'User Login Register',
+            to: '/UserLoginMaster',
+          },
+        ]
       },
       {
-        component: CNavItem,
-        name: 'User Login Register',
-        to: '/UserLoginMaster',
+        component: CNavGroup,
+        name: 'Sub Master',
+        to: '/Master',
+        icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+        items: [
+          {
+            component: CNavItem,
+            name: 'Division',
+            to: '/Division',
+          },
+          {
+            component: CNavItem,
+            name: 'Department',
+            to: '/Department',
+          },
+          {
+            component: CNavItem,
+            name: 'Designation',
+            to: '/Designation',
+          },
+          {
+            component: CNavItem,
+            name: 'Vehicle Capacity',
+            to: '/VehicleCapacity',
+          },
+          {
+            component: CNavItem,
+            name: 'Rejection Reason',
+            to: '/RejectReason',
+          },
+          {
+            component: CNavItem,
+            name: 'Material Description',
+            to: '/MaterialDescription',
+          },
+          {
+            component: CNavItem,
+            name: 'UOM',
+            to: '/UOM',
+          },
+          {
+            component: CNavItem,
+            name: 'Defect Type',
+            to: '/DefectType',
+          },
+          {
+            component: CNavItem,
+            name: 'Other Charges',
+            to: '/OtherCharges',
+          },
+          {
+            component: CNavItem,
+            name: 'Previous Load Details',
+            to: '/PreviousLoadDetails',
+          },
+          {
+            component: CNavItem,
+            name: 'Status',
+            to: '/Status',
+          },
+        ]
       },
     ]
   },
