@@ -133,7 +133,6 @@ const VehicleInspection = () => {
                   <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
                   <CFormInput name="dMob" size="sm" id="" value="9443194657" readOnly />
                 </CCol>
-
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dMob">Odometer KM</CFormLabel>
                   <CFormInput name="dMob" size="sm" id="" value="189736" readOnly />

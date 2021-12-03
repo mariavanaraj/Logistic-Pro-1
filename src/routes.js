@@ -34,8 +34,11 @@ import VendorCreationHome from './Pages/VendorCreationRequest/VendorCreationHome
 import VendorCreationRequest from './Pages/VendorCreationRequest/VendorCreationRequest'
 import TSClossure from './Pages/TripsheetClossure/TSClossure'
 import TSClossureSto from './Pages/TripsheetClossure/TSClossureSto'
-
-
+import VehicleMaster from './Pages/Master/VehicleMaster'
+import DriverMaster from './Pages/Master/DriverMaster'
+import ShedMaster from './Pages/Master/ShedMaster'
+import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
+import UserLoginMaster from './Pages/UserLoginMaster/UserLoginMaster'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
@@ -172,6 +175,11 @@ const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/TSClossure', exact: true, name: 'Test', component: TSClossure },
   { path: '/TSClossure-sto', exact: true, name: 'Test', component: TSClossureSto },
+  { path: '/VehicleMaster', exact: true, name: 'VehicleMaster', component: VehicleMaster },
+  { path: '/DriverMaster', exact: true, name: 'DriverMaster', component: DriverMaster },
+  { path: '/ShedMaster', exact: true, name: 'ShedMaster', component: ShedMaster },
+  { path: '/DieselVendorMaster', exact: true, name: 'DieselVendorMaster', component: DieselVendorMaster },
+  { path: '/UserLoginMaster', exact: true, name: 'UserLoginMaster', component: UserLoginMaster },
 ]
 
 export default routes

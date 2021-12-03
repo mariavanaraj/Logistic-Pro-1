@@ -439,7 +439,6 @@ const VendorCreationApproval = () => {
                   <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                 </span>
               </CButton>
-
               <CModal visible={TDSFormBack} onClose={() => setTDSFormBack(false)}>
                 <CModalHeader>
                   <CModalTitle>TDS Declaration Form Back</CModalTitle>

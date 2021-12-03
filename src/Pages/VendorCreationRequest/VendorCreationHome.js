@@ -71,6 +71,7 @@ const VendorCreationHome = () => {
       Vehicle_Type: 'own',
       Vehicle_No: 'TN45AT8417',
       Driver_Name: 'Saravana',
+      Driver_Number: '986578465',
       Waiting_At: <span className="badge rounded-pill bg-info">DI Creation</span>,
       Screen_Duration: '0 Hrs 07 Mins',
       Overall_Duration: '0 Hrs 55 Mins',

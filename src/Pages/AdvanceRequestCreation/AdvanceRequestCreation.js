@@ -185,6 +185,34 @@ const ParkingYardGate = () => {
                     placeholder=""
                   />
                 </CCol>
+              
+              {/* <p className="text-danger">For Hire Vehicle - changed by scenario</p> */}
+              <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
+
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly/>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
+
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly/>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Current Outstanding</CFormLabel>
+
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly/>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Total Freight Amount</CFormLabel>
+
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly/>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">80% Advance Amount</CFormLabel>
+
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly/>
+                </CCol>
+
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>

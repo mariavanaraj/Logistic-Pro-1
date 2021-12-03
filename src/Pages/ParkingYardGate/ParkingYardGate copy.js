@@ -29,7 +29,11 @@ import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
   const formValues = {
     vehicleType: '',
+<<<<<<< HEAD
     OdometerKm: '',
+=======
+    OdometerKm: ''
+>>>>>>> 4ac940b3f7502e2189c12be2caef901dbbbf73b0
   }
 
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
@@ -159,7 +163,11 @@ const ParkingYardGate = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
+<<<<<<< HEAD
             <CForm className="container p-3" onSubmit={handleSubmit}>
+=======
+            <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
+>>>>>>> 4ac940b3f7502e2189c12be2caef901dbbbf73b0
               <CRow>
                 <CCol md={3}>
                   <CFormLabel htmlFor="vehicleType">
@@ -252,7 +260,16 @@ const ParkingYardGate = () => {
                       <span className="help text-danger">{errors.odometerPhoto}</span>
                     )}
                   </CFormLabel>
+<<<<<<< HEAD
                   <CFormInput type="file" name="odometerPhoto" size="sm" id="formFileSm" />
+=======
+                  <CFormInput
+                    type="file"
+                    name="odometerPhoto"
+                    size="sm"
+                    id="formFileSm"
+                  />
+>>>>>>> 4ac940b3f7502e2189c12be2caef901dbbbf73b0
                 </CCol>
                 <CCol
                   xs={12}
