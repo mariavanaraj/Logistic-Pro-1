@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
 import { AppContent, AppSidebar, AppFooter, AppHeader } from '../components/index'
-
 import nav from '../_nav'
 
 const DefaultLayout = () => {
-
   return (
     <div>
       <AppSidebar />

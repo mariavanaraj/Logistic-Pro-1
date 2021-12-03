@@ -21,6 +21,7 @@ import {
   CTableRow,
   CTabPane,
   CFormFloating,
+  CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
@@ -56,7 +57,7 @@ const TSClossureSto = () => {
                   active={activeKey === 1}
                   onClick={() => setActiveKey(1)}
                 >
-                  Page1
+                  General Information
                 </CNavLink>
               </CNavItem>
               <CNavItem>
@@ -65,7 +66,7 @@ const TSClossureSto = () => {
                   active={activeKey === 2}
                   onClick={() => setActiveKey(2)}
                 >
-                  Page2
+                  Delivery Information
                 </CNavLink>
               </CNavItem>
             </CNav>
@@ -89,7 +90,7 @@ const TSClossureSto = () => {
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
-                <CCol xs={12} md={3}>
+                {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -98,10 +99,7 @@ const TSClossureSto = () => {
                   <CFormLabel htmlFor="inputAddress">TS Date & Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-              </CRow>
-
-              <CRow className="">
+                </CCol> */}
                 <CCol md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
@@ -129,13 +127,8 @@ const TSClossureSto = () => {
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Opening Odometer Photo</CFormLabel>
-
-                  {/* <CFormInput size="sm" id="inputAddress" value="View" readOnly /> */}
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
@@ -146,6 +139,17 @@ const TSClossureSto = () => {
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                     </span>
                   </CButton>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" readOnly/>
+                </CCol>
+              </CRow>
+
+              <CRow className="">
+              <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet Date & Time</CFormLabel>
+                  <CFormInput type="datetime-local" size="sm" id="inputAddress" readOnly/>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Closing KM*</CFormLabel>
@@ -168,12 +172,12 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Other Charges*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
-                    <option hidden>Select Type</option>
+                    <option hidden>Select...</option>
+                    <option >Select-LP</option>
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Other Charges Amount*</CFormLabel>
-
+                  <CFormLabel htmlFor="inputAddress">Other Charges*</CFormLabel>
                   <CFormInput size="sm" id="inputAddress" />
                 </CCol>
                 <CCol xs={12} md={3}>
@@ -226,6 +230,14 @@ const TSClossureSto = () => {
                   <CFormLabel htmlFor="inputAddress">Total Diesel Consume*</CFormLabel>
 
                   <CFormInput type="text" size="sm" id="inputAddress" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormTextarea
+                    name="remarks"
+                    id="exampleFormControlTextarea1"
+                    rows="1"
+                  ></CFormTextarea>
                 </CCol>
               </CRow>
             </CTabPane>

@@ -27,6 +27,7 @@ import {
   CModalTitle,
   CModalBody,
   CModalFooter,
+  CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
@@ -100,15 +101,32 @@ const VehicleInspection = () => {
 
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
-                  <CFormInput
-                    name="dName"
+                  <CFormLabel htmlFor="inputAddress">
+                    Driver Name*
+                    {errors.vehicleType && (
+                      <span className="help text-danger">{errors.vehicleType}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormSelect
                     size="sm"
-                    id=""
-                    value="TN90AE3902"
-                    placeholder=""
-                    readOnly
-                  />
+                    name="vehicleType"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.vehicleType}
+                    className={`${errors.vehicleType && 'is-invalid'}`}
+                    aria-label="Small select example"
+                  >
+                    <option value="" hidden>
+                      Select...
+                    </option>
+
+                    <option value="1">Mari</option>
+
+                    <option value="2">Selvan</option>
+
+                    <option value="3">Muthu</option>
+                  </CFormSelect>
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -257,7 +275,7 @@ const VehicleInspection = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-3">
+              <CRow>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
                   <CFormSelect
@@ -276,9 +294,13 @@ const VehicleInspection = () => {
                   <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
                   <CFormInput name="vFitLoad" size="sm" id="" value="No" readOnly />
                 </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+                </CCol>
               </CRow>
 
-              <CRow>
+              <CRow className="mt-2">
                 <CCol>
                   <CButton
                     md={9}

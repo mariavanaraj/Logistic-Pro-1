@@ -7,6 +7,7 @@ import {
   CFormLabel,
   CFormSelect,
   CRow,
+  CFormTextarea
 } from '@coreui/react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -156,7 +157,10 @@ const TripSheetCreationSTO = () => {
               size="sm"
               id="formFileSm"
             />
-          </CCol>
+          </CCol><CCol xs={12} md={3}>
+              <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+              <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+            </CCol>
         </CRow>
 
         <CRow className="mt-md-3">

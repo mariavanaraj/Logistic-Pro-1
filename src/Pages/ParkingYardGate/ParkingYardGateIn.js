@@ -23,6 +23,7 @@ import {
   CTabPane,
   CFormFloating,
   CFormCheck,
+  CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
@@ -294,9 +295,13 @@ const ParkingYardGate = () => {
                   <option value="closed">Closed</option>
                 </CFormSelect>
               </CCol>
+              <CCol xs={12} md={3}>
+                <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+              </CCol>
             </CRow>
 
-            <CRow>
+            <CRow className="mt-1">
               <CCol
                 className="d-md-flex justify-content-end"
                 xs={12}
@@ -327,7 +332,7 @@ const ParkingYardGate = () => {
             </CRow>
           </CForm>
         </CCard>
-        <CCard className="mt-4">
+        <CCard className="mt-3">
           <CContainer className="mt-2">
             <CustomTable columns={columns} data={data} />
           </CContainer>

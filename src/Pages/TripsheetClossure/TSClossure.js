@@ -27,6 +27,7 @@ import {
   CFormFloating,
   CNavbar,
   CTableRow,
+  CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
 // import CModal from '@coreui/react/src/components/modal/CModal'
@@ -174,7 +175,7 @@ const TSClossure = () => {
                 </CModal>
                 <CRow className="">
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Odometer Opening KM</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Odometer Opening Photo</CFormLabel>
                     <div className="d-grid gap-2">
                       <CButton
                         className="text-justify"
@@ -189,7 +190,7 @@ const TSClossure = () => {
                     </div>
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Gate-In Date & Time</CFormLabel>
 
                     <CFormInput
                       size="sm"
@@ -199,7 +200,7 @@ const TSClossure = () => {
                     />
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Vehicle Inspection Date & Time</CFormLabel>
 
                     <CFormInput
                       size="sm"
@@ -209,7 +210,7 @@ const TSClossure = () => {
                     />
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Doc. Verify Time</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Doc. Verification Date & Time</CFormLabel>
 
                     <CFormInput
                       size="sm"
@@ -250,7 +251,7 @@ const TSClossure = () => {
 
                 <CRow className="">
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Gate-In Date & Time</CFormLabel>
 
                     <CFormInput
                       size="sm"
@@ -515,6 +516,14 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="inputAddress">Halt Days*</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" />
+                  </CCol>
+                  <CCol xs={12} md={3}>
+                    <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                    <CFormTextarea
+                      name="remarks"
+                      id="exampleFormControlTextarea1"
+                      rows="1"
+                    ></CFormTextarea>
                   </CCol>
                 </CRow>
                 <CRow>
@@ -1215,6 +1224,14 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="inputAddress">RJ KM</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                  </CCol>
+                  <CCol xs={12} md={3}>
+                    <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                    <CFormTextarea
+                      name="remarks"
+                      id="exampleFormControlTextarea1"
+                      rows="1"
+                    ></CFormTextarea>
                   </CCol>
                 </CRow>
                 <CRow>

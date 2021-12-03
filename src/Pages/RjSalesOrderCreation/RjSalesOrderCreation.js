@@ -21,6 +21,7 @@ import {
   CTableRow,
   CTabPane,
   CFormFloating,
+  CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
@@ -184,8 +185,8 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Advance Amount*</CFormLabel>
-
+                  {/* <CFormLabel htmlFor="inputAddress">Advance Amount*</CFormLabel> */}
+                  <CFormLabel htmlFor="inputAddress">Income Amount*</CFormLabel> {/* Changed */}
                   <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
@@ -276,6 +277,14 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="inputAddress">Empty Km After Unload*</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormTextarea
+                    name="remarks"
+                    id="exampleFormControlTextarea1"
+                    rows="1"
+                  ></CFormTextarea>
                 </CCol>
               </CRow>
 

@@ -21,6 +21,7 @@ import {
   CTableRow,
   CTabPane,
   CFormFloating,
+  CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
@@ -108,19 +109,19 @@ const ParkingYardGate = () => {
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Gate-In Date & Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Inspection Date & Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Doc. Verify Time</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Doc. Verification Date & Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -149,6 +150,11 @@ const ParkingYardGate = () => {
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol> */}
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Driver Outstanding</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
@@ -156,9 +162,9 @@ const ParkingYardGate = () => {
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Outstanding</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Advance Request Form</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput type="file" size="sm" id="inputAddress" value="" />
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -178,6 +184,10 @@ const ParkingYardGate = () => {
                     id="inputAddress"
                     placeholder=""
                   />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
                 </CCol>
               </CRow>
 

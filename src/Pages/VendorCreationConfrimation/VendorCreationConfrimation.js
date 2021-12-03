@@ -14,6 +14,7 @@ import {
   CModalHeader,
   CModalTitle,
   CRow,
+  CFormTextarea
 } from '@coreui/react'
 import { useState } from 'react'
 import useForm from 'src/Hooks/useForm'
@@ -619,6 +620,10 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
+          <CCol xs={12} md={3}>
+              <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+              <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+            </CCol>
         </CRow>
         <CRow className="">
           <CCol className="" xs={12} sm={12} md={3}>

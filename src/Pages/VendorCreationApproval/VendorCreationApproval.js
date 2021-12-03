@@ -13,6 +13,7 @@ import {
   CModalHeader,
   CModalTitle,
   CRow,
+  CFormTextarea
 } from '@coreui/react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -679,6 +680,10 @@ const VendorCreationApproval = () => {
                 )}
               </CFormLabel>
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
+            </CCol>
+            <CCol xs={12} md={3}>
+              <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+              <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
             </CCol>
           </CRow>
 

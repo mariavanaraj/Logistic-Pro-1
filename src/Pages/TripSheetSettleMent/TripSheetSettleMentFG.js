@@ -25,6 +25,7 @@ import {
   CTableHeaderCell,
   CTableRow,
   CTabPane,
+  CFormTextarea,
 } from '@coreui/react'
 import { useState } from 'react'
 import useForm from 'src/Hooks/useForm'
@@ -378,12 +379,20 @@ const TripSheetSettleMentFG = () => {
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
-                  Diff Mileage
+                  Diff. Mileage
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              </CCol>
+              <CCol xs={12} md={3}>
+                <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                <CFormTextarea
+                  name="remarks"
+                  id="exampleFormControlTextarea1"
+                  rows="1"
+                ></CFormTextarea>
               </CCol>
             </CRow>
           </CForm>

@@ -21,7 +21,6 @@ html,
 body {
   font-family: 'Zen Maru Gothic', sans-serif;
   scrollbar-width: none;
- 
 }
 
 .btn,
@@ -44,11 +43,16 @@ body {
 // .sidebar-nav{
 //   left : 10px;
 // }
-.simplebar-content{
+.simplebar-content {
   margin-left: 5px;
 }
 
-.sidebar-nav .nav-link.active{
+.sidebar-nav .nav-link.active {
   box-shadow: 0px 3px 15px 10px #ebc999;
   scrollbar-width: thin;
+}
+
+textarea.form-control {
+  height: calc((29px / 1rem) * 1rem) !important;
+  min-height: 0 !important;
 }

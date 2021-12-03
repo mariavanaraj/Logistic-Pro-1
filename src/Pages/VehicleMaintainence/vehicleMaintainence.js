@@ -21,7 +21,9 @@ import {
   CTableRow,
   CTabPane,
   CFormFloating,
+  CFormTextarea,
 } from '@coreui/react'
+
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
@@ -29,7 +31,7 @@ import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const VehicleMaintainence = () => {
-  const [outSide,setoutSide] = useState(false);
+  const [outSide, setoutSide] = useState(false)
   const formValues = {
     vehicleType: '',
     OdometerKm: '',
@@ -78,9 +80,40 @@ const VehicleMaintainence = () => {
                     <option value="" hidden>
                       Select Maintenance By
                     </option>
-                    <option value="inHouse" onClick={()=>setoutSide(false)}>Inhouse</option>
-                    <option value="outSide" onClick={()=>setoutSide(true)}>Outside</option>
+                    <option value="inHouse" onClick={() => setoutSide(false)}>
+                      Inhouse
+                    </option>
+                    <option value="outSide" onClick={() => setoutSide(true)}>
+                      Outside
+                    </option>
                   </CFormSelect>
+                </CCol>
+                <CCol className="mb-3" md={3}>
+                  <CFormLabel htmlFor="workOrder">Work Order *</CFormLabel>
+                  <CFormSelect size="sm" name="workOrder" className="">
+                    <option value="" hidden>
+                      Select...
+                    </option>
+                    <option value="inHouse" onClick={() => setoutSide(false)}>
+                      Select-LP
+                    </option>
+                  </CFormSelect>
+                </CCol>
+                <CCol className="mb-3" md={3}>
+                  <CFormLabel htmlFor="vendorName">Vendor Name *</CFormLabel>
+                  <CFormSelect size="sm" name="vendorName" className="">
+                   
+                    <option value="" hidden>
+                      Select...
+                    </option>
+                    <option value="" onClick={() => setoutSide(false)}>
+                      Select-LP
+                    </option>
+                  </CFormSelect>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
                 </CCol>
               </CRow>
 

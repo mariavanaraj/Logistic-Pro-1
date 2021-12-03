@@ -28,6 +28,7 @@ import {
   CModalTitle,
   CModalBody,
   CModalFooter,
+  CFormTextarea
 } from '@coreui/react'
 import { cilInput, cilDescription, cilCheckCircle, cilCog } from '@coreui/icons'
 
@@ -263,6 +264,10 @@ const DocVerifyVendorNotAvail = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="freigthRate">Freight Rate Per Ton*</CFormLabel>
                   <CFormInput type="text" name="freigthRate" size="sm" id="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
                 </CCol>
               </CRow>
 

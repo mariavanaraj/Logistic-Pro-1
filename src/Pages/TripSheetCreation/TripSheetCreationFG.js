@@ -13,6 +13,8 @@ import {
   CModalHeader,
   CModalTitle,
   CRow,
+  CFormTextarea,
+  CFormSelect,
 } from '@coreui/react'
 import useForm from 'src/Hooks/useForm'
 import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
@@ -70,10 +72,29 @@ const TripSheetCreationFG = () => {
         <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Driver Name
+              Driver Name*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
+            <CFormSelect
+              size="sm"
+              name="vehicleType"
+              onFocus={onFocus}
+              onBlur={onBlur}
+              onChange={handleChange}
+              value={values.vehicleType}
+              className={`${errors.vehicleType && 'is-invalid'}`}
+              aria-label="Small select example"
+            >
+              <option value="" hidden>
+                Select...
+              </option>
+
+              <option value="1">Mari</option>
+
+              <option value="2">Selvan</option>
+
+              <option value="3">Muthu</option>
+            </CFormSelect>
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -169,6 +190,39 @@ const TripSheetCreationFG = () => {
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" type="text" value="" readOnly />
+          </CCol>
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Trip Advance Eligibility
+              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+            </CFormLabel>
+            <CFormSelect
+              size="sm"
+              name=""
+              onFocus={onFocus}
+              onBlur={onBlur}
+              onChange={handleChange}
+              value={values.vehicleType}
+              className={`${errors.vehicleType && 'is-invalid'}`}
+              aria-label="Small select example"
+            >
+              <option value="" hidden>
+                Select...
+              </option>
+              <option value="1">Select-LP</option>
+            </CFormSelect>
+          </CCol>
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Trip Advance Amount
+              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+            </CFormLabel>
+            <CFormInput size="sm" id="inputAddress" type="text" value="" />
+          </CCol>
+
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+            <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
           </CCol>
         </CRow>
         <CRow className="mt-md-3">
