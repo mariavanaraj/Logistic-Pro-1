@@ -47,54 +47,53 @@ const ParkingYardGate = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-            <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-              <CRow>
+            <CForm className="container p-3" onSubmit={handleSubmit}>
+              <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Type*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">VA Number*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+              </CRow>
+              <CRow className="">
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Driver Cell No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Cell No.*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Odometer KM</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer Km*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer Photo*</CFormLabel>
-
-                  {/* <CFormInput size="sm" id="inputAddress" value="" readOnly /> */}
+                  <CFormLabel htmlFor="inputAddress">Odometer Photo</CFormLabel>
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
@@ -106,64 +105,65 @@ const ParkingYardGate = () => {
                     </span>
                   </CButton>
                 </CCol>
-
+              </CRow>
+              <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Gate-In Time*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Inspection Time*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Doc. Verify Time*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Doc. Verify Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet No.*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+              </CRow>
+              <CRow className="">
+                {/* <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Shed Name*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Owner Name</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Name*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Owner Cell No.</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol> */}
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
-
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Cell No.*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vendor Code*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Outstanding*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Driver Outstanding</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">
-                    Advance Amount*{' '}
+                    Advance Amount*
                     {errors.OdometerKm && (
                       <span className="help text-danger">{errors.OdometerKm}</span>
                     )}

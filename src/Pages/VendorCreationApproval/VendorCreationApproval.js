@@ -46,11 +46,11 @@ const VendorCreationApproval = () => {
   return (
     <>
       <CCard>
-        <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-          <CRow className="mb-md-2">
+        <CForm className="container p-3" onSubmit={handleSubmit}>
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                PAN Card No*
+                PAN Card No
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -68,7 +68,7 @@ const VendorCreationApproval = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Owner Cell No
+                Owner Cell No.
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -84,7 +84,7 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setAdharVisible(!adharvisible)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -115,7 +115,7 @@ const VendorCreationApproval = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Bank Passbook
@@ -125,7 +125,7 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setBankPassbook(!BankPassbook)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -161,7 +161,7 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setPanCard(!PanCard)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -198,7 +198,7 @@ const VendorCreationApproval = () => {
 
               <CButton
                 onClick={() => setLicence(!PanCard)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -234,7 +234,7 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setRcFront(!RcFront)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -266,7 +266,7 @@ const VendorCreationApproval = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 RC Copy Back
@@ -276,7 +276,7 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setRcBank(!RcBank)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -313,7 +313,7 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setInsurance(!Insurance)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -348,10 +348,10 @@ const VendorCreationApproval = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              
+
               <CButton
                 onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -387,7 +387,7 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setTDSFormFront(!TDSFormFront)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -419,7 +419,7 @@ const VendorCreationApproval = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 TDS Declaration Form-Back
@@ -428,8 +428,8 @@ const VendorCreationApproval = () => {
                 )}
               </CFormLabel>
               <CButton
-                onClick={() =>setTDSFormBack(!TDSFormFront)}
-                className="w-100"
+                onClick={() => setTDSFormBack(!TDSFormFront)}
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -438,7 +438,7 @@ const VendorCreationApproval = () => {
                   <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                 </span>
               </CButton>
-              
+
               <CModal visible={TDSFormBack} onClose={() => setTDSFormBack(false)}>
                 <CModalHeader>
                   <CModalTitle>TDS Declaration Form Back</CModalTitle>
@@ -477,7 +477,7 @@ const VendorCreationApproval = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Freight Rate
+                Freight Rate Per Ton
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -488,7 +488,7 @@ const VendorCreationApproval = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Aadhar No
@@ -529,7 +529,7 @@ const VendorCreationApproval = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Vendor Address
@@ -570,7 +570,7 @@ const VendorCreationApproval = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 GST Registeration No
@@ -611,7 +611,7 @@ const VendorCreationApproval = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Bank Name
@@ -652,7 +652,7 @@ const VendorCreationApproval = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 TDS%

@@ -2,6 +2,7 @@
 import {
   CButton,
   CCard,
+  CCardBody,
   CCol,
   CContainer,
   CForm,
@@ -28,6 +29,8 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
+  const [hire, setHire] = useState(false)
+
   const formValues = {
     vehicleType: '',
     OdometerKm: '',
@@ -159,155 +162,170 @@ const ParkingYardGate = () => {
     <>
       <CContainer>
         <CCard>
-          <CTabContent>
-            <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-              <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-                <CRow className="mb-md-2">
-                  <CCol md={3}>
-                    <CFormLabel htmlFor="vType">
-                      Vehicle Type*{' '}
-                      {errors.vehicleType && (
-                        <span className="help text-danger">{errors.vehicleType}</span>
-                      )}
-                    </CFormLabel>
+          <CForm className="container p-3" onSubmit={handleSubmit}>
+            <CRow className="">
+              <CCol md={3}>
+                <CFormLabel htmlFor="vType">
+                  Vehicle Type*{' '}
+                  {errors.vehicleType && (
+                    <span className="help text-danger">{errors.vehicleType}</span>
+                  )}
+                </CFormLabel>
 
-                    <CFormSelect
-                      size="sm"
-                      name="vType"
-                      onChange={onClick}
-                      aria-label="Small select example"
-                    >
-                      <option value="own">Own</option>
-                      <option value="contract">Contract</option>
-                      <option value="hire">Hire</option>
-                    </CFormSelect>
-                  </CCol>
+                <CFormSelect size="sm" name="vType" aria-label="Small select example">
+                  <option value="" hidden selected>
+                    Select...
+                  </option>
+                  <option value="own" onClick={() => setHire(false)}>
+                    Own
+                  </option>
+                  <option value="contract" onClick={() => setHire(false)}>
+                    Contract
+                  </option>
+                  <option value="hire" onClick={() => setHire(true)}>
+                    Hire
+                  </option>
+                </CFormSelect>
+              </CCol>
 
-                  <CCol md={3}>
-                    <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
-                    <CFormSelect
-                      size="sm"
-                      name="vNum"
-                      className=""
-                      aria-label="Small select example"
-                    >
-                      <option hidden>Select Vehicle No</option>
+              <CCol md={3}>
+                <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
+                {hire ? (
+                  <CFormInput name="vNum" size="sm" id="inputAddress" value="" />
+                ) : (
+                  <CFormSelect size="sm" name="vNum" className="" aria-label="Small select example">
+                    <option hidden>Select...</option>
 
-                      <option value="1">TN45AT8614</option>
+                    <option value="1">TN45AT8614</option>
 
-                      <option value="2">TN45AT8612</option>
+                    <option value="2">TN45AT8612</option>
 
-                      <option value="3">TN45AT9687</option>
-                    </CFormSelect>
-                  </CCol>
+                    <option value="3">TN45AT9687</option>
+                  </CFormSelect>
+                )}
+              </CCol>
 
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
+              <CCol xs={12} md={3}>
+                <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
+                {hire ? (
+                  <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
+                    <option hidden>Select...</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="19">19</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                  </CFormSelect>
+                ) : (
+                  <CFormInput name="vCap" size="sm" id="inputAddress" value="" readOnly />
+                )}
+              </CCol>
 
-                    <CFormInput name="vCap" size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
-                    <CFormSelect
-                      name="dName"
-                      size="sm"
-                      className=""
-                      aria-label="Small select example"
-                    >
-                      <option hidden>Select Driver</option>
-
-                      <option value="1">Mari Muthu</option>
-
-                      <option value="2">Mani Kandan</option>
-
-                      <option value="3">Velu Chamy</option>
-                    </CFormSelect>
-                  </CCol>
-                </CRow>
-
-                <CRow>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="dMob">Driver Contact Number*</CFormLabel>
-                    <CFormInput name="dMob" size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="odoMeter">
-                      Odometer Km*{' '}
-                      {errors.OdometerKm && (
-                        <span className="help text-danger">{errors.OdometerKm}</span>
-                      )}
-                    </CFormLabel>
-                    <CFormInput
-                      name="odoMeter"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      className={`${errors.OdometerKm && 'is-invalid'}`}
-                      size="sm"
-                      id="inputAddress"
-                      placeholder=""
-                    />
-                  </CCol>
-
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="odoImg">
-                      Odometer Photo*{' '}
-                      {errors.odometerPhoto && (
-                        <span className="help text-danger">{errors.odometerPhoto}</span>
-                      )}
-                    </CFormLabel>
-                    <CFormInput
-                      type="file"
-                      name="odoImg"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.odometerPhoto}
-                      className={`${errors.odometerPhoto && 'is-invalid'}`}
-                      size="sm"
-                      id="formFileSm"
-                    />
-                  </CCol>
-                  <CCol
-                    xs={12}
-                    md={3}
-                    className="mt-3 pt-1"
-                    style={{ display: 'flex', justifyContent: 'space-between' }}
-                  ></CCol>
-                </CRow>
-
-                <CRow className="mb-mt-2">
-                  <CCol
-                    className="offset-md-9 text-right"
-                    xs={12}
-                    sm={12}
-                    md={3}
-                    style={{ display: 'flex', justifyContent: 'flex-end' }}
+              <CCol xs={12} md={3}>
+                <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
+                {hire ? (
+                  <CFormInput name="dName" size="sm" id="inputAddress" value="" />
+                ) : (
+                  <CFormSelect
+                    name="dName"
+                    size="sm"
+                    className=""
+                    aria-label="Small select example"
                   >
-                    <CButton
-                      size="sm"
-                      color="warning"
-                      // disabled={enableSubmit}
-                      className="mx-1 text-white"
-                      type="submit"
-                    >
-                      Wait OutSide
-                    </CButton>
-                    <CButton
-                      size="sm"
-                      // disabled={enableSubmit}
-                      color="warning"
-                      className="mx-1 text-white"
-                      type="submit"
-                    >
-                      Gate In
-                    </CButton>
-                  </CCol>
-                </CRow>
-              </CForm>
-            </CTabPane>
-          </CTabContent>
+                    <option hidden>Select...</option>
+                    <option value="1">Mari Muthu</option>
+                    <option value="2">Mani Kandan</option>
+                    <option value="3">Velu Chamy</option>
+                  </CFormSelect>
+                )}
+              </CCol>
+            </CRow>
+
+            <CRow>
+              <CCol xs={12} md={3}>
+                <CFormLabel htmlFor="dMob">Driver Contact Number*</CFormLabel>
+                <CFormInput name="dMob" size="sm" id="inputAddress" value="" readOnly={!hire} />
+              </CCol>
+
+              <CCol xs={12} md={3} hidden={hire}>
+                <CFormLabel htmlFor="odoMeter">
+                  Odometer KM*{' '}
+                  {errors.OdometerKm && (
+                    <span className="help text-danger">{errors.OdometerKm}</span>
+                  )}
+                </CFormLabel>
+                <CFormInput
+                  name="odoMeter"
+                  onFocus={onFocus}
+                  onBlur={onBlur}
+                  onChange={handleChange}
+                  className={`${errors.OdometerKm && 'is-invalid'}`}
+                  size="sm"
+                  id="inputAddress"
+                  placeholder=""
+                />
+              </CCol>
+
+              <CCol xs={12} md={3} hidden={hire}>
+                <CFormLabel htmlFor="odoImg">
+                  Odometer Photo*{' '}
+                  {errors.odometerPhoto && (
+                    <span className="help text-danger">{errors.odometerPhoto}</span>
+                  )}
+                </CFormLabel>
+                <CFormInput
+                  type="file"
+                  name="odoImg"
+                  onFocus={onFocus}
+                  onBlur={onBlur}
+                  onChange={handleChange}
+                  value={values.odometerPhoto}
+                  className={`${errors.odometerPhoto && 'is-invalid'}`}
+                  size="sm"
+                  id="formFileSm"
+                />
+              </CCol>
+
+              <CCol xs={12} md={3} hidden={!hire}>
+                <CFormLabel htmlFor="vBody">Vehicle Body*</CFormLabel>
+                <CFormSelect name="vBody" size="sm" className="" aria-label="Small select example">
+                  <option hidden>Select...</option>
+                  <option value="open">Open</option>
+                  <option value="closed">Closed</option>
+                </CFormSelect>
+              </CCol>
+            </CRow>
+
+            <CRow>
+              <CCol
+                className="d-md-flex justify-content-end"
+                xs={12}
+                sm={12}
+                md={12}
+                // style={{ display: 'flex', justifyContent: 'flex-end' }}
+              >
+                <CButton
+                  size="sm"
+                  color="warning"
+                  // disabled={enableSubmit}
+                  className="mx-1 text-white"
+                  type="submit"
+                >
+                  Wait OutSide
+                </CButton>
+                {hire}
+                <CButton
+                  size="sm"
+                  // disabled={enableSubmit}
+                  color="warning"
+                  className="mx-1 text-white"
+                  type="submit"
+                >
+                  Gate In
+                </CButton>
+              </CCol>
+            </CRow>
+          </CForm>
         </CCard>
         <CCard className="mt-4">
           <CContainer className="mt-2">

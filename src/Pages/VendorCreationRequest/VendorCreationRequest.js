@@ -47,12 +47,12 @@ const VendorCreationRequest = () => {
   return (
     <>
       <CCard>
-        <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
+        <CForm className="container p-3" onSubmit={handleSubmit}>
           {/* ------------------------- */}
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                PAN Card No*
+                PAN Card No
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -86,7 +86,7 @@ const VendorCreationRequest = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setAdharVisible(!adharvisible)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -100,7 +100,7 @@ const VendorCreationRequest = () => {
 
           {/* ------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Bank Passbook
@@ -111,7 +111,7 @@ const VendorCreationRequest = () => {
 
               <CButton
                 onClick={() => setBankPassbook(!BankPassbook)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -130,7 +130,7 @@ const VendorCreationRequest = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setPanCard(!PanCard)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -142,14 +142,14 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Licence Copy
+                License Copy
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
               <CButton
                 onClick={() => setLicence(!PanCard)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -168,7 +168,7 @@ const VendorCreationRequest = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setRcFront(!RcFront)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -182,7 +182,7 @@ const VendorCreationRequest = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 RC Copy Back
@@ -192,7 +192,7 @@ const VendorCreationRequest = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setRcBank(!RcBank)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -211,7 +211,7 @@ const VendorCreationRequest = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setInsurance(!Insurance)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -230,7 +230,7 @@ const VendorCreationRequest = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -249,7 +249,7 @@ const VendorCreationRequest = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setTDSFormFront(!TDSFormFront)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -263,7 +263,7 @@ const VendorCreationRequest = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 TDS Declaration Form-Back
@@ -273,7 +273,7 @@ const VendorCreationRequest = () => {
               </CFormLabel>
               <CButton
                 onClick={() => setTDSFormBack(!TDSFormFront)}
-                className="w-100"
+                className="w-100 m-0"
                 color="info"
                 size="sm"
                 id="inputAddress"
@@ -303,7 +303,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Freight Rate
+                Freight Rate Per Ton
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -314,10 +314,10 @@ const VendorCreationRequest = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Aadhar No
+                Aadhar No.*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -326,7 +326,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Bank A/c No
+                Bank A/C No.*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -335,7 +335,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                IFSC Code No
+                IFSC Code No.*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -344,7 +344,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Vendor pin code
+                Vendor Pin Code*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -355,10 +355,10 @@ const VendorCreationRequest = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Vendor Address
+                Vendor Address*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -385,7 +385,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                GST Registeration
+                GST Registration*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -400,7 +400,9 @@ const VendorCreationRequest = () => {
                 className={`${errors.vehicleType && 'is-invalid'}`}
                 aria-label="Small select example"
               >
-                <option value="">Select Vehicle Types</option>
+                <option value="" hidden>
+                  Select...
+                </option>
 
                 <option value="1">Own</option>
 
@@ -413,10 +415,10 @@ const VendorCreationRequest = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                GST Registeration No
+                GST Registration No.*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -443,7 +445,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Account Holder Name
+                Account Holder Name*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -454,10 +456,10 @@ const VendorCreationRequest = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Bank Name
+                Bank Name*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -484,7 +486,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                GST Tax Code
+                GST Tax Code*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -495,7 +497,9 @@ const VendorCreationRequest = () => {
                 className={`${errors.vehicleType && 'is-invalid'}`}
                 aria-label="Small select example"
               >
-                <option value="">Select Vehicle Types</option>
+                <option value="" hidden>
+                  Select...
+                </option>
 
                 <option value="1">Own</option>
 
@@ -508,10 +512,10 @@ const VendorCreationRequest = () => {
 
           {/* --------------------------------- */}
 
-          <CRow className="mb-md-2">
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                TDS%
+                TDS% *
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -522,7 +526,9 @@ const VendorCreationRequest = () => {
                 className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
                 aria-label="Small select example"
               >
-                <option value="">Select Vehicle Types</option>
+                <option value="" hidden>
+                  Select...
+                </option>
 
                 <option value="1">Own</option>
 
@@ -533,7 +539,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Payment Terms 3 Days
+                Payment Terms 3 Days*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -544,7 +550,9 @@ const VendorCreationRequest = () => {
                 className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
                 aria-label="Small select example"
               >
-                <option value="">Select Vehicle Types</option>
+                <option value="" hidden>
+                  Select...
+                </option>
 
                 <option value="1">Own</option>
 

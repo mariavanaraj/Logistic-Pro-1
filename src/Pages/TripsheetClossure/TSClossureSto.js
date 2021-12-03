@@ -45,12 +45,12 @@ const TSClossureSto = () => {
   const [activeKey, setActiveKey] = useState(1)
   return (
     <>
-      <CForm className="row g-3 m-1 p-1" onSubmit={handleSubmit}>
+      <CForm className="row" onSubmit={handleSubmit}>
         <CCard>
-          <CTabContent className="m-3">
+          <CTabContent className="m-1">
             {/* <CNav component="nav" > */}
-            <CNav variant="pills" role="tablist">
-              <CNavItem className="p-2">
+            <CNav variant="tabs" role="tablist">
+              <CNavItem>
                 <CNavLink
                   href="javascript:void (0);"
                   active={activeKey === 1}
@@ -59,7 +59,7 @@ const TSClossureSto = () => {
                   Page1
                 </CNavLink>
               </CNavItem>
-              <CNavItem className="p-2">
+              <CNavItem>
                 <CNavLink
                   href="javascript:void(0);"
                   active={activeKey === 2}
@@ -71,7 +71,7 @@ const TSClossureSto = () => {
             </CNav>
 
             <CTabPane role="tabpanel" aria-labelledby="Page1-tab" visible={activeKey === 1}>
-              <CRow className="mb-md-2 mt-3">
+              <CRow className="mt-2">
                 <CCol md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle No.*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
@@ -101,7 +101,7 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-2">
+              <CRow className="">
                 <CCol md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
@@ -131,7 +131,7 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-2">
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Opening Odometer Photo</CFormLabel>
 
@@ -148,12 +148,12 @@ const TSClossureSto = () => {
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Closing KM</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Closing KM*</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Closing Odometer Photo</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Closing Odometer Photo*</CFormLabel>
 
                   <CFormInput type="file" size="sm" id="inputAddress" />
                 </CCol>
@@ -164,7 +164,7 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-2">
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Other Charges*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
@@ -172,30 +172,30 @@ const TSClossureSto = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Other Charges Amount</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Other Charges Amount*</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Trip Expense Sheet</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Trip Expense Sheet*</CFormLabel>
 
                   <CFormInput type="file" size="sm" id="inputAddress" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Bata</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Driver Bata*</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" />
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-2">
+              <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Misc Exp.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Misc Exp.*</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Municipal charges</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Municipal charges*</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" />
                 </CCol>
@@ -211,22 +211,61 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-2">
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Amount</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Diesel Invoice</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Diesel Invoice*</CFormLabel>
 
                   <CFormInput type="file" size="sm" id="inputAddress" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Total Diesel Consume*</CFormLabel>
+
+                  <CFormInput type="text" size="sm" id="inputAddress" />
                 </CCol>
               </CRow>
             </CTabPane>
 
             <CTabPane role="tabpanel" aria-labelledby="Page2-tab" visible={activeKey === 2}>
-              <CRow className="mb-md-2 mt-3" hidden>
+              <CRow className="mt-2" hidden>
+                <CCol xs={12} md={2}>
+                  <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
+                </CCol>
+                <CCol xs={12} md={2}>
+                  <CFormLabel htmlFor="inputAddress">Delivery Date*</CFormLabel>
+
+                  <CFormInput size="sm" type="date" id="inputAddress" />
+                </CCol>
+                <CCol xs={12} md={2}>
+                  <CFormLabel htmlFor="inputAddress">Delivery Time*</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" type="time" />
+                </CCol>
+                <CCol xs={12} md={2}>
+                  <CFormLabel htmlFor="inputAddress">Load Charges</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" />
+                </CCol>
+                <CCol xs={12} md={2}>
+                  <CFormLabel htmlFor="inputAddress">Tarpaulin Charges</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" />
+                </CCol>
+                <CCol xs={12} md={2}>
+                  <CFormLabel htmlFor="inputAddress">FJ POD Copy</CFormLabel>
+                  <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
+
+                  {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
+                </CCol>
+              </CRow>
+
+              <CRow className="" hidden>
                 <CCol xs={12} md={2}>
                   <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
@@ -260,7 +299,7 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-2" hidden>
+              <CRow className="" hidden>
                 <CCol xs={12} md={2}>
                   <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
 
@@ -294,67 +333,29 @@ const TSClossureSto = () => {
                 </CCol>
               </CRow>
 
-              <CRow className="mb-md-2" hidden>
-                <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
+              <CRow className="mt-3">
+                <CCol className="" xs={12} sm={12} md={3}>
+                  <CButton size="sm" color="primary" className="text-white" type="submit">
+                    Previous
+                  </CButton>
                 </CCol>
-                <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Delivery Date</CFormLabel>
 
-                  <CFormInput size="sm" type="date" id="inputAddress" />
-                </CCol>
-                <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Delivery Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" type="time" />
-                </CCol>
-                <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Load Charges</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" />
-                </CCol>
-                <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Tarpaulin Charges</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" />
-                </CCol>
-                <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">FJ POD Copy</CFormLabel>
-                  <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
-
-                  {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
-                </CCol>
-              </CRow>
-              <CRow>
                 <CCol
-                  className="mt-3 offset-md-9 py-2"
+                  className="offset-md-6"
                   xs={12}
                   sm={12}
                   md={3}
-                  // style={{ display: 'flex', justifyContent: 'space-between' }}
-                  style={{ display: 'flex', flexDirection: 'row-reverse', cursor: 'pointer' }}
+                  style={{ display: 'flex', justifyContent: 'end' }}
                 >
                   <CButton
                     size="sm"
                     color="warning"
                     disabled={enableSubmit}
-                    className="mx-3 text-white"
-                    // className="align-self-end ml-auto"
+                    className="text-white"
                     type="submit"
                   >
                     Close Tripsheet
                   </CButton>
-                  {/* <CButton
-                                        size="sm"
-                                        disabled={enableSubmit}
-                                        color="warning"
-                                        className="mx-3 text-white"
-                                        type="submit"
-                                    >
-                                        Gate In
-                                    </CButton> */}
                 </CCol>
               </CRow>
             </CTabPane>

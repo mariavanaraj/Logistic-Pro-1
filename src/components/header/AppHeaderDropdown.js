@@ -22,13 +22,13 @@ import {
 } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 
-import avatar8 from './../../assets/images/avatars/8.jpg'
+// import avatar8 from 'https://cdn.icon-icons.com/icons2/2643/PNG/512/male_boy_person_people_avatar_icon_159358.png'
 
 const AppHeaderDropdown = () => {
   return (
     <CDropdown variant="nav-item">
       <CDropdownToggle placement="bottom-end" className="py-0" caret={false}>
-        <CAvatar src={avatar8} size="md" />
+        <CAvatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGq3esvd2vR31jkhoULZUGIoCZcjjMJRIT0G1HpW6AyRjUWqebVB0RLCzGXjrC-CbQ9A4&usqp=CAU" size="md" />
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
         <CDropdownHeader className="bg-light fw-semibold py-2">Account</CDropdownHeader>

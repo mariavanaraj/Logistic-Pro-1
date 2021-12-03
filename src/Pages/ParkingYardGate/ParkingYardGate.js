@@ -47,7 +47,7 @@ const ParkingYardGate = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-            <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
+            <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow>
                 <CCol md={3}>
                   <CFormLabel htmlFor="vehicleType">

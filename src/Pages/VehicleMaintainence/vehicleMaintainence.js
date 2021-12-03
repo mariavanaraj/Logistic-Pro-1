@@ -29,6 +29,7 @@ import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const VehicleMaintainence = () => {
+  const [outSide,setoutSide] = useState(false);
   const formValues = {
     vehicleType: '',
     OdometerKm: '',
@@ -52,7 +53,7 @@ const VehicleMaintainence = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-            <CForm className="row g-3 m-2 p-1" onSubmit={'handleSubmit'}>
+            <CForm className="container p-3" onSubmit={'handleSubmit'}>
               <CRow>
                 <CCol md={3}>
                   <CFormLabel htmlFor="maintenenceType">
@@ -62,11 +63,7 @@ const VehicleMaintainence = () => {
                     )}
                   </CFormLabel>
 
-                  <CFormSelect
-                    size="sm"
-                    name="maintenenceType"
-                    className=""
-                  >
+                  <CFormSelect size="sm" name="maintenenceType" className="">
                     <option value="" hidden>
                       Select Maintenance Type
                     </option>
@@ -77,16 +74,12 @@ const VehicleMaintainence = () => {
 
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="maintenenceBy">Maintenance By *</CFormLabel>
-                  <CFormSelect
-                    size="sm"
-                    name="maintenenceBy"
-                    className=""
-                  >
+                  <CFormSelect size="sm" name="maintenenceBy" className="">
                     <option value="" hidden>
                       Select Maintenance By
                     </option>
-                    <option value="inHouse">Inhouse</option>
-                    <option value="outSide">Outside</option>
+                    <option value="inHouse" onClick={()=>setoutSide(false)}>Inhouse</option>
+                    <option value="outSide" onClick={()=>setoutSide(true)}>Outside</option>
                   </CFormSelect>
                 </CCol>
               </CRow>
@@ -118,8 +111,20 @@ const VehicleMaintainence = () => {
                     disabled=""
                     className="mx-3 text-white"
                     type="button"
+                    hidden={outSide}
                   >
                     Maintenence Start
+                  </CButton>
+
+                  <CButton
+                    size="sm"
+                    color="warning"
+                    disabled=""
+                    className="mx-3 text-white"
+                    type="button"
+                    hidden={!outSide}
+                  >
+                    Gate Out
                   </CButton>
                 </CCol>
               </CRow>

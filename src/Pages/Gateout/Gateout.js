@@ -58,8 +58,8 @@ const Gateout = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-            <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-              <CRow className="mb-md-2">
+            <CForm className="container p-3" onSubmit={handleSubmit}>
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
 
@@ -81,8 +81,8 @@ const Gateout = () => {
                   <CFormInput size="sm" id="inputAddress" value="11123" readOnly />
                 </CCol>
               </CRow>
-              
-              <CRow className="mb-md-2">
+
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
@@ -138,8 +138,8 @@ const Gateout = () => {
                   </CModal>
                 </CCol>
               </CRow>
-              
-              <CRow className="mb-md-2">
+
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
 
@@ -194,7 +194,6 @@ const Gateout = () => {
                   <CFormInput size="sm" id="inputAddress" value="9898987676" readOnly />
                 </CCol>
               </CRow>
-              
 
               <CRow>
                 <CCol xs={12} sm={3} md={9}>

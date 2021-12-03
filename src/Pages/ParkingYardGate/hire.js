@@ -47,7 +47,7 @@ const ParkingYardGate = () => {
         <CCard>
           <CTabContent>
             <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-              <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
+              <CForm className="container p-3" onSubmit={handleSubmit}>
                 <CRow>
                   <CCol md={3}>
                     <CFormLabel htmlFor="vType">
@@ -92,18 +92,16 @@ const ParkingYardGate = () => {
                   </CCol>
 
                   <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="vBody">
+                    <CFormLabel htmlFor="vBody">
                       Vehicle Body*
                       {errors.vehicleType && (
                         <span className="help text-danger">{errors.vehicleType}</span>
                       )}
                     </CFormLabel>
-                    <CFormSelect
-                      size="sm"
-                      name="vBody"
-                      aria-label="Small select example"
-                    >
-                      <option value="open" hidden>Select Body Type</option>
+                    <CFormSelect size="sm" name="vBody" aria-label="Small select example">
+                      <option value="open" hidden>
+                        Select Body Type
+                      </option>
                       <option value="open">Open</option>
                       <option value="closed">Closed</option>
                     </CFormSelect>

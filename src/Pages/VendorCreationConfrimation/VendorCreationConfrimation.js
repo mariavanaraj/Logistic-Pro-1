@@ -47,8 +47,8 @@ const VendorCreationConfrimation = () => {
   }
   return (
     <CCard>
-      <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-        <CRow className="mb-md-2">
+      <CForm className="container p-3" onSubmit={handleSubmit}>
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               PAN Card Number
@@ -77,7 +77,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setAdharVisible(!adharvisible)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -106,7 +106,7 @@ const VendorCreationConfrimation = () => {
             </CModal>
           </CCol>
         </CRow>
-        <CRow className="mb-md-2">
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Bank Passbook
@@ -114,7 +114,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setBankPassbook(!BankPassbook)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -149,7 +149,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setPanCard(!PanCard)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -184,7 +184,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setLicence(!PanCard)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -219,7 +219,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setRcFront(!RcFront)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -248,7 +248,7 @@ const VendorCreationConfrimation = () => {
             </CModal>
           </CCol>
         </CRow>
-        <CRow className="mb-md-2">
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               RC Copy Back
@@ -256,7 +256,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setRcBank(!RcBank)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -291,7 +291,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setInsurance(!Insurance)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -325,7 +325,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -360,7 +360,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setTDSFormFront(!TDSFormFront)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -389,7 +389,7 @@ const VendorCreationConfrimation = () => {
             </CModal>
           </CCol>
         </CRow>
-        <CRow className="mb-md-2">
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               TDS Declaration Form-Back
@@ -397,7 +397,7 @@ const VendorCreationConfrimation = () => {
             </CFormLabel>
             <CButton
               onClick={() => setTDSFormBack(!TDSFormFront)}
-              className="w-100"
+              className="w-100 m-0"
               color="info"
               size="sm"
               id="inputAddress"
@@ -441,13 +441,13 @@ const VendorCreationConfrimation = () => {
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Freight Rate
+              Freight Rate Per Ton
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
         </CRow>
-        <CRow className="mb-md-2">
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Aadhar No
@@ -477,7 +477,7 @@ const VendorCreationConfrimation = () => {
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
         </CRow>
-        <CRow className="mb-md-2">
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Vendor Address
@@ -507,7 +507,7 @@ const VendorCreationConfrimation = () => {
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
         </CRow>
-        <CRow className="mb-md-2">
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               GST Registeration No
@@ -537,7 +537,7 @@ const VendorCreationConfrimation = () => {
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
         </CRow>
-        <CRow className="mb-md-2">
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Bank Name
@@ -567,7 +567,7 @@ const VendorCreationConfrimation = () => {
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
         </CRow>
-        <CRow className="mb-md-2">
+        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               TDS%
@@ -594,7 +594,7 @@ const VendorCreationConfrimation = () => {
               Approval Date & Time
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" type="date" value="" readOnly />
+            <CFormInput size="sm" id="inputAddress" type="datetime-local" value="" readOnly />
           </CCol>
         </CRow>
         <CRow className="mb-md-4">

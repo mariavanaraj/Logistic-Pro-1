@@ -47,12 +47,12 @@ const ParkingYardGate = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-            <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
+            <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle No*</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select</option>
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
 
                     <option value="1">TN45AT8614</option>
 
@@ -63,15 +63,26 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet No</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Customer Name</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select Driver</option>
+                  <CFormLabel htmlFor="inputAddress">Topay / Shed*</CFormLabel>
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
+
+                    <option value="1">select</option>
+
+                    <option value="2">select Lp</option>
+                  </CFormSelect>
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Customer Name*</CFormLabel>
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
 
                     <option value="1">Mari Muthu</option>
 
@@ -88,185 +99,183 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Material Description*</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select Driver</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
-                    Order Qty*{' '}
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
-                    )}
-                  </CFormLabel>
-                  <CFormInput
-                    name="Order Qty"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    className={`${errors.OdometerKm && 'is-invalid'}`}
-                    size="sm"
-                    id="inputAddress"
-                    placeholder=""
-                  />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">UOM*</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
-                    Freight Income*{' '}
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
-                    )}
-                  </CFormLabel>
-                  <CFormInput
-                    name="Order Qty"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    className={`${errors.OdometerKm && 'is-invalid'}`}
-                    size="sm"
-                    id="inputAddress"
-                    placeholder=""
-                  />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">HSN Code*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Material Code*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Rate Base*</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Last Delivery Point*</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Loading Point*</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Empty KM*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
-                    Advance Amt*{' '}
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
-                    )}
-                  </CFormLabel>
-                  <CFormInput
-                    name="Order Qty"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    className={`${errors.OdometerKm && 'is-invalid'}`}
-                    size="sm"
-                    id="inputAddress"
-                    placeholder=""
-                  />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Loading Point*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Unloading Point*</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Load KM*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Topay / Shed*</CFormLabel>
-                  <CFormSelect size="sm" className="mb-2" aria-label="Small select example">
-                    <option hidden>Select</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Unloading Point*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Shed*</CFormLabel>
 
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
+
+                    <option value="1">North</option>
+
+                    <option value="2">East</option>
+
+                    <option value="3">South</option>
+                  </CFormSelect>
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Material Type*</CFormLabel>
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
+
+                    <option value="1">Vegetable</option>
+
+                    <option value="2">Grocery</option>
+
+                    <option value="3">Engg. Spares</option>
+                  </CFormSelect>
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Material Description*</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">HSN Code</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">UOM*</CFormLabel>
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
+
+                    <option value="1">select</option>
+
+                    <option value="2">select Lp</option>
+                  </CFormSelect>
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">
+                    Order Qty. Tons*
+                    {errors.OdometerKm && (
+                      <span className="help text-danger">{errors.OdometerKm}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput
+                    name="Order Qty"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    className={`${errors.OdometerKm && 'is-invalid'}`}
+                    size="sm"
+                    id="inputAddress"
+                    placeholder=""
+                  />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">
+                    Freight Income*
+                    {errors.OdometerKm && (
+                      <span className="help text-danger">{errors.OdometerKm}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput
+                    name="Order Qty"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    className={`${errors.OdometerKm && 'is-invalid'}`}
+                    size="sm"
+                    id="inputAddress"
+                    placeholder=""
+                  />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Advance Amount*</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Last Delivery Point*</CFormLabel>
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
+
+                    <option value="1">select</option>
+
+                    <option value="2">select Lp</option>
+                  </CFormSelect>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Empty Load KM*</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Loading Point*</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Unloading Point*</CFormLabel>
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
+
+                    <option value="1">select</option>
+
+                    <option value="2">select Lp</option>
+                  </CFormSelect>
+                </CCol>
+
+                {/* <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Material Code</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol> */}
+
+                {/* <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Rate Base*</CFormLabel>
+                  <CFormSelect size="sm" aria-label="Small select example">
+                    <option hidden>Select...</option>
+
+                    <option value="1">select</option>
+
+                    <option value="2">select Lp</option>
+                  </CFormSelect>
+                </CCol> */}
+
+                {/* <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">
+                    Advance Amount*
+                    {errors.OdometerKm && (
+                      <span className="help text-danger">{errors.OdometerKm}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput
+                    name="Order Qty"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    className={`${errors.OdometerKm && 'is-invalid'}`}
+                    size="sm"
+                    id="inputAddress"
+                    placeholder=""
+                  />
+                </CCol> */}
+
+                {/* <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Loading Point</CFormLabel>
+
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Empty Km*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Load KM</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Unloading Point</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol> */}
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Empty Km After Unload*</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
               </CRow>
 

@@ -47,52 +47,53 @@ const ParkingYardGate = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-            <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-              <CRow>
+            <CForm className="container p-3" onSubmit={handleSubmit}>
+              <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Type*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">VA Number*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+              </CRow>
+              <CRow className="">
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Driver Cell No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Cell No.*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Odometer KM</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer KM*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer Photo*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Odometer Photo</CFormLabel>
 
                   {/* <CFormInput size="sm" id="inputAddress" value="" readOnly /> */}
                   <CButton
@@ -106,45 +107,47 @@ const ParkingYardGate = () => {
                     </span>
                   </CButton>
                 </CCol>
-
+              </CRow>
+              <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Gate-In Time*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Inspection Time*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Doc. Verify Time*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Doc. Verify Time</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet No.*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+              </CRow>
+              <CRow className="">
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Shed Name*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Owner Name</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Name*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Cell No.*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Owner Cell No.</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -152,22 +155,23 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vendor Name*</CFormLabel>
                   <CFormSelect size="sm" className="" aria-label="Small select example">
-                    <option hidden>Select</option>
+                    <option hidden>Select...</option>
 
                     <option value="1">select</option>
 
                     <option value="2">select Lp</option>
                   </CFormSelect>
                 </CCol>
-
+              </CRow>
+              <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vendor Code*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Diesel Liters*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Diesel Liters</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -185,13 +189,7 @@ const ParkingYardGate = () => {
                     Previous
                   </CButton>
                 </CCol>
-                <CCol
-                  className="offset-md-6"
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  style={{ display: 'flex', justifyContent: 'end' }}
-                >
+                <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>
                   <CButton
                     size="sm"
                     color="warning"

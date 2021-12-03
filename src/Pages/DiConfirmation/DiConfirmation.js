@@ -47,8 +47,8 @@ const ParkingYardGate = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-            <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-              <CRow>
+            <CForm className="container p-3" onSubmit={handleSubmit}>
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Va Number</CFormLabel>
 
@@ -72,7 +72,8 @@ const ParkingYardGate = () => {
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
-
+              </CRow>
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
 
@@ -86,7 +87,7 @@ const ParkingYardGate = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">
-                    Invoice No{' '}
+                    Invoice No.*
                     {errors.OdometerKm && (
                       <span className="help text-danger">{errors.OdometerKm}</span>
                     )}
@@ -104,7 +105,7 @@ const ParkingYardGate = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="formFileSm">
-                    Invoice Copy{' '}
+                    Invoice Copy*
                     {errors.odometerPhoto && (
                       <span className="help text-danger">{errors.odometerPhoto}</span>
                     )}
@@ -121,9 +122,11 @@ const ParkingYardGate = () => {
                     id="formFileSm"
                   />
                 </CCol>
+              </CRow>
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">
-                    No of Liters{' '}
+                    No. Of Liters*
                     {errors.OdometerKm && (
                       <span className="help text-danger">{errors.OdometerKm}</span>
                     )}
@@ -141,7 +144,7 @@ const ParkingYardGate = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">
-                    Rate Per Liter{' '}
+                    Rate Per Liter*
                     {errors.OdometerKm && (
                       <span className="help text-danger">{errors.OdometerKm}</span>
                     )}
@@ -177,13 +180,7 @@ const ParkingYardGate = () => {
                     Previous
                   </CButton>
                 </CCol>
-                <CCol
-                  className="offset-md-6"
-                  xs={12}
-                  sm={12}
-                  md={3}
-                  style={{ display: 'flex', justifyContent: 'end' }}
-                >
+                <CCol className="offset-md-6  d-md-flex justify-content-end" xs={12} sm={12} md={3}>
                   <CButton
                     size="sm"
                     color="warning"

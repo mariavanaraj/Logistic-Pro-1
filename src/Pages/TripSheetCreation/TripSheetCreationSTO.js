@@ -30,11 +30,11 @@ const TripSheetCreationSTO = () => {
   }
   return (
     <CCard>
-      <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-        <CRow className="mb-md-2">
-          <CCol xs={12} md={4}>
+      <CForm className="container p-3" onSubmit={handleSubmit}>
+        <CRow className="">
+          <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Vechile Type
+              Vehicle Type*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormSelect
@@ -47,7 +47,9 @@ const TripSheetCreationSTO = () => {
               className={`${errors.vehicleType && 'is-invalid'}`}
               aria-label="Small select example"
             >
-              <option value="">Select Vehicle Types</option>
+              <option value="" hidden>
+                Select...
+              </option>
 
               <option value="1">Own</option>
 
@@ -56,9 +58,9 @@ const TripSheetCreationSTO = () => {
               <option value="3">Hire</option>
             </CFormSelect>
           </CCol>
-          <CCol xs={12} md={4}>
+          <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Vehicle Number
+              Vehicle Number*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormSelect
@@ -71,7 +73,9 @@ const TripSheetCreationSTO = () => {
               className={`${errors.vehicleType && 'is-invalid'}`}
               aria-label="Small select example"
             >
-              <option value="">Select Vehicle Number</option>
+              <option value="" hidden>
+                Select...
+              </option>
 
               <option value="1">Own</option>
 
@@ -80,18 +84,16 @@ const TripSheetCreationSTO = () => {
               <option value="3">Hire</option>
             </CFormSelect>
           </CCol>
-          <CCol xs={12} md={4}>
+          <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Vehicle Capacity In MTS
+              Vehicle Capacity In MTS*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
-        </CRow>
-        <CRow className="mb-md-2">
-          <CCol xs={12} md={4}>
+          <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Driver Name
+              Driver Name*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormSelect
@@ -104,7 +106,9 @@ const TripSheetCreationSTO = () => {
               className={`${errors.vehicleType && 'is-invalid'}`}
               aria-label="Small select example"
             >
-              <option value="">Select Driver Name</option>
+              <option value="" hidden>
+                Select...
+              </option>
 
               <option value="1">Own</option>
 
@@ -113,32 +117,32 @@ const TripSheetCreationSTO = () => {
               <option value="3">Hire</option>
             </CFormSelect>
           </CCol>
-          <CCol xs={12} md={4}>
+        </CRow>
+        <CRow className="">
+          <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Driver Code
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
-          <CCol xs={12} md={4}>
+          <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Driver Cell Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
-        </CRow>
-        <CRow>
-          <CCol xs={12} md={4}>
+          <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Opening KM
+              Opening KM*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" type="number" value="" />
           </CCol>
-          <CCol xs={12} md={4}>
+          <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Opening Odometer Photo
+              Opening Odometer Photo*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput
@@ -154,6 +158,7 @@ const TripSheetCreationSTO = () => {
             />
           </CCol>
         </CRow>
+
         <CRow className="mt-md-3">
           <CCol className="" xs={12} sm={12} md={3}>
             <CButton size="sm" color="primary" className="text-white" type="button">
@@ -162,11 +167,30 @@ const TripSheetCreationSTO = () => {
               </Link>
             </CButton>
           </CCol>
-          <CCol className="offset-md-5 d-md-flex justify-content-end" xs={12} sm={12} md={4}>
-            <CButton size="sm" color="warning" className="mx-3 text-white" type="submit">
-              Create TripSheet
+
+          <CCol
+            className="offset-md-6"
+            xs={12}
+            sm={12}
+            md={3}
+            style={{ display: 'flex', justifyContent: 'end' }}
+          >
+            <CButton
+              size="sm"
+              color="warning"
+              // disabled={enableSubmit}
+              className="mx-3 px-3 text-white"
+              type="submit"
+            >
+              Create
             </CButton>
-            <CButton size="sm" color="warning" className="text-white" type="submit">
+            <CButton
+              size="sm"
+              // disabled={enableSubmit}
+              color="warning"
+              className="px-3 text-white"
+              type="submit"
+            >
               Cancel
             </CButton>
           </CCol>
