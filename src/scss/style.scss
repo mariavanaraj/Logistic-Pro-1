@@ -56,3 +56,37 @@ textarea.form-control {
   height: calc((29px / 1rem) * 1rem) !important;
   min-height: 0 !important;
 }
+
+.table > :not(caption) > * > * {
+  padding: 0.5;
+}
+.table > :not(caption) > * > * > input {
+  // height: 10px;
+  min-height: 25px !important;
+}
+
+table {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  // height: calc(50%);
+  height: 40vh;
+}
+
+thead {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+tbody {
+  flex: 1 1 auto;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+tr {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}

@@ -7,6 +7,7 @@ import {
   CForm,
   CFormInput,
   CFormLabel,
+  CTableCaption,
   CFormSelect,
   CNav,
   CNavItem,
@@ -34,6 +35,7 @@ import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
+
 const TSClossure = () => {
   const formValues = {
     vehicleType: '',
@@ -54,6 +56,7 @@ const TSClossure = () => {
   const [activeKey, setActiveKey] = useState(1)
   const [activeKey_2, setActiveKey_2] = useState(1)
   const [visible, setVisible] = useState(false)
+  const [visible1, setVisible1] = useState(false)
 
   return (
     <>
@@ -109,7 +112,7 @@ const TSClossure = () => {
                   active={activeKey === 3}
                   onClick={() => setActiveKey(3)}
                 >
-                  Expenses
+                  Expenses / Income
                 </CNavLink>
               </CNavItem>
             </CNav>
@@ -169,6 +172,19 @@ const TSClossure = () => {
                   </CModalBody>
                   <CModalFooter>
                     <CButton color="primary" onClick={() => setVisible(false)}>
+                      Close
+                    </CButton>
+                  </CModalFooter>
+                </CModal>
+                <CModal visible={visible1} onClose={() => setVisible1(false)}>
+                  <CModalHeader onClose={() => setVisible1(false)}>
+                    <CModalTitle>Modal title</CModalTitle>
+                  </CModalHeader>
+                  <CModalBody>
+                    <h2>Invoice Copy View</h2>
+                  </CModalBody>
+                  <CModalFooter>
+                    <CButton color="primary" onClick={() => setVisible1(false)}>
                       Close
                     </CButton>
                   </CModalFooter>
@@ -456,67 +472,553 @@ const TSClossure = () => {
                   </CCol>
                 </CRow>
               </CTabPane>
+              <br />
 
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey === 3}>
+                <CTable caption="top" hover>
+                  <CTableCaption>Expenses</CTableCaption>
+
+                  <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
+                    <CTableRow>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        S.No
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Type
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 1
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 2
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 3
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Total
+                      </CTableHeaderCell>
+                    </CTableRow>
+                  </CTableHead>
+
+                  <CTableBody>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">1</CTableHeaderCell>
+                      <CTableDataCell>Unloading Charges (Excess)*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                      <CTableDataCell>Subdelivery Charges*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">3</CTableHeaderCell>
+                      <CTableDataCell>Weighment Charges*</CTableDataCell>
+
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">4</CTableHeaderCell>
+                      <CTableDataCell>Freight Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="2000" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="2000" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">5</CTableHeaderCell>
+                      <CTableDataCell>Stock Diversion / Return Charges*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">6</CTableHeaderCell>
+                      <CTableDataCell>Halting Charges*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">7</CTableHeaderCell>
+                      <CTableDataCell>Total Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                  </CTableBody>
+                </CTable>
+                <CTable caption="top" hover>
+                  <CTableCaption>Income</CTableCaption>
+                  <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
+                    <CTableRow>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        S.No
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Type
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 1
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 2
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 3
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Total
+                      </CTableHeaderCell>
+                    </CTableRow>
+                  </CTableHead>
+
+                  <CTableBody>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">1</CTableHeaderCell>
+                      <CTableDataCell>Base Freight 1</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                      <CTableDataCell>Base Freight 2</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">3</CTableHeaderCell>
+                      <CTableDataCell>Additional Freight</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">4</CTableHeaderCell>
+                      <CTableDataCell>Total Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                  </CTableBody>
+                </CTable>
+                <CTable caption="top" hover>
+                  <CTableCaption>Others</CTableCaption>
+                  <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
+                    <CTableRow>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        S.No
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Type
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 1
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 2
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 3
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Total
+                      </CTableHeaderCell>
+                    </CTableRow>
+                  </CTableHead>
+
+                  <CTableBody>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">1</CTableHeaderCell>
+                      <CTableDataCell>To Location*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                      <CTableDataCell>Paying Quantity*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">3</CTableHeaderCell>
+                      <CTableDataCell>Paying Rate*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">4</CTableHeaderCell>
+                      <CTableDataCell>Diverted POD*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">5</CTableHeaderCell>
+                      <CTableDataCell>Halt Days*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">6</CTableHeaderCell>
+                      <CTableDataCell>Diesel Vendor Name</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">7</CTableHeaderCell>
+                      <CTableDataCell>Vendor Code</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">8</CTableHeaderCell>
+                      <CTableDataCell>Diesel Liters</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Fill Tank" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Fill Tank" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Fill Tank" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Fill Tank" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">9</CTableHeaderCell>
+                      <CTableDataCell>Invoice No</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Fill Tank" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Fill Tank" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Fill Tank" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Fill Tank" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">10</CTableHeaderCell>
+                      <CTableDataCell>Invoice Copy</CTableDataCell>
+                      <CTableDataCell>
+                        <div className="d-grid gap-2">
+                          <CButton
+                            className="text-justify"
+                            color="info"
+                            size="sm"
+                            onClick={() => setVisible1(!visible1)}
+                          >
+                            <span className="float-start">
+                              <i className="fa fa-eye"></i> &nbsp; View
+                            </span>
+                          </CButton>
+                        </div>
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <div className="d-grid gap-2">
+                          <CButton
+                            className="text-justify"
+                            color="info"
+                            size="sm"
+                            onClick={() => setVisible1(!visible1)}
+                          >
+                            <span className="float-start">
+                              <i className="fa fa-eye"></i> &nbsp; View
+                            </span>
+                          </CButton>
+                        </div>
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <div className="d-grid gap-2">
+                          <CButton
+                            className="text-justify"
+                            color="info"
+                            size="sm"
+                            onClick={() => setVisible1(!visible1)}
+                          >
+                            <span className="float-start">
+                              <i className="fa fa-eye"></i> &nbsp; View
+                            </span>
+                          </CButton>
+                        </div>
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <div className="d-grid gap-2">
+                          <CButton
+                            className="text-justify"
+                            color="info"
+                            size="sm"
+                            onClick={() => setVisible1(!visible1)}
+                          >
+                            <span className="float-start">
+                              <i className="fa fa-eye"></i> &nbsp; View
+                            </span>
+                          </CButton>
+                        </div>
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">11</CTableHeaderCell>
+                      <CTableDataCell>No of Liters</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">12</CTableHeaderCell>
+                      <CTableDataCell>Rate Per Liter</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">13</CTableHeaderCell>
+                      <CTableDataCell>Amount</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                  </CTableBody>
+                </CTable>
                 <CRow className="mt-2">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Unloading Charges (Excess)*</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Subdelivery Charges*</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Weighment Charges*</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Low Tonnage*</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                </CRow>
-
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Freight Charges</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">To Location*</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">
-                      Stock Diversion / Return Charges*
-                    </CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Diverted POD*</CFormLabel>
-
-                    <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
-                  </CCol>
-                </CRow>
-
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Halting Charges*</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Halt Days*</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                     <CFormTextarea
@@ -579,7 +1081,7 @@ const TSClossure = () => {
                   active={activeKey_2 === 3}
                   onClick={() => setActiveKey_2(3)}
                 >
-                  Expenses
+                  Expenses / Income
                 </CNavLink>
               </CNavItem>
               <CNavItem>
@@ -997,224 +1499,750 @@ const TSClossure = () => {
               </CTabPane>
 
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 3}>
-                <CRow className="mt-2">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Halting Charges*</CFormLabel>
+                <CTable caption="top" hover>
+                  <CTableCaption>Expenses</CTableCaption>
+                  <CTableHead
+                    style={{
+                      backgroundColor: '#4d3227',
+                      color: 'white',
+                    }}
+                  >
+                    <CTableRow>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        S.No
+                      </CTableHeaderCell>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Halt Days*</CFormLabel>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Type
+                      </CTableHeaderCell>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Toll Amount</CFormLabel>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 1
+                      </CTableHeaderCell>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Bata*</CFormLabel>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 2
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 3
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Total
+                      </CTableHeaderCell>
+                    </CTableRow>
+                  </CTableHead>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                </CRow>
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Municipal Charges*</CFormLabel>
+                  <CTableBody>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">1</CTableHeaderCell>
+                      <CTableDataCell>Halting Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Enroute Diesel Ltr*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                      <CTableDataCell>Toll Amout</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="2000" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="2000" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Enroute Diesel Amount*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">3</CTableHeaderCell>
+                      <CTableDataCell>Bata</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Enroute Diesel Invoice*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">4</CTableHeaderCell>
+                      <CTableDataCell>Municipal Charges</CTableDataCell>
 
-                    <CFormInput type="file" size="sm" id="inputAddress" />
-                  </CCol>
-                </CRow>
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Port Entry Fee*</CFormLabel>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Misc Charges*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">5</CTableHeaderCell>
+                      <CTableDataCell>Enroute Diesel Amt</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Fine Amount*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">6</CTableHeaderCell>
+                      <CTableDataCell>Port Entry Fee</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Fine Bill*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">7</CTableHeaderCell>
+                      <CTableDataCell>Misc Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput type="file" size="sm" id="inputAddress" />
-                  </CCol>
-                </CRow>
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Subdelivery Charges*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">8</CTableHeaderCell>
+                      <CTableDataCell>Fine Amount</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Maintenance Cost* </CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">9</CTableHeaderCell>
+                      <CTableDataCell>Subdelivery Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Loading Charges*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">10</CTableHeaderCell>
+                      <CTableDataCell>Maintenance Cost</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Tarpaulin Charges*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">11</CTableHeaderCell>
+                      <CTableDataCell>Loading Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                </CRow>
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Weighment Charges*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">12</CTableHeaderCell>
+                      <CTableDataCell>Tarpaulin Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Low Tonnage Charges*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">13</CTableHeaderCell>
+                      <CTableDataCell>Weighment Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">14</CTableHeaderCell>
+                      <CTableDataCell>Low Tonage Charges </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
 
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Trip Expense Sheet*</CFormLabel>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">15</CTableHeaderCell>
+                      <CTableDataCell>Total Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                  </CTableBody>
+                </CTable>
+                <CTable caption="top" hover>
+                  <CTableCaption>Income</CTableCaption>
+                  <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
+                    <CTableRow>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        S.No
+                      </CTableHeaderCell>
 
-                    <CFormInput type="file" size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Bunk Diesel in Ltr.</CFormLabel>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Type
+                      </CTableHeaderCell>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
-                  </CCol>
-                </CRow>
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Bunk Diesel Amount</CFormLabel>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 1
+                      </CTableHeaderCell>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
-                  </CCol>
-                </CRow>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 2
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 3
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Total
+                      </CTableHeaderCell>
+                    </CTableRow>
+                  </CTableHead>
+
+                  <CTableBody>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">1</CTableHeaderCell>
+                      <CTableDataCell>Base Freight 1</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                      <CTableDataCell>Base Freight 2</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">3</CTableHeaderCell>
+                      <CTableDataCell>Additional Freight</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">4</CTableHeaderCell>
+                      <CTableDataCell>Total Charges</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                  </CTableBody>
+                </CTable>
+                <CTable caption="top" hover>
+                  <CTableCaption>Others</CTableCaption>
+                  <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
+                    <CTableRow>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        S.No
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Type
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 1
+                      </CTableHeaderCell>
+
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 2
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Delivery 3
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Total
+                      </CTableHeaderCell>
+                    </CTableRow>
+                  </CTableHead>
+
+                  <CTableBody>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">1</CTableHeaderCell>
+                      <CTableDataCell>Halt Days*</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                      <CTableDataCell>Enroute Diesel Ltr</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">3</CTableHeaderCell>
+                      <CTableDataCell>Enroute Diesel Invoice</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">4</CTableHeaderCell>
+                      <CTableDataCell>Fine Bill</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">5</CTableHeaderCell>
+                      <CTableDataCell>Trip Expense Sheet</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="file" name="divortedPod" size="sm" id="formFileSm" />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">6</CTableHeaderCell>
+                      <CTableDataCell>Bunk Diesel in Ltr</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">7</CTableHeaderCell>
+                      <CTableDataCell>Bunk Diesel Rate</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">8</CTableHeaderCell>
+                      <CTableDataCell>Bunk Diesel Amount</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">9</CTableHeaderCell>
+                      <CTableDataCell>Bunk Diesel Vendor</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">10</CTableHeaderCell>
+                      <CTableDataCell>Diesel Inv No</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">11</CTableHeaderCell>
+                      <CTableDataCell>Bunk Diesel Inv</CTableDataCell>
+                      <CTableDataCell>
+                        <div className="d-grid gap-2">
+                          <CButton
+                            className="text-justify"
+                            color="info"
+                            size="sm"
+                            onClick={() => setVisible1(!visible1)}
+                          >
+                            <span className="float-start">
+                              <i className="fa fa-eye"></i> &nbsp; View
+                            </span>
+                          </CButton>
+                        </div>
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <div className="d-grid gap-2">
+                          <CButton
+                            className="text-justify"
+                            color="info"
+                            size="sm"
+                            onClick={() => setVisible1(!visible1)}
+                          >
+                            <span className="float-start">
+                              <i className="fa fa-eye"></i> &nbsp; View
+                            </span>
+                          </CButton>
+                        </div>
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <div className="d-grid gap-2">
+                          <CButton
+                            className="text-justify"
+                            color="info"
+                            size="sm"
+                            onClick={() => setVisible1(!visible1)}
+                          >
+                            <span className="float-start">
+                              <i className="fa fa-eye"></i> &nbsp; View
+                            </span>
+                          </CButton>
+                        </div>
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <div className="d-grid gap-2">
+                          <CButton
+                            className="text-justify"
+                            color="info"
+                            size="sm"
+                            onClick={() => setVisible1(!visible1)}
+                          >
+                            <span className="float-start">
+                              <i className="fa fa-eye"></i> &nbsp; View
+                            </span>
+                          </CButton>
+                        </div>
+                      </CTableDataCell>
+                    </CTableRow>
+                  </CTableBody>
+                </CTable>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 4}>
                 <CRow className="mt-2">
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Customer Name</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Customer Code</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Material Description</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Material Code</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                 </CRow>
                 <CRow className="">
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">HSN Code</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Order Qty.</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">UOM</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Freight Income</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                 </CRow>
                 <CRow className="">
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Advance Amt</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Advance Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Topay / Shed</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Last Delivery Point</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">RJ Shed </CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                 </CRow>
                 <CRow className="">
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Loading Point</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Empty KM</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Unloading Point</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Load KM</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                 </CRow>
                 <CRow className="">
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date*</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Delivery Date & Time</CFormLabel>
 
-                    <CFormInput size="sm" type="date" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Time*</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="time" />
+                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">RJ POD Copy*</CFormLabel>
@@ -1223,7 +2251,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">RJ KM</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="2500" readOnly />
+                    <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>

@@ -55,7 +55,7 @@ import {
   cilInfo,
   cilAirplay,
   cilTruck,
-  cilDotcircle
+  cilDotcircle,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -150,15 +150,15 @@ const _nav = [
     to: '/VehicleAssignmentFoods',
     icon: <CIcon icon={cilInbox} customClassName="nav-icon" />,
     dataToggle: 'tooltip',
-    title: 'Vehicle Assignment Foods',
+    title: 'Vehicle Assignment',
   },
   {
     component: CNavItem,
-    name: 'Adv. Req. Creation',
+    name: 'Advance Payment',
     to: '/AdvanceRequestCreation',
     icon: <CIcon icon={cilCash} customClassName="nav-icon" />,
     dataToggle: 'tooltip',
-    title: 'Advance Request Creation',
+    title: 'Advance Payment',
   },
   {
     component: CNavItem,
@@ -229,26 +229,23 @@ const _nav = [
             component: CNavItem,
             name: 'Driver Master',
             to: '/DriverMaster',
-
           },
           {
             component: CNavItem,
             name: 'Shed Master',
             to: '/ShedMaster',
-
           },
           {
             component: CNavItem,
             name: 'Diesel Vendor Master',
             to: '/DieselVendorMaster',
-
           },
           {
             component: CNavItem,
             name: 'User Login Register',
             to: '/UserLoginMaster',
           },
-        ]
+        ],
       },
       {
         component: CNavGroup,
@@ -311,15 +308,15 @@ const _nav = [
             name: 'Status',
             to: '/Status',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   // {
   //   component: CNavItem,
   //   name: 'Gate-out',
   //   to: '/Gateout',
   //   icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
-  // }, 
+  // },
 ]
 export default _nav
