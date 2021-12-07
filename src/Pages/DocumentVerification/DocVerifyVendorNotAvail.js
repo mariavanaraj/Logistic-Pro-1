@@ -171,7 +171,7 @@ const DocVerifyVendorNotAvail = () => {
                   />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="panNum">PAN Card No.*</CFormLabel>
+                  <CFormLabel htmlFor="panNum">PAN Card Number*</CFormLabel>
                   <CFormInput name="panNum" size="sm" id="" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
@@ -182,7 +182,7 @@ const DocVerifyVendorNotAvail = () => {
 
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="ownerMob">Owner Mobile No.*</CFormLabel>
+                  <CFormLabel htmlFor="ownerMob">Owner Mobile Number*</CFormLabel>
                   <CFormInput name="ownerName" size="sm" id="" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>

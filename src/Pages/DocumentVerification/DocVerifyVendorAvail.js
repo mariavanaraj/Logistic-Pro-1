@@ -141,7 +141,7 @@ const DocVerifyVendorAvail = () => {
                   />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="panNum">PAN Card No.*</CFormLabel>
+                  <CFormLabel htmlFor="panNum">PAN Card Number*</CFormLabel>
                   <CFormSelect
                     size="sm"
                     name="panNum"
@@ -162,7 +162,7 @@ const DocVerifyVendorAvail = () => {
 
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="ownerMob">Owner Mobile No.</CFormLabel>
+                  <CFormLabel htmlFor="ownerMob">Owner Mobile Number</CFormLabel>
                   <CFormInput
                     name="inspectInDateTime"
                     size="sm"
@@ -172,11 +172,11 @@ const DocVerifyVendorAvail = () => {
                   />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="aadhar">Aadhar No.</CFormLabel>
+                  <CFormLabel htmlFor="aadhar">Aadhar Number</CFormLabel>
                   <CFormInput name="aadhar" size="sm" id="" value="506980963214" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="bankAcc">Bank Acc. No.</CFormLabel>
+                  <CFormLabel htmlFor="bankAcc">Bank Account Number</CFormLabel>
                   <CFormInput name="bankAcc" size="sm" id="" value="SBI506980963214" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>

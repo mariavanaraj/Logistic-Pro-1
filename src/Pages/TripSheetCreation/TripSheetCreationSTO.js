@@ -129,7 +129,7 @@ const TripSheetCreationSTO = () => {
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Driver Cell Number
+              Driver Mobile Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -158,9 +158,9 @@ const TripSheetCreationSTO = () => {
               id="formFileSm"
             />
           </CCol><CCol xs={12} md={3}>
-              <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
-              <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
-            </CCol>
+            <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+            <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+          </CCol>
         </CRow>
 
         <CRow className="mt-md-3">

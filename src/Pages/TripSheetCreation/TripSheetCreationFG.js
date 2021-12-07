@@ -186,7 +186,7 @@ const TripSheetCreationFG = () => {
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Owner Cell No
+              Owner Mobile Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" type="text" value="" readOnly />

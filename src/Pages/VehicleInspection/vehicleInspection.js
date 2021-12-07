@@ -93,13 +93,11 @@ const VehicleInspection = () => {
                   <CFormInput name="vCap" size="sm" id="" value="10" placeholder="10" readOnly />
                 </CCol>
 
-                <CCol xs={12} md={3}>
+                {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vaNum">VA Number</CFormLabel>
                   <CFormInput name="vaNum" size="sm" id="" value="11113" placeholder="" readOnly />
-                </CCol>
-              </CRow>
+                </CCol> */}
 
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">
                     Driver Name*
@@ -128,7 +126,8 @@ const VehicleInspection = () => {
                     <option value="3">Muthu</option>
                   </CFormSelect>
                 </CCol>
-
+              </CRow>
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
                   <CFormInput name="dMob" size="sm" id="" value="9443194657" readOnly />
@@ -170,9 +169,6 @@ const VehicleInspection = () => {
                     </CModalFooter>
                   </CModal>
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time*</CFormLabel>
                   <CFormInput
@@ -183,6 +179,8 @@ const VehicleInspection = () => {
                     readOnly
                   />
                 </CCol>
+              </CRow>
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="truckClean">Truck Clean *</CFormLabel>
                   <CFormSelect size="sm" name="truckClean" className="">
@@ -213,9 +211,6 @@ const VehicleInspection = () => {
                     <option value="2">No</option>
                   </CFormSelect>
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="tarSRF">Tarpaulin – SRF</CFormLabel>
                   <CFormSelect
@@ -230,6 +225,8 @@ const VehicleInspection = () => {
                     <option value="2">2</option>
                   </CFormSelect>
                 </CCol>
+              </CRow>
+              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="nonSRF">Non – SRF *</CFormLabel>
                   <CFormSelect
@@ -272,9 +269,6 @@ const VehicleInspection = () => {
                     <option value="2">No</option>
                   </CFormSelect>
                 </CCol>
-              </CRow>
-
-              <CRow>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
                   <CFormSelect
@@ -289,6 +283,8 @@ const VehicleInspection = () => {
                     <option value="2">No</option>
                   </CFormSelect>
                 </CCol>
+                </CRow>
+              <CRow>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
                   <CFormInput name="vFitLoad" size="sm" id="" value="No" readOnly />

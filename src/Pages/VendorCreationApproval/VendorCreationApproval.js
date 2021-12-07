@@ -51,7 +51,7 @@ const VendorCreationApproval = () => {
           <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                PAN Card No
+                PAN Card Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -69,7 +69,7 @@ const VendorCreationApproval = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Owner Cell No.
+                Owner Mobile Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -491,7 +491,7 @@ const VendorCreationApproval = () => {
           <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Aadhar No
+                Aadhar Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -500,7 +500,7 @@ const VendorCreationApproval = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Bank A/c No
+                Bank Account Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -509,7 +509,7 @@ const VendorCreationApproval = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                IFSC Code No
+                IFSC Code Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -573,7 +573,7 @@ const VendorCreationApproval = () => {
           <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                GST Registeration No
+                GST Registeration Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}

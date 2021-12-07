@@ -129,7 +129,7 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -148,7 +148,7 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Cell No.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Owner Mobile Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>

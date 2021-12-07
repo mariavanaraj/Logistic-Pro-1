@@ -131,7 +131,7 @@ const TripSheetSettleMentFG = () => {
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
-                  Driver Cell No
+                  Driver Mobile Number
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
@@ -210,7 +210,7 @@ const TripSheetSettleMentFG = () => {
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
-                  Tripsheet No
+                  Tripsheet Number
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
@@ -239,7 +239,7 @@ const TripSheetSettleMentFG = () => {
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
-                  Owner Cell No
+                  Owner Cell Number
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}

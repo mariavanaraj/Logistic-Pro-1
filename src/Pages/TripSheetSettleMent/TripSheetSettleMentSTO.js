@@ -111,7 +111,7 @@ const TripSheetSettleMentSTO = () => {
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
-                  Tripsheet No
+                  Tripsheet Number
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
@@ -149,7 +149,7 @@ const TripSheetSettleMentSTO = () => {
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
-                  Driver Cell No
+                  Driver Cell Number
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
@@ -311,7 +311,7 @@ const TripSheetSettleMentSTO = () => {
             <CRow className="">
               <CCol xs={12} md={2}>
                 <CFormLabel htmlFor="inputAddress">
-                  Delivery Invoice No
+                  Delivery Invoice Number
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
@@ -381,7 +381,7 @@ const TripSheetSettleMentSTO = () => {
             <CRow className="">
               <CCol xs={12} md={2}>
                 <CFormLabel htmlFor="inputAddress">
-                  Delivery Invoice No
+                  Delivery Invoice Number
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
