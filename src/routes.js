@@ -39,6 +39,18 @@ import DriverMaster from './Pages/Master/DriverMaster'
 import ShedMaster from './Pages/Master/ShedMaster'
 import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
 import UserLoginMaster from './Pages/UserLoginMaster/UserLoginMaster'
+import DefectType from './Pages/Master/Submaster/DefectType'
+import Department from './Pages/Master/Submaster/Department'
+import Designation from './Pages/Master/Submaster/Designation'
+import Division from './Pages/Master/Submaster/Division'
+import MaterialDescription from './Pages/Master/Submaster/MaterialDescription'
+import OtherCharges from './Pages/Master/Submaster/OtherCharges'
+import PreviousLoadDetails from './Pages/Master/Submaster/PreviousLoadDetails'
+import RejectReason from './Pages/Master/Submaster/RejectReason'
+import Status from './Pages/Master/Submaster/Status'
+import UOM from './Pages/Master/Submaster/UOM'
+import VehicleCapacity from './Pages/Master/Submaster/VehicleCapacity'
+import VehicleMasterTable from './Pages/Master/Submaster/VehicleMasterTable'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
@@ -180,6 +192,18 @@ const routes = [
   { path: '/ShedMaster', exact: true, name: 'ShedMaster', component: ShedMaster },
   { path: '/DieselVendorMaster', exact: true, name: 'DieselVendorMaster', component: DieselVendorMaster },
   { path: '/UserLoginMaster', exact: true, name: 'UserLoginMaster', component: UserLoginMaster },
+  { path: '/DefectType', exact: true, name: 'DefectType', component: DefectType },
+  { path: '/Department', exact: true, name: 'Department', component: Department },
+  { path: '/Designation', exact: true, name: 'Designation', component: Designation },
+  { path: '/Division', exact: true, name: 'Division', component: Division },
+  { path: '/MaterialDescription', exact: true, name: 'MaterialDescription', component: MaterialDescription },
+  { path: '/OtherCharges', exact: true, name: 'OtherCharges', component: OtherCharges },
+  { path: '/PreviousLoadDetails', exact: true, name: 'PreviousLoadDetails', component: PreviousLoadDetails },
+  { path: '/RejectReason', exact: true, name: 'RejectReason', component: RejectReason },
+  { path: '/Status', exact: true, name: 'Status', component: Status },
+  { path: '/UOM', exact: true, name: 'UOM', component: UOM },
+  { path: '/VehicleCapacity', exact: true, name: 'VehicleCapacity', component: VehicleCapacity },
+  { path: '/VehicleMasterTable', exact: true, name: 'VehicleMasterTable', component: VehicleMasterTable },
 ]
 
 export default routes

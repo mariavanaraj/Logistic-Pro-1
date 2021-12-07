@@ -51,7 +51,7 @@ const ParkingYardGate = () => {
             <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle No*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
                     <option hidden>Select...</option>
 
@@ -64,7 +64,7 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>

@@ -71,7 +71,7 @@ const VendorCreationRequest = () => {
           <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                PAN Card No
+                PAN Card Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -89,7 +89,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Owner Cell No
+                Owner Mobile Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -126,8 +126,8 @@ const VendorCreationRequest = () => {
                     <i
                       className="fa fa-trash"
                       aria-hidden="true"
-                      // onMouseOver={changeBackground}
-                      // onMouseLeave={changeBackground1}
+                    // onMouseOver={changeBackground}
+                    // onMouseLeave={changeBackground1}
                     ></i>
                   </span>
                 </CButton>
@@ -536,7 +536,7 @@ const VendorCreationRequest = () => {
           <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Aadhar No.*
+                Aadhar Number*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -545,7 +545,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Bank A/C No.*
+                Bank Account Number*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -554,7 +554,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                IFSC Code No.*
+                IFSC Code Number*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -637,7 +637,7 @@ const VendorCreationRequest = () => {
           <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                GST Registration No.*
+                GST Registration Number*
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}

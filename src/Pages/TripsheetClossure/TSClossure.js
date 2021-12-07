@@ -125,7 +125,7 @@ const TSClossure = () => {
                     <CFormInput size="sm" id="inputAddress" value="RMIASR182100000024" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="700012" readOnly />
                   </CCol>
@@ -153,7 +153,7 @@ const TSClossure = () => {
                     <CFormInput size="sm" id="inputAddress" value="NAGARAJ" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Driver Cell No.</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Driver Cell Number</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="8525097921" readOnly />
                   </CCol>
@@ -249,7 +249,7 @@ const TSClossure = () => {
                     <CFormInput size="sm" id="inputAddress" value="BBBBB" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Owner Cell No.</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Owner Cell Number</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="1234567890" readOnly />
                   </CCol>
@@ -355,7 +355,7 @@ const TSClossure = () => {
                     <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Customer No.</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Customer Number</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="111111" readOnly />
                   </CCol>
@@ -1104,7 +1104,7 @@ const TSClossure = () => {
                   </CCol>
 
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="700012" readOnly />
                   </CCol>
@@ -1133,7 +1133,7 @@ const TSClossure = () => {
                     <CFormInput size="sm" id="inputAddress" value="NAGARAJ" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Driver Cell No</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="8525097921" readOnly />
                   </CCol>
@@ -1205,7 +1205,7 @@ const TSClossure = () => {
                     <CFormInput size="sm" id="inputAddress" value="BBBBB" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Owner Cell No.</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Owner Mobile Number</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="1234567890" readOnly />
                   </CCol>

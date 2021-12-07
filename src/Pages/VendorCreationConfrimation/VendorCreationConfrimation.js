@@ -66,7 +66,7 @@ const VendorCreationConfrimation = () => {
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Owner Cell Number
+              Owner Mobile Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -451,21 +451,21 @@ const VendorCreationConfrimation = () => {
         <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Aadhar No
+              Aadhar Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Bank A/c No
+              Bank Account Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              IFSC Code No
+              IFSC Code Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -511,7 +511,7 @@ const VendorCreationConfrimation = () => {
         <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              GST Registeration No
+              GST Registeration Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -621,9 +621,9 @@ const VendorCreationConfrimation = () => {
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
           <CCol xs={12} md={3}>
-              <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
-              <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
-            </CCol>
+            <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+            <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+          </CCol>
         </CRow>
         <CRow className="">
           <CCol className="" xs={12} sm={12} md={3}>

@@ -239,24 +239,12 @@ const DriverMaster = () => {
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-2">
-                                <CCol>
-                                    <CButton
-                                        md={9}
-                                        size="sm"
-                                        color=""
-                                        disabled=""
-                                        className="text-white"
-                                        type="submit"
-                                    >
-
-                                    </CButton>
-                                </CCol>
-
+                               
                                 <CCol
                                     className="pull-right"
                                     xs={12}
                                     sm={12}
-                                    md={3}
+                                    md={12}
                                     style={{ display: 'flex', justifyContent: 'flex-end' }}
                                 >
                                     <CButton

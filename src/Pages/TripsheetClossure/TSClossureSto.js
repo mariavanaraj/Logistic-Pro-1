@@ -74,7 +74,7 @@ const TSClossureSto = () => {
             <CTabPane role="tabpanel" aria-labelledby="Page1-tab" visible={activeKey === 1}>
               <CRow className="mt-2">
                 <CCol md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle No.*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
                     <option hidden>Select</option>
 
@@ -103,7 +103,7 @@ const TSClossureSto = () => {
                 <CCol md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
-                    <option hidden>Select Vehicle No</option>
+                    <option hidden>Select Vehicle Number</option>
 
                     <option value="1">Arun</option>
 
@@ -118,7 +118,7 @@ const TSClossureSto = () => {
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Cell No.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -141,15 +141,15 @@ const TSClossureSto = () => {
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" readOnly/>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" readOnly />
                 </CCol>
               </CRow>
 
               <CRow className="">
-              <CCol xs={12} md={3}>
+                <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Tripsheet Date & Time</CFormLabel>
-                  <CFormInput type="datetime-local" size="sm" id="inputAddress" readOnly/>
+                  <CFormInput type="datetime-local" size="sm" id="inputAddress" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Closing KM*</CFormLabel>
@@ -245,7 +245,7 @@ const TSClossureSto = () => {
             <CTabPane role="tabpanel" aria-labelledby="Page2-tab" visible={activeKey === 2}>
               <CRow className="mt-2" hidden>
                 <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                 </CCol>
@@ -279,7 +279,7 @@ const TSClossureSto = () => {
 
               <CRow className="" hidden>
                 <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                 </CCol>
@@ -313,7 +313,7 @@ const TSClossureSto = () => {
 
               <CRow className="" hidden>
                 <CCol xs={12} md={2}>
-                  <CFormLabel htmlFor="inputAddress">Invoice No.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
                 </CCol>
