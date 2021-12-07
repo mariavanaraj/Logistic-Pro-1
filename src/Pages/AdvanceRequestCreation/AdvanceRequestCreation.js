@@ -82,7 +82,11 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
+
+                  <CFormLabel htmlFor="inputAddress">Driver Cell Number</CFormLabel>
+
+//                   <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
+
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
@@ -133,7 +137,7 @@ const ParkingYardGate = () => {
                 </CCol>
               </CRow>
               <CRow className="">
-                {/* <CCol xs={12} md={3}>
+                <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -146,21 +150,24 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Cell No.</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Owner Cell Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol> */}
+                </CCol>
+              </CRow>
+
+              <CRow className="">
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Outstanding</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Advance Request Form</CFormLabel>
 
@@ -174,7 +181,8 @@ const ParkingYardGate = () => {
                       <span className="help text-danger">{errors.OdometerKm}</span>
                     )}
                   </CFormLabel>
-                  <CFormInput
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  {/* <CFormInput
                     name="Order Qty"
                     onFocus={onFocus}
                     onBlur={onBlur}
@@ -183,10 +191,9 @@ const ParkingYardGate = () => {
                     size="sm"
                     id="inputAddress"
                     placeholder=""
-                  />
+                  /> */}
                 </CCol>
 
-                {/* <p className="text-danger">For Hire Vehicle - changed by scenario</p> */}
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
@@ -211,6 +218,41 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="inputAddress">80% Advance Amount</CFormLabel>
 
                   <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="remarks">Payment Through*</CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    // className="mb-3"
+                    aria-label="Small select example"
+                  >
+                    <option hidden>Select Payment Type</option>
+
+                    <option value="1">Cash</option>
+
+                    <option value="2">Diesel</option>
+                  </CFormSelect>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">OTP Generate</CFormLabel>
+                  <CButton
+                    // onClick={() => setVisible(!visible)}
+                    className="w-100"
+                    color="info"
+                    size="sm"
+                  >
+                    <span className="float-start">
+                      <i className="fa fa-key" aria-hidden="true"></i> &nbsp;Click Here To Generate
+                      OTP
+                    </span>
+                  </CButton>
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Enter OTP*</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" />
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -249,9 +291,18 @@ const ParkingYardGate = () => {
                   </CButton>
                   <CButton
                     size="sm"
+                    color="warning"
+                    // disabled={enableSubmit}
+                    className="mx-3 px-3 text-white"
+                    type="submit"
+                  >
+                    Reject
+                  </CButton>
+                  <CButton
+                    size="sm"
                     // disabled={enableSubmit}
                     color="warning"
-                    className="px-3 text-white"
+                    className="mx-3 px-3 text-white"
                     type="submit"
                   >
                     Cancel
