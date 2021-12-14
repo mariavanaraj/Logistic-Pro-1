@@ -19,6 +19,7 @@ import { logo } from 'src/assets/brand/logo'
 import Title from './Title'
 
 const AppHeader = () => {
+
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.changeState.sidebarShow)
 
@@ -34,8 +35,9 @@ const AppHeader = () => {
         <CHeaderBrand className="mx-auto d-md-none" to="/">
           <h3>Logistics Pro</h3>
         </CHeaderBrand>
-        {/* <h3 className="text-white d-md-block d-none">{title}</h3> */}
+        {/* <h3 className="text-white d-md-block d-none"> {name}</h3> */}
         <Title />
+
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
         </CHeaderNav>

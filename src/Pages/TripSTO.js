@@ -103,25 +103,6 @@ const TripSheetCreationHome = () => {
         </CButton>
       ),
     },
-    {
-      id: 3,
-      sno: 3,
-      VA_No: 12018,
-      Tripsheet_No: 102501,
-      Vehicle_Type: 'Hire',
-      Vehicle_No: 'TN54CT8417',
-      Driver_Name: 'Alvin',
-      Waiting_At: <span className="badge rounded-pill bg-info">Ts Creation</span>,
-      Screen_Duration: '1 Hrs 07 Mins',
-      Overall_Duration: '2 Hrs 55 Mins',
-      Action: (
-        <CButton className="badge text-white" color="warning">
-          <Link className="text-white" to="/TripSheetCreationHome/TripSheetCreationOwnFG" >
-            TripSheet FG Own
-          </Link>
-        </CButton>
-      ),
-    },
   ]
   return (
     <CCard className="mt-4">

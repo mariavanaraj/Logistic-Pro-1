@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import {
   CButton,
   CCard,
@@ -15,10 +16,13 @@ import {
   CRow,
   CFormTextarea,
   CFormSelect,
+
 } from '@coreui/react'
 import useForm from 'src/Hooks/useForm'
 import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
 import { Link } from 'react-router-dom'
+import CMultiSelect from '@coreui/react-pro/src/components/multi-select/CMultiSelect'
+
 
 const TripSheetCreationFG = () => {
   const formValues = {
@@ -98,55 +102,11 @@ const TripSheetCreationFG = () => {
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Driver Cell No.
+              Driver Mobile Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
-          <CCol xs={12} md={3}>
-            <CFormLabel htmlFor="inputAddress">
-              Odometer KM
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
-            </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
-          </CCol>
-          <CCol xs={12} md={3}>
-            <CFormLabel htmlFor="inputAddress">
-              Odometer Photo
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
-            </CFormLabel>
-
-            <CButton
-              onClick={() => setOdometerPhoto(!OdometerPhoto)}
-              className="w-100 m-0"
-              color="info"
-              size="sm"
-              id="inputAddress"
-            >
-              <span className="float-start">
-                <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
-              </span>
-            </CButton>
-            <CModal visible={OdometerPhoto} onClose={() => setOdometerPhoto(false)}>
-              <CModalHeader>
-                <CModalTitle>Odometer Photo</CModalTitle>
-              </CModalHeader>
-              <CModalBody>
-                <CCardImage
-                  orientation="top"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy8_NeahwoKut3zeWbVAhUWS59XaqVah0mYMotQ08scOqWrXWsZy39GGRedOzSV1Ao8qk&usqp=CAU"
-                />
-              </CModalBody>
-              <CModalFooter>
-                <CButton color="secondary" onClick={() => setOdometerPhoto(false)}>
-                  Close
-                </CButton>
-                <CButton color="primary">Save changes</CButton>
-              </CModalFooter>
-            </CModal>
-          </CCol>
-        </CRow>
-        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Gate-In Date & Time
@@ -175,8 +135,6 @@ const TripSheetCreationFG = () => {
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" value="" readOnly />
           </CCol>
-        </CRow>
-        <CRow className="">
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Owner Name
@@ -193,8 +151,8 @@ const TripSheetCreationFG = () => {
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Trip Advance Eligibility
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              Division
+              {errors.Division && <span className="help text-danger">{errors.Division}</span>}
             </CFormLabel>
             <CFormSelect
               size="sm"
@@ -202,24 +160,80 @@ const TripSheetCreationFG = () => {
               onFocus={onFocus}
               onBlur={onBlur}
               onChange={handleChange}
-              value={values.vehicleType}
-              className={`${errors.vehicleType && 'is-invalid'}`}
+              value={values.Division}
+              className={`${errors.Division && 'is-invalid'}`}
               aria-label="Small select example"
             >
               <option value="" hidden>
                 Select...
               </option>
-              <option value="1">Select-LP</option>
+              <option value="1">NLFD</option>
+              <option value="2">NLFA</option>
+              <option value="3">NLMD</option>
+              <option value="4">NLCD</option>
+              <option value="5">NLDV</option>
             </CFormSelect>
           </CCol>
           <CCol xs={12} md={3}>
-            <CFormLabel htmlFor="inputAddress">
-              Trip Advance Amount
+            <CFormLabel htmlFor="inputAddress" >
+              Freight Rate Per TON
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" type="text" value="" />
           </CCol>
-
+          {/* <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Appoximate Freight Amount
+              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+            </CFormLabel>
+            <CFormInput size="sm" id="inputAddress" type="text" value="" readOnly />
+          </CCol> */}
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Trip Advance Eligibility
+              {errors.AdvanceEligibility && <span className="help text-danger">{errors.AdvanceEligibility}</span>}
+            </CFormLabel>
+            <CFormSelect
+              size="sm"
+              name=""
+              onFocus={onFocus}
+              onBlur={onBlur}
+              onChange={handleChange}
+              value={values.AdvanceEligibility}
+              className={`${errors.AdvanceEligibility && 'is-invalid'}`}
+              aria-label="Small select example"
+            >
+              <option value="" hidden>
+                Select...
+              </option>
+              <option value="1">Yes</option>
+              <option value="2">No</option>
+            </CFormSelect>
+          </CCol>
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Advance Payment Mode
+              {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+            </CFormLabel>
+            <CMultiSelect
+              size="sm"
+              name=""
+            >
+              <option value="" hidden>
+                Select...
+              </option>
+              <option value="1">Bank</option>
+              <option value="2">Cash</option>
+              <option value="3">Diesel</option>
+            </CMultiSelect>
+          </CCol>
+          {/* <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Advance Amount
+              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+            </CFormLabel>
+            <CFormInput size="sm" id="inputAddress" type="text" value="" />
+          </CCol> */}
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
             <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
@@ -249,7 +263,7 @@ const TripSheetCreationFG = () => {
             >
               Create
             </CButton>
-            <CButton
+            {/* <CButton
               size="sm"
               // disabled={enableSubmit}
               color="warning"
@@ -257,12 +271,11 @@ const TripSheetCreationFG = () => {
               type="submit"
             >
               Cancel
-            </CButton>
+            </CButton> */}
           </CCol>
         </CRow>
       </CForm>
     </CCard>
   )
 }
-
 export default TripSheetCreationFG

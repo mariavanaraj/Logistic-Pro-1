@@ -206,7 +206,7 @@ const ParkingYardGate = () => {
                     className="px-3 text-white"
                     type="submit"
                   >
-                    Cancel
+                    Reject
                   </CButton>
                 </CCol>
               </CRow>

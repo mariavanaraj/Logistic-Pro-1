@@ -323,10 +323,10 @@ const VehicleInspection = () => {
                   <CButton size="sm" color="warning" className="mx-1 px-2 text-white" type="submit">
                     Reject
                   </CButton>
-
+{/* 
                   <CButton size="sm" color="warning" className="mx-1 px-2 text-white" type="submit">
                     Cancel
-                  </CButton>
+                  </CButton> */}
                 </CCol>
               </CRow>
             </CForm>

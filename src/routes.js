@@ -7,6 +7,9 @@ import RjSalesOrderCreation from './Pages/RjSalesOrderCreation/RjSalesOrderCreat
 import VehicleAssignmentFoods from './Pages/VehicleAssignmentFoods/VehicleAssignmentFoods'
 import VehicleAssignmentConsumer from './Pages/VehicleAssignmentConsumer/VehicleAssignmentConsumer'
 import AdvanceRequestCreation from './Pages/AdvanceRequestCreation/AdvanceRequestCreation'
+import AdvancePayment from './Pages/AdvanceRequestCreation/AdvancePayment'
+import AdvanceOwn from './Pages/AdvanceRequestCreation/AdvanceOwn'
+import AdvanceHire from './Pages/AdvanceRequestCreation/AdvanceHire'
 import DiCreation from './Pages/DiCreation/DiCreation'
 import DiConfirmation from './Pages/DiConfirmation/DiConfirmation'
 import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGateIn'
@@ -15,14 +18,15 @@ import vInspection from './Pages/VehicleInspection/vInspection'
 import vehicleInspection from './Pages/VehicleInspection/vehicleInspection'
 import vehicleMaintainence from './Pages/VehicleMaintainence/vehicleMaintainence'
 import VMain from './Pages/VehicleMaintainence/VMain'
-
 import DocVerify from './Pages/DocumentVerification/DocsVerify'
 import DocVerifyVendorAvail from './Pages/DocumentVerification/DocVerifyVendorAvail'
 import DocVerifyVendorNotAvail from './Pages/DocumentVerification/DocVerifyVendorNotAvail'
 // import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
 import TripSheetCreationFG from './Pages/TripSheetCreation/TripSheetCreationFG'
+import TripSheetCreationOwnFG from './Pages/TripSheetCreation/TripSheetCreationOwnFG'
 import TripSheetCreationHome from './Pages/TripSheetCreation/TripSheetCreationHome'
 import TripSheetCreationSTO from './Pages/TripSheetCreation/TripSheetCreationSTO'
+import TripSTO from './Pages/TripSheetCreation/TripSTO'
 import TripSheetSettleMentFG from './Pages/TripSheetSettleMent/TripSheetSettleMentFG'
 import TripSheetSettleMentHome from './Pages/TripSheetSettleMent/TripSheetSettleMentHome'
 import TripSheetSettleMentSTO from './Pages/TripSheetSettleMent/TripSheetSettleMentSTO'
@@ -50,7 +54,8 @@ import RejectReason from './Pages/Master/Submaster/RejectReason'
 import Status from './Pages/Master/Submaster/Status'
 import UOM from './Pages/Master/Submaster/UOM'
 import VehicleCapacity from './Pages/Master/Submaster/VehicleCapacity'
-import VehicleMasterTable from './Pages/Master/Submaster/VehicleMasterTable'
+import VehicleMasterTable from './Pages/VehicleMasterTable'
+import ShipmentCreation from './Pages/ShipmentCreation/ShipmentCreation'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
@@ -160,10 +165,22 @@ const routes = [
     component: TripSheetCreationFG,
   },
   {
-    path: '/TripSheetCreationHome/TripSheetCreationSTO',
+    path: '/TripSheetCreationHome/TripSheetCreationOwnFG',
     exact: true,
-    name: 'TripSheetCreationFG',
+    name: '/TripSheetCreationOwnFG',
+    component: TripSheetCreationOwnFG
+  },
+  {
+    path: '/TripSheetCreationSTO',
+    exact: true,
+    name: 'TripSheetCreationSTO',
     component: TripSheetCreationSTO,
+  },
+  {
+    path: '/TripSTO',
+    exact: true,
+    name: 'TripSTO',
+    component: TripSTO,
   },
   {
     path: '/TripSheetSettleMentHome',
@@ -183,7 +200,12 @@ const routes = [
     name: 'TripSheetSettleMentSTO',
     component: TripSheetSettleMentSTO,
   },
-
+  {
+    path: '/ShipmentCreation',
+    exact: true,
+    name: 'ShipmentCreation',
+    component: ShipmentCreation,
+  },
   { path: '/', exact: true, name: 'Home' },
   { path: '/TSClossure', exact: true, name: 'Test', component: TSClossure },
   { path: '/TSClossure-sto', exact: true, name: 'Test', component: TSClossureSto },
@@ -204,6 +226,10 @@ const routes = [
   { path: '/UOM', exact: true, name: 'UOM', component: UOM },
   { path: '/VehicleCapacity', exact: true, name: 'VehicleCapacity', component: VehicleCapacity },
   { path: '/VehicleMasterTable', exact: true, name: 'VehicleMasterTable', component: VehicleMasterTable },
+  { path: '/AdvancePayment', exact: true, name: 'AdvancePayment', component: AdvancePayment },
+  { path: '/AdvancePayment/AdvanceOwn', exact: true, name: 'AdvanceOwn', component: AdvanceOwn },
+  { path: '/AdvancePayment/AdvanceHire', exact: true, name: 'AdvanceHire', component: AdvanceHire },
+
 ]
 
 export default routes

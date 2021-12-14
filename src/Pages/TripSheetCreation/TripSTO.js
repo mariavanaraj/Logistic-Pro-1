@@ -68,25 +68,6 @@ const TripSheetCreationHome = () => {
     {
       id: 1,
       sno: 1,
-      VA_No: 12000,
-      Tripsheet_No: 102556,
-      Vehicle_Type: 'own',
-      Vehicle_No: 'TN45AT8417',
-      Driver_Name: 'Saravana',
-      Waiting_At: <span className="badge rounded-pill bg-info">DI Creation</span>,
-      Screen_Duration: '0 Hrs 07 Mins',
-      Overall_Duration: '0 Hrs 55 Mins',
-      Action: (
-        <CButton className="badge text-white" color="warning">
-          <Link className="text-white" to="/TripSheetCreationHome/TripSheetCreationFG">
-            TripSheet FG Hire
-          </Link>
-        </CButton>
-      ),
-    },
-    {
-      id: 2,
-      sno: 2,
       VA_No: 12070,
       Tripsheet_No: 102501,
       Vehicle_Type: 'contract',
@@ -97,31 +78,13 @@ const TripSheetCreationHome = () => {
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
         <CButton className="badge text-white" color="warning" >
-          <Link className="text-white" to="TripSheetCreationSTO">
-            TripSheet STO
+          <Link className="text-white" to="/TripSheetCreationHome/TripSheetCreationOwnFG">
+            Trip STO
           </Link>
         </CButton>
       ),
     },
-    {
-      id: 3,
-      sno: 3,
-      VA_No: 12018,
-      Tripsheet_No: 102501,
-      Vehicle_Type: 'Hire',
-      Vehicle_No: 'TN54CT8417',
-      Driver_Name: 'Alvin',
-      Waiting_At: <span className="badge rounded-pill bg-info">Ts Creation</span>,
-      Screen_Duration: '1 Hrs 07 Mins',
-      Overall_Duration: '2 Hrs 55 Mins',
-      Action: (
-        <CButton className="badge text-white" color="warning">
-          <Link className="text-white" to="/TripSheetCreationHome/TripSheetCreationOwnFG" >
-            TripSheet FG Own
-          </Link>
-        </CButton>
-      ),
-    },
+
   ]
   return (
     <CCard className="mt-4">

@@ -83,9 +83,7 @@ const ParkingYardGate = () => {
 
                 <CCol xs={12} md={3}>
 
-                  <CFormLabel htmlFor="inputAddress">Driver Cell Number</CFormLabel>
-
-//                   <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
 
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />

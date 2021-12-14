@@ -3,6 +3,7 @@ import { AppContent, AppSidebar, AppFooter, AppHeader } from '../components/inde
 import nav from '../_nav'
 
 const DefaultLayout = () => {
+
   return (
     <div>
       <AppSidebar />

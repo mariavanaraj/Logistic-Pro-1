@@ -186,7 +186,7 @@ const ParkingYardGate = () => {
 
                 <CCol xs={12} md={3}>
                   {/* <CFormLabel htmlFor="inputAddress">Advance Amount*</CFormLabel> */}
-                  <CFormLabel htmlFor="inputAddress">Income Amount*</CFormLabel> {/* Changed */}
+                  <CFormLabel htmlFor="inputAddress">Advance Amount*</CFormLabel> {/* Changed */}
                   <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
@@ -279,7 +279,7 @@ const ParkingYardGate = () => {
                   <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea
                     name="remarks"
                     id="exampleFormControlTextarea1"
@@ -317,7 +317,7 @@ const ParkingYardGate = () => {
                   >
                     Submit
                   </CButton>
-                  <CButton
+                  {/* <CButton
                     size="sm"
                     // disabled={enableSubmit}
                     color="warning"
@@ -325,7 +325,7 @@ const ParkingYardGate = () => {
                     type="submit"
                   >
                     Cancel
-                  </CButton>
+                  </CButton> */}
                 </CCol>
               </CRow>
             </CForm>

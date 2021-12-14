@@ -809,9 +809,9 @@ const VendorCreationRequest = () => {
               <CButton size="sm" color="warning" className="mx-3 px-3 text-white" type="submit">
                 Submit
               </CButton>
-              <CButton size="sm" color="warning" className="px-3 text-white" type="submit">
+              {/* <CButton size="sm" color="warning" className="px-3 text-white" type="submit">
                 Cancel
-              </CButton>
+              </CButton> */}
             </CCol>
           </CRow>
         </CForm>

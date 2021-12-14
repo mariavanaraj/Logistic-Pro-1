@@ -156,16 +156,7 @@ const ParkingYardGate = () => {
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Division*</CFormLabel>
-                  <CFormSelect size="sm" className="" aria-label="Small select example">
-                    <option hidden>Select...</option>
-                    <option value="1">NLFD</option>
-                    <option value="2">NLFA</option>
-                    <option value="3">NLCD</option>
-                    <option value="4">NLMD</option>
-                  </CFormSelect>
-                </CCol>
+
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea
