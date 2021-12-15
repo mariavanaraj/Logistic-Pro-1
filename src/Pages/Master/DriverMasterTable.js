@@ -2,12 +2,12 @@ import { CButton, CCard, CContainer, CCol, CRow, CModal, CModalHeader, CModalTit
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CustomTable from "src/components/customComponent/CustomTable";
-const VehicleMasterTable = () => {
-    const [OdometerPhoto, setOdometerPhoto] = useState(false)
+const UserLoginMasterTable = () => {
+    const [DriverPhoto, setDriverPhoto] = useState(false)
     const [RCCopyFront, setRCCopyFront] = useState(false)
     const [RCCopyBack, setRCCopyBack] = useState(false)
     const [InsuranceCopyBack, setInsuranceCopyBack] = useState(false)
-    const [InsuranceCopyFront, setInsuranceCopyFront] = useState(false)
+    const [PANNumber, setPANNumber] = useState(false)
     const columns = [
         {
             name: 'S.No',
@@ -23,53 +23,78 @@ const VehicleMasterTable = () => {
         },
 
         {
-            name: 'Vehicle Type',
-            selector: (row) => row.Vehicle_Type,
+            name: 'Driver Type',
+            selector: (row) => row.Driver_Type,
             sortable: true,
             center: true,
         },
         {
-            name: 'Vehicle Capacity',
-            selector: (row) => row.Vehicle_Capacity,
+            name: 'Driver Name',
+            selector: (row) => row.Driver_Name,
             sortable: true,
             center: true,
         },
         {
-            name: 'Vehicle Body Type',
-            selector: (row) => row.Vehicle_Bodytype,
+            name: 'Driver Code',
+            selector: (row) => row.Driver_Code,
             sortable: true,
             center: true,
         },
         {
-            name: 'RC Copy Front',
-            selector: (row) => row.RC_Copy_Front,
+            name: 'Driver Mobile Number 1',
+            selector: (row) => row.Driver_Mobile_Number1,
             sortable: true,
             center: true,
         },
         {
-            name: 'RC Copy Back',
-            selector: (row) => row.RC_Copy_Back,
+            name: 'Driver Mobile Number 2',
+            selector: (row) => row.Driver_Mobile_Number2,
             sortable: true,
             center: true,
         },
         {
-            name: 'Insurance Copy Front',
-            selector: (row) => row.Insuranance_Copy_Front,
+            name: 'License Number',
+            selector: (row) => row.License_Number,
             center: true,
         },
         {
-            name: ' Insurance Copy Back',
-            selector: (row) => row.Insuranance_Copy_Back,
+            name: ' License Valid To',
+            selector: (row) => row.License_Valid_To,
             center: true,
         },
         {
-            name: 'Insurance Validity',
-            selector: (row) => row.Insurance_Validity,
+            name: 'License Copy Front',
+            selector: (row) => row.License_Copy_Front,
             center: true,
         },
         {
-            name: 'FC Validity',
-            selector: (row) => row.FC_Validity,
+            name: 'License_Copy_Back',
+            selector: (row) => row.License_Copy_Back,
+            center: true,
+        },
+        {
+            name: 'License Validity Status',
+            selector: (row) => row.License_Validity_Status,
+            center: true,
+        },
+        {
+            name: 'Aadhar Card',
+            selector: (row) => row.Aadhar_Card,
+            center: true,
+        },
+        {
+            name: 'PAN Card',
+            selector: (row) => row.PAN_Card,
+            center: true,
+        },
+        {
+            name: 'Driver Photo',
+            selector: (row) => row.Driver_Photo,
+            center: true,
+        },
+        {
+            name: 'Driver Address',
+            selector: (row) => row.Driver_Address,
             center: true,
         },
         {
@@ -89,10 +114,14 @@ const VehicleMasterTable = () => {
         {
             sno: 1,
             Creation_Date: '12.12.2021',
-            Vehicle_Type: 'Own',
-            Vehicle_Capacity: '15',
-            Vehicle_Bodytype: 'Open',
-            RC_Copy_Front: (<span><CButton
+            Driver_Type: 'Own',
+            Driver_Name: 'Subash',
+            Driver_Code: '67238',
+            Driver_Mobile_Number1: '9813792723',
+            Driver_Mobile_Number2: '9813792723',
+            License_Number: 'Dindigul',
+            License_Valid_To: '12.12.2021',
+            License_Copy_Front: (<span><CButton
                 onClick={() => setRCCopyFront(!RCCopyFront)}
                 className="w-100 m-0"
                 color=""
@@ -105,7 +134,7 @@ const VehicleMasterTable = () => {
             </CButton>
                 <CModal visible={RCCopyFront} onClose={() => setRCCopyFront(false)}>
                     <CModalHeader>
-                        <CModalTitle>RC Copy Front</CModalTitle>
+                        <CModalTitle>Licence Front Copy</CModalTitle>
                     </CModalHeader>
                     <CModalBody>
                         <CCardImage
@@ -120,7 +149,7 @@ const VehicleMasterTable = () => {
                         <CButton color="primary">Save changes</CButton>
                     </CModalFooter>
                 </CModal></span>),
-            RC_Copy_Back: (<span><CButton
+            License_Copy_Back: (<span><CButton
                 onClick={() => setRCCopyBack(!RCCopyBack)}
                 className="w-100 m-0"
                 color=""
@@ -133,7 +162,7 @@ const VehicleMasterTable = () => {
             </CButton>
                 <CModal visible={RCCopyBack} onClose={() => setRCCopyBack(false)}>
                     <CModalHeader>
-                        <CModalTitle>RC Copy Back</CModalTitle>
+                        <CModalTitle>License Copy Back</CModalTitle>
                     </CModalHeader>
                     <CModalBody>
                         <CCardImage
@@ -148,34 +177,8 @@ const VehicleMasterTable = () => {
                         <CButton color="primary">Save changes</CButton>
                     </CModalFooter>
                 </CModal></span>),
-            Insuranance_Copy_Front: (<span><CButton
-                onClick={() => setInsuranceCopyFront(!InsuranceCopyFront)}
-                className="w-100 m-0"
-                color=""
-                size="sm"
-                id="inputAddress"
-            >
-                <span className="float-start">
-                    <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
-                </span>
-            </CButton>
-                <CModal visible={InsuranceCopyFront} onClose={() => setInsuranceCopyFront(false)}>
-                    <CModalHeader>
-                        <CModalTitle>Insurance Copy Front</CModalTitle>
-                    </CModalHeader>
-                    <CModalBody>
-                        <CCardImage
-                            orientation="top"
-                            src=""
-                        />
-                    </CModalBody>
-                    <CModalFooter>
-                        <CButton color="secondary" onClick={() => InsuranceCopyFront(false)}>
-                            Close
-                        </CButton>
-                    </CModalFooter>
-                </CModal></span>),
-            Insuranance_Copy_Back: (<span><CButton
+            License_Validity_Status: 'Valid',
+            Aadhar_Card: (<span><CButton
                 onClick={() => setInsuranceCopyBack(!InsuranceCopyBack)}
                 className="w-100 m-0"
                 color=""
@@ -188,7 +191,7 @@ const VehicleMasterTable = () => {
             </CButton>
                 <CModal visible={InsuranceCopyBack} onClose={() => setInsuranceCopyBack(false)}>
                     <CModalHeader>
-                        <CModalTitle>Insurance Copy Back</CModalTitle>
+                        <CModalTitle>Aadhar Card</CModalTitle>
                     </CModalHeader>
                     <CModalBody>
                         <CCardImage
@@ -202,8 +205,61 @@ const VehicleMasterTable = () => {
                         </CButton>
                     </CModalFooter>
                 </CModal></span>),
-            Insurance_Validity: '10.01.2022',
-            FC_Validity: '10.01.2022',
+            PAN_Card: (<span><CButton
+                onClick={() => setPANNumber(!PANNumber)}
+                className="w-100 m-0"
+                color=""
+                size="sm"
+                id="inputAddress"
+            >
+                <span className="float-start">
+                    <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+            </CButton>
+                <CModal visible={PANNumber} onClose={() => setPANNumber(false)}>
+                    <CModalHeader>
+                        <CModalTitle>PAN Card</CModalTitle>
+                    </CModalHeader>
+                    <CModalBody>
+                        <CCardImage
+                            orientation="top"
+                            src=""
+                        />
+                    </CModalBody>
+                    <CModalFooter>
+                        <CButton color="secondary" onClick={() => PANNumber(false)}>
+                            Close
+                        </CButton>
+                    </CModalFooter>
+                </CModal></span>),
+            Driver_Photo: (<span><CButton
+                onClick={() => setDriverPhoto(!DriverPhoto)}
+                className="w-100 m-0"
+                color=""
+                size="sm"
+                id="inputAddress"
+            >
+                <span className="float-start">
+                    <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+            </CButton>
+                <CModal visible={DriverPhoto} onClose={() => setDriverPhoto(false)}>
+                    <CModalHeader>
+                        <CModalTitle>Driver Photo</CModalTitle>
+                    </CModalHeader>
+                    <CModalBody>
+                        <CCardImage
+                            orientation="top"
+                            src=""
+                        />
+                    </CModalBody>
+                    <CModalFooter>
+                        <CButton color="secondary" onClick={() => DriverPhoto(false)}>
+                            Close
+                        </CButton>
+                    </CModalFooter>
+                </CModal></span>),
+            Driver_Address: 'Dindigul',
             Status: <span className="badge rounded-pill bg-info">Active</span>,
             Action: (<span>
                 <CButton className="btn btn-danger" color="">
@@ -238,7 +294,7 @@ const VehicleMasterTable = () => {
                             className="px-3 text-white"
                             type="submit"
                         >
-                            <Link className="text-white" to="/VehicleMaster">
+                            <Link className="text-white" to="/DriverMaster">
                                 New
                             </Link>
                         </CButton>
@@ -250,4 +306,4 @@ const VehicleMasterTable = () => {
     );
 }
 
-export default VehicleMasterTable;
+export default UserLoginMasterTable;

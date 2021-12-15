@@ -54,8 +54,24 @@ import RejectReason from './Pages/Master/Submaster/RejectReason'
 import Status from './Pages/Master/Submaster/Status'
 import UOM from './Pages/Master/Submaster/UOM'
 import VehicleCapacity from './Pages/Master/Submaster/VehicleCapacity'
+import DesignationTable from './Pages/Master/Submaster/DesignationTable'
+import DefectTypeTable from './Pages/Master/Submaster/DefectTypeTable'
+import DepartmentTable from './Pages/Master/Submaster/DepartmentTable'
+import StatusTable from './Pages/Master/Submaster/StatusTable'
+import DivisionTable from './Pages/Master/Submaster/DivisionTable'
+import MaterialDescriptionTable from './Pages/Master/Submaster/MaterialDescriptionTable'
+import OtherChargesTable from './Pages/Master/Submaster/OtherChargesTable'
+import PreviousLoadDetailsTable from './Pages/Master/Submaster/PreviousLoadDetailsTable'
+import RejectReasonTable from './Pages/Master/Submaster/RejectReasonTable'
+import VehicleCapacityTable from './Pages/Master/Submaster/VehicleCapacityTable'
+import UOMTable from './Pages/Master/Submaster/UOMTable'
+import ShedMasterTable from './Pages/Master/ShedMasterTable'
 import VehicleMasterTable from './Pages/VehicleMasterTable'
+import DriverMasterTable from './Pages/Master/DriverMasterTable'
+import DieselVendorMasterTable from './Pages/Master/DieselVendorMasterTable'
+import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
 import ShipmentCreation from './Pages/ShipmentCreation/ShipmentCreation'
+import ShipmentCreationConsumer from './Pages/ShipmentCreation/ShipmentCreationConsumer'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
@@ -206,6 +222,12 @@ const routes = [
     name: 'ShipmentCreation',
     component: ShipmentCreation,
   },
+  {
+    path: '/ShipmentCreationConsumer',
+    exact: true,
+    name: 'ShipmentCreationConsumer',
+    component: ShipmentCreationConsumer,
+  },
   { path: '/', exact: true, name: 'Home' },
   { path: '/TSClossure', exact: true, name: 'Test', component: TSClossure },
   { path: '/TSClossure-sto', exact: true, name: 'Test', component: TSClossureSto },
@@ -229,7 +251,21 @@ const routes = [
   { path: '/AdvancePayment', exact: true, name: 'AdvancePayment', component: AdvancePayment },
   { path: '/AdvancePayment/AdvanceOwn', exact: true, name: 'AdvanceOwn', component: AdvanceOwn },
   { path: '/AdvancePayment/AdvanceHire', exact: true, name: 'AdvanceHire', component: AdvanceHire },
-
+  { path: '/ShedMasterTable', exact: true, name: 'ShedMasterTable', component: ShedMasterTable },
+  { path: '/DriverMasterTable', exact: true, name: 'DriverMasterTable', component: DriverMasterTable },
+  { path: '/DieselVendorMasterTable', exact: true, name: 'DieselVendorMasterTable', component: DieselVendorMasterTable },
+  { path: '/UserLoginMasterTable', exact: true, name: 'UserLoginMasterTable', component: UserLoginMasterTable },
+  { path: '/VehicleCapacityTable', exact: true, name: 'VehicleCapacityTable', component: VehicleCapacityTable },
+  { path: '/DefectTypeTable', exact: true, name: 'DefectTypeTable', component: DefectTypeTable },
+  { path: '/DepartmentTable', exact: true, name: 'DepartmentTable', component: DepartmentTable },
+  { path: '/DesignationTable', exact: true, name: 'DesignationTable', component: DesignationTable },
+  { path: '/MaterialDescriptionTable', exact: true, name: 'MaterialDescriptionTable', component: MaterialDescriptionTable },
+  { path: '/OtherChargesTable', exact: true, name: 'OtherChargesTable', component: OtherChargesTable },
+  { path: '/PreviousLoadDetailsTable', exact: true, name: 'PreviousLoadDetailsTable', component: PreviousLoadDetailsTable },
+  { path: '/RejectReasonTable', exact: true, name: 'RejectReasonTable', component: RejectReasonTable },
+  { path: '/UOMTable', exact: true, name: 'UOMTable', component: UOMTable },
+  { path: '/StatusTable', exact: true, name: 'StatusTable', component: StatusTable },
+  { path: '/DivisionTable', exact: true, name: 'DivisionTable', component: DivisionTable },
 ]
 
 export default routes

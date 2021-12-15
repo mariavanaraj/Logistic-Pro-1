@@ -21,9 +21,7 @@ import {
 import useForm from 'src/Hooks/useForm'
 import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
 import { Link } from 'react-router-dom'
-import CMultiSelect from '@coreui/react-pro/src/components/multi-select/CMultiSelect'
-
-
+// import CMultiSelect from '@coreui/react-pro/src/components/multi-select/CMultiSelect'
 const TripSheetCreationFG = () => {
   const formValues = {
     vehicleType: '',
@@ -215,9 +213,10 @@ const TripSheetCreationFG = () => {
               Advance Payment Mode
               {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
             </CFormLabel>
-            <CMultiSelect
+            <CFormSelect
               size="sm"
               name=""
+
             >
               <option value="" hidden>
                 Select...
@@ -225,7 +224,7 @@ const TripSheetCreationFG = () => {
               <option value="1">Bank</option>
               <option value="2">Cash</option>
               <option value="3">Diesel</option>
-            </CMultiSelect>
+            </CFormSelect>
           </CCol>
           {/* <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
