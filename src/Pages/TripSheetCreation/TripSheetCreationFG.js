@@ -216,7 +216,10 @@ const TripSheetCreationFG = () => {
             <CFormSelect
               size="sm"
               name=""
-
+              className="form-multi-select form-multi-select-lg mb-3"
+              id="multiple-select-counter"
+              data-coreui-selection-type="tags"
+              data-coreui-search="true"
             >
               <option value="" hidden>
                 Select...

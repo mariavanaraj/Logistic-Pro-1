@@ -162,7 +162,7 @@ const _nav = [
   // },
   {
     component: CNavItem,
-    name: 'Vehicle Assign',
+    name: 'Vehicle Assignment',
     to: '/ShipmentCreation',
     icon: <CIcon icon={cilInbox} customClassName="nav-icon" />,
     dataToggle: 'tooltip',
@@ -218,11 +218,11 @@ const _nav = [
   // },
   {
     component: CNavItem,
-    name: 'TS SettleMent',
-    to: '/TripSheetSettleMentHome',
+    name: 'TS Settlement',
+    to: '/TripSheetSettleMentNew',
     icon: <CIcon icon={cilBrowser} customClassName="nav-icon" />,
     dataToggle: 'tooltip',
-    title: 'Trip Sheet SettleMent',
+    title: 'Trip Sheet Settlement',
   },
   {
     component: CNavGroup,

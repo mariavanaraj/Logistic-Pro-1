@@ -87,7 +87,7 @@ const UserLoginMaster = () => {
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.Divison}
-                                        className={`mb-3 ${errors.Divison && 'is-invalid'}`}
+                                        className={`mb-1 ${errors.Divison && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
                                         <option value="">Select ...</option>
@@ -118,7 +118,7 @@ const UserLoginMaster = () => {
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.Department}
-                                        className={`mb-3 ${errors.Department && 'is-invalid'}`}
+                                        className={`mb-1 ${errors.Department && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
                                         <option value="">Select ...</option>
@@ -148,7 +148,7 @@ const UserLoginMaster = () => {
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.Designation}
-                                        className={`mb-3 ${errors.Designation && 'is-invalid'}`}
+                                        className={`mb-1 ${errors.Designation && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
                                         <option value="">Select ...</option>
@@ -166,7 +166,7 @@ const UserLoginMaster = () => {
                                 </CCol>
 
                             </CRow>
-                            <CRow className="mb-md-3">
+                            <CRow className="mb-md-1">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="vNum">Serial No*</CFormLabel>
                                     <CFormInput
@@ -208,7 +208,7 @@ const UserLoginMaster = () => {
                                     />
                                 </CCol>
                             </CRow>
-                            <CRow className="mb-md-2">
+                            <CRow className="mb-md-1">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="formFileSm">
                                         User Photo*{' '}
@@ -225,7 +225,7 @@ const UserLoginMaster = () => {
                                 </CCol>
 
                             </CRow>
-                            <CRow className="mb-md-2">
+                            <CRow className="mb-md-1">
                                 <CCol
                                     className="pull-right"
                                     xs={12}

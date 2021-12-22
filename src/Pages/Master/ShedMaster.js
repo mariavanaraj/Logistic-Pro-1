@@ -62,7 +62,7 @@ const ShedMaster = () => {
                 <CTabContent>
                     <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-                            <CRow className="mb-md-1">
+                            <CRow className="">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="vehicleType">
                                         Driver Type*{' '}
@@ -78,7 +78,7 @@ const ShedMaster = () => {
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.DriverType}
-                                        className={`mb-3 ${errors.DriverType && 'is-invalid'}`}
+                                        className={`mb-1 ${errors.DriverType && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
                                         <option value="">Select ...</option>
@@ -115,7 +115,7 @@ const ShedMaster = () => {
                                     />
                                 </CCol>
                             </CRow>
-                            <CRow className="mb-md-3">
+                            <CRow className="">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="vNum">Shed Owner Mobile Number 2*</CFormLabel>
                                     <CFormInput
@@ -159,7 +159,7 @@ const ShedMaster = () => {
                                     />
                                 </CCol>
                             </CRow>
-                            <CRow className="mb-md-3">
+                            <CRow className="">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="vNum">GST No*</CFormLabel>
                                     <CFormInput

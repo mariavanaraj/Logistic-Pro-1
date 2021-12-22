@@ -28,6 +28,7 @@ import TripSheetCreationHome from './Pages/TripSheetCreation/TripSheetCreationHo
 import TripSheetCreationSTO from './Pages/TripSheetCreation/TripSheetCreationSTO'
 import TripSTO from './Pages/TripSheetCreation/TripSTO'
 import TripSheetSettleMentFG from './Pages/TripSheetSettleMent/TripSheetSettleMentFG'
+import TripSheetSettleMentNew from './Pages/TripSheetSettleMent/TripSheetSettleMentNew'
 import TripSheetSettleMentHome from './Pages/TripSheetSettleMent/TripSheetSettleMentHome'
 import TripSheetSettleMentSTO from './Pages/TripSheetSettleMent/TripSheetSettleMentSTO'
 import VendorCreationApproval from './Pages/VendorCreationApproval/VendorCreationApproval'
@@ -266,6 +267,6 @@ const routes = [
   { path: '/UOMTable', exact: true, name: 'UOMTable', component: UOMTable },
   { path: '/StatusTable', exact: true, name: 'StatusTable', component: StatusTable },
   { path: '/DivisionTable', exact: true, name: 'DivisionTable', component: DivisionTable },
+  { path: '/TripSheetSettleMentNew', exact: true, name: 'TripSheetSettleMentNew', component: TripSheetSettleMentNew },
 ]
-
 export default routes
