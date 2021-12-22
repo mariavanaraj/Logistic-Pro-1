@@ -62,7 +62,7 @@ const ShedMaster = () => {
                 <CTabContent>
                     <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
-                            <CRow className="mb-md-3">
+                            <CRow className="mb-md-2">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="vNum">Diesel Vendor Name*</CFormLabel>
                                     <CFormInput
@@ -100,7 +100,7 @@ const ShedMaster = () => {
                                     />
                                 </CCol>
                             </CRow>
-                            <CRow className="mb-md-3">
+                            <CRow className="mb-md-2">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="vNum">Diesel Vendor Mail ID*</CFormLabel>
                                     <CFormInput

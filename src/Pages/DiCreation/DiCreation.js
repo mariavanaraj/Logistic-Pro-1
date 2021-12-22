@@ -208,7 +208,7 @@ const ParkingYardGate = () => {
                   >
                     Submit
                   </CButton>
-                  <CButton
+                  {/* <CButton
                     size="sm"
                     // disabled={enableSubmit}
                     color="warning"
@@ -216,7 +216,7 @@ const ParkingYardGate = () => {
                     type="submit"
                   >
                     Cancel
-                  </CButton>
+                  </CButton> */}
                 </CCol>
               </CRow>
             </CForm>

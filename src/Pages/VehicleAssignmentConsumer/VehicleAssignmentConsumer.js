@@ -154,48 +154,6 @@ const ParkingYardGate = () => {
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Select Document*</CFormLabel>
-                  <CFormSelect size="sm" className="" aria-label="Small select example">
-                    <option hidden>Select...</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-              </CRow>
-
-              <CRow className="">
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Test*</CFormLabel>
-                  <CFormSelect size="sm" className="" aria-label="Small select example">
-                    <option hidden>Select...</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">To Division</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">City</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Route</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea

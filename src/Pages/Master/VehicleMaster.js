@@ -77,7 +77,7 @@ const VehicleMaster = () => {
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.vehicleType}
-                                        className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
+                                        className={`mb-1 ${errors.vehicleType && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
                                         <option value="">Select ...</option>
@@ -117,7 +117,7 @@ const VehicleMaster = () => {
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.VehicleCapacity}
-                                        className={`mb-3 ${errors.VehicleCapacity && 'is-invalid'}`}
+                                        className={`mb-1 ${errors.VehicleCapacity && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
                                         <option value="">Select ...</option>
@@ -147,7 +147,7 @@ const VehicleMaster = () => {
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.VehicleBodyType}
-                                        className={`mb-3 ${errors.VehicleBodyType && 'is-invalid'}`}
+                                        className={`mb-1 ${errors.VehicleBodyType && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
                                         <option value="">Select ...</option>
@@ -159,7 +159,7 @@ const VehicleMaster = () => {
                                 </CCol>
 
                             </CRow>
-                            <CRow className="mb-md-3">
+                            <CRow className="mb-md-1">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="formFileSm">
                                         RC Copy Front*{' '}
@@ -217,7 +217,7 @@ const VehicleMaster = () => {
                                     />
                                 </CCol>
                             </CRow>
-                            <CRow className="mb-md-3">
+                            <CRow className="mb-md-1">
                                 <CCol md={3}>
                                     <CFormLabel>Insurance Validity*</CFormLabel>
                                     <CFormInput
@@ -239,7 +239,7 @@ const VehicleMaster = () => {
                                     />
                                 </CCol>
                             </CRow>
-                            <CRow className="mb-md-2">
+                            <CRow className="mb-md-1">
                                 <CCol
                                     className="pull-right"
                                     xs={12}

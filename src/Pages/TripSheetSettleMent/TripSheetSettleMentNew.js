@@ -2430,7 +2430,7 @@ const TSClossure = () => {
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
-                      Registered Vendor{' '}
+                      Registed Vendor{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
                       )}
@@ -2705,11 +2705,6 @@ const TSClossure = () => {
 
                     <CFormInput size="sm" htmlFor="inputAddress" readOnly />
                   </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Load Tonnage</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
-                  </CCol>
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
@@ -2754,11 +2749,6 @@ const TSClossure = () => {
 
                     <CFormInput size="sm" htmlFor="inputAddress" readOnly />
                   </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Load Tonnage</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
-                  </CCol>
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
@@ -2800,11 +2790,6 @@ const TSClossure = () => {
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Running KM</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Load Tonnage</CFormLabel>
 
                     <CFormInput size="sm" htmlFor="inputAddress" readOnly />
                   </CCol>
