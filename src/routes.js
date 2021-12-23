@@ -33,8 +33,8 @@ import TripSheetSettleMentHome from './Pages/TripSheetSettleMent/TripSheetSettle
 import TripSheetSettleMentSTO from './Pages/TripSheetSettleMent/TripSheetSettleMentSTO'
 import VendorCreationApproval from './Pages/VendorCreationApproval/VendorCreationApproval'
 import VendorCreationApprovalHome from './Pages/VendorCreationApproval/VendorCreationApprovalHome'
-import VendorCreationConfrimation from './Pages/VendorCreationConfrimation/VendorCreationConfrimation'
-import VendorCreationConfrimationHome from './Pages/VendorCreationConfrimation/VendorCreationConfrimationHome'
+import VendorCreationConfrimation from './Pages/VendorCreationConfrimation/VendorCreationConfrimationHire'
+import VendorCreationConfrimationHome from './Pages/VendorCreationConfrimation/VendorCreationConfrimation'
 import VendorCreationHome from './Pages/VendorCreationRequest/VendorCreationHome'
 import VendorCreationRequest from './Pages/VendorCreationRequest/VendorCreationRequest'
 import TSClossure from './Pages/TripsheetClossure/TSClossure'
@@ -73,6 +73,7 @@ import DieselVendorMasterTable from './Pages/Master/DieselVendorMasterTable'
 import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
 import ShipmentCreation from './Pages/ShipmentCreation/ShipmentCreation'
 import ShipmentCreationConsumer from './Pages/ShipmentCreation/ShipmentCreationConsumer'
+import VendorCreationConfrimationOwn from './Pages/VendorCreationConfrimation/VendorCreationConfrimationOwn'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
@@ -185,7 +186,7 @@ const routes = [
     path: '/TripSheetCreationHome/TripSheetCreationOwnFG',
     exact: true,
     name: '/TripSheetCreationOwnFG',
-    component: TripSheetCreationOwnFG
+    component: TripSheetCreationOwnFG,
   },
   {
     path: '/TripSheetCreationSTO',
@@ -235,38 +236,103 @@ const routes = [
   { path: '/VehicleMaster', exact: true, name: 'VehicleMaster', component: VehicleMaster },
   { path: '/DriverMaster', exact: true, name: 'DriverMaster', component: DriverMaster },
   { path: '/ShedMaster', exact: true, name: 'ShedMaster', component: ShedMaster },
-  { path: '/DieselVendorMaster', exact: true, name: 'DieselVendorMaster', component: DieselVendorMaster },
+  {
+    path: '/DieselVendorMaster',
+    exact: true,
+    name: 'DieselVendorMaster',
+    component: DieselVendorMaster,
+  },
   { path: '/UserLoginMaster', exact: true, name: 'UserLoginMaster', component: UserLoginMaster },
   { path: '/DefectType', exact: true, name: 'DefectType', component: DefectType },
   { path: '/Department', exact: true, name: 'Department', component: Department },
   { path: '/Designation', exact: true, name: 'Designation', component: Designation },
   { path: '/Division', exact: true, name: 'Division', component: Division },
-  { path: '/MaterialDescription', exact: true, name: 'MaterialDescription', component: MaterialDescription },
+  {
+    path: '/MaterialDescription',
+    exact: true,
+    name: 'MaterialDescription',
+    component: MaterialDescription,
+  },
   { path: '/OtherCharges', exact: true, name: 'OtherCharges', component: OtherCharges },
-  { path: '/PreviousLoadDetails', exact: true, name: 'PreviousLoadDetails', component: PreviousLoadDetails },
+  {
+    path: '/PreviousLoadDetails',
+    exact: true,
+    name: 'PreviousLoadDetails',
+    component: PreviousLoadDetails,
+  },
   { path: '/RejectReason', exact: true, name: 'RejectReason', component: RejectReason },
   { path: '/Status', exact: true, name: 'Status', component: Status },
   { path: '/UOM', exact: true, name: 'UOM', component: UOM },
   { path: '/VehicleCapacity', exact: true, name: 'VehicleCapacity', component: VehicleCapacity },
-  { path: '/VehicleMasterTable', exact: true, name: 'VehicleMasterTable', component: VehicleMasterTable },
+  {
+    path: '/VehicleMasterTable',
+    exact: true,
+    name: 'VehicleMasterTable',
+    component: VehicleMasterTable,
+  },
   { path: '/AdvancePayment', exact: true, name: 'AdvancePayment', component: AdvancePayment },
   { path: '/AdvancePayment/AdvanceOwn', exact: true, name: 'AdvanceOwn', component: AdvanceOwn },
   { path: '/AdvancePayment/AdvanceHire', exact: true, name: 'AdvanceHire', component: AdvanceHire },
   { path: '/ShedMasterTable', exact: true, name: 'ShedMasterTable', component: ShedMasterTable },
-  { path: '/DriverMasterTable', exact: true, name: 'DriverMasterTable', component: DriverMasterTable },
-  { path: '/DieselVendorMasterTable', exact: true, name: 'DieselVendorMasterTable', component: DieselVendorMasterTable },
-  { path: '/UserLoginMasterTable', exact: true, name: 'UserLoginMasterTable', component: UserLoginMasterTable },
-  { path: '/VehicleCapacityTable', exact: true, name: 'VehicleCapacityTable', component: VehicleCapacityTable },
+  {
+    path: '/DriverMasterTable',
+    exact: true,
+    name: 'DriverMasterTable',
+    component: DriverMasterTable,
+  },
+  {
+    path: '/DieselVendorMasterTable',
+    exact: true,
+    name: 'DieselVendorMasterTable',
+    component: DieselVendorMasterTable,
+  },
+  {
+    path: '/UserLoginMasterTable',
+    exact: true,
+    name: 'UserLoginMasterTable',
+    component: UserLoginMasterTable,
+  },
+  {
+    path: '/VehicleCapacityTable',
+    exact: true,
+    name: 'VehicleCapacityTable',
+    component: VehicleCapacityTable,
+  },
   { path: '/DefectTypeTable', exact: true, name: 'DefectTypeTable', component: DefectTypeTable },
   { path: '/DepartmentTable', exact: true, name: 'DepartmentTable', component: DepartmentTable },
   { path: '/DesignationTable', exact: true, name: 'DesignationTable', component: DesignationTable },
-  { path: '/MaterialDescriptionTable', exact: true, name: 'MaterialDescriptionTable', component: MaterialDescriptionTable },
-  { path: '/OtherChargesTable', exact: true, name: 'OtherChargesTable', component: OtherChargesTable },
-  { path: '/PreviousLoadDetailsTable', exact: true, name: 'PreviousLoadDetailsTable', component: PreviousLoadDetailsTable },
-  { path: '/RejectReasonTable', exact: true, name: 'RejectReasonTable', component: RejectReasonTable },
+  {
+    path: '/MaterialDescriptionTable',
+    exact: true,
+    name: 'MaterialDescriptionTable',
+    component: MaterialDescriptionTable,
+  },
+  {
+    path: '/OtherChargesTable',
+    exact: true,
+    name: 'OtherChargesTable',
+    component: OtherChargesTable,
+  },
+  {
+    path: '/PreviousLoadDetailsTable',
+    exact: true,
+    name: 'PreviousLoadDetailsTable',
+    component: PreviousLoadDetailsTable,
+  },
+  {
+    path: '/RejectReasonTable',
+    exact: true,
+    name: 'RejectReasonTable',
+    component: RejectReasonTable,
+  },
   { path: '/UOMTable', exact: true, name: 'UOMTable', component: UOMTable },
   { path: '/StatusTable', exact: true, name: 'StatusTable', component: StatusTable },
   { path: '/DivisionTable', exact: true, name: 'DivisionTable', component: DivisionTable },
-  { path: '/TripSheetSettleMentNew', exact: true, name: 'TripSheetSettleMentNew', component: TripSheetSettleMentNew },
+  {
+    path: '/TripSheetSettleMentNew',
+    exact: true,
+    name: 'TripSheetSettleMentNew',
+    component: TripSheetSettleMentNew,
+  },
 ]
 export default routes
