@@ -187,7 +187,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'DI Creation',
-    to: '/DiCreation',
+    to: '/DieselIntentHome',
     icon: <CIcon icon={cilPenNib} customClassName="nav-icon" />,
     dataToggle: 'tooltip',
     title: 'Diesel Indent Creation',

@@ -112,7 +112,14 @@ const ParkingYardGate = () => {
                     <option value="3">South</option>
                   </CFormSelect>
                 </CCol>
-
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">PAN Number*</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Aadhar Number*</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value=""/>
+                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Material Type*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">

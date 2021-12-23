@@ -36,8 +36,9 @@ import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
+import { Link } from 'react-router-dom'
 
-const TSClossure = () => {
+const Shipment = () => {
     const formValues = {
         vehicleType: '',
         OdometerKm: '',
@@ -176,10 +177,9 @@ const TSClossure = () => {
                             <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
                                 <CTableRow>
                                     <CTableHeaderCell scope="col" style={{ color: 'white' }}>#</CTableHeaderCell>
-                                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>S.no</CTableHeaderCell>
-                                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>DSP No</CTableHeaderCell>
+                                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>S.No</CTableHeaderCell>
                                     <CTableHeaderCell scope="col" style={{ color: 'white' }}>SO No</CTableHeaderCell>
-                                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>SO Date</CTableHeaderCell>
+                                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>SO Date & Time</CTableHeaderCell>
                                     <CTableHeaderCell scope="col" style={{ color: 'white' }}>Delivery No</CTableHeaderCell>
                                     <CTableHeaderCell scope="col" style={{ color: 'white' }}>Delivery Date</CTableHeaderCell>
                                     <CTableHeaderCell scope="col" style={{ color: 'white' }}>City</CTableHeaderCell>
@@ -195,7 +195,6 @@ const TSClossure = () => {
                                 <CTableRow>
                                     <CTableDataCell scope="row"><input type="checkbox" name="name2" /></CTableDataCell>
                                     <CTableDataCell>1</CTableDataCell>
-                                    <CTableDataCell>1111</CTableDataCell>
                                     <CTableDataCell>637534</CTableDataCell>
                                     <CTableDataCell>13.12.2021</CTableDataCell>
                                     <CTableDataCell>635437</CTableDataCell>
@@ -236,7 +235,6 @@ const TSClossure = () => {
                                 <CTableRow>
                                     <CTableDataCell scope="row"><input type="checkbox" name="" /></CTableDataCell>
                                     <CTableDataCell>2</CTableDataCell>
-                                    <CTableDataCell>2222</CTableDataCell>
                                     <CTableDataCell>980567</CTableDataCell>
                                     <CTableDataCell>14.12.2021</CTableDataCell>
                                     <CTableDataCell>635437</CTableDataCell>
@@ -318,7 +316,9 @@ const TSClossure = () => {
                                     <CTableDataCell>6547234</CTableDataCell>
                                     <CTableDataCell>637534</CTableDataCell>
                                     <CTableDataCell>TN57AT6789</CTableDataCell>
-                                    <CTableDataCell><CButton color="warning" size="sm" className="mx-3 text-white">Show</CButton></CTableDataCell>
+                                    <CTableDataCell><CButton color="warning" size="sm" className="mx-3 text-white"><Link className="text-white" to="/VehicleAssignmentFoods">
+                                        Show
+                                    </Link></CButton></CTableDataCell>
                                 </CTableRow>
                             </CTableBody>
                         </CTable>
@@ -350,4 +350,4 @@ const TSClossure = () => {
     )
 }
 
-export default TSClossure
+export default Shipment

@@ -30,7 +30,8 @@ import {
   CTableRow,
   CFormTextarea,
 } from '@coreui/react'
-import { React, useState } from 'react'
+import { React, useEffect, useState } from 'react'
+import Select from 'react-select';
 // import CModal from '@coreui/react/src/components/modal/CModal'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
@@ -59,6 +60,21 @@ const TSClossure = () => {
   const [visible1, setVisible1] = useState(false)
   const [adharvisible, setAdharVisible] = useState(false)
   const [adhardel, setAdhardel] = useState(false)
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+  ];
+  const [deliveryNumber, setSelectedDeliveryNumber] = useState([]);
+
+  const selecthandleChange = (e) => {
+    console.log(e.value);
+    // setSelectedDeliveryNumber({[...deliveryNumber, e.value]});
+  }
+
+  useEffect(() => {
+    console.log(deliveryNumber);
+  }, [deliveryNumber])
   return (
     <>
       <CCard className="p-1">
@@ -194,6 +210,7 @@ const TSClossure = () => {
 
                     <CFormInput size="sm" id="inputAddress" value="8525097921" readOnly />
                   </CCol>
+
                   {/* <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Odometer Opening KM</CFormLabel>
 
@@ -625,7 +642,7 @@ const TSClossure = () => {
 
                     <CTableRow>
                       <CTableDataCell>
-                        <CFormInput size="sm" id="inputAddress" Value="15" />
+                        <CFormInput size="sm" id="inputAddress" Value="15" readOnly />
                       </CTableDataCell>
                       <CTableDataCell>
                         <CFormInput size="sm" id="inputAddress" Value="25000" readOnly />
@@ -660,17 +677,23 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Diesel Liter</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" value="" />
+                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Rate Per Liter</CFormLabel>
 
-                    <CFormInput size="sm" type="" id="inputAddress" />
+                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" type="" value=
+                      "" readOnly />
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">Invoice Date & Time</CFormLabel>
+
+                    <CFormInput size="sm" id="inputAddress" type="datetime-local" value=
                       "" readOnly />
                   </CCol>
                   {!adhardel && (
@@ -873,8 +896,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Return Freight Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Diverted POD</CFormLabel>
@@ -900,7 +922,7 @@ const TSClossure = () => {
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        FG Delivery
+                        FJ Delivery
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -1066,7 +1088,7 @@ const TSClossure = () => {
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        FG Delivery
+                        FJ Delivery
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -1180,7 +1202,7 @@ const TSClossure = () => {
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        FG Delivery
+                        FJ Delivery
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -1249,7 +1271,7 @@ const TSClossure = () => {
                   </CTableBody>
                 </CTable>
                 <CTable caption="top" style={{ height: '40vh' }} hover>
-                  <CTableCaption>Others</CTableCaption>
+                  <CTableCaption style={{ color: 'maroon' }}>Others</CTableCaption>
                   <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
                     <CTableRow>
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -1261,7 +1283,7 @@ const TSClossure = () => {
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        FG Delivery
+                        FJ Delivery
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -1653,6 +1675,16 @@ const TSClossure = () => {
               <CNavItem>
                 <CNavLink
                   href="javascript:void(0);"
+                  active={activeKey_2 === 8}
+                  onClick={() => setActiveKey_2(8)}
+                >
+                  Gate Pass
+                </CNavLink>
+              </CNavItem>
+              <CNavItem></CNavItem>
+              <CNavItem>
+                <CNavLink
+                  href="javascript:void(0);"
                   active={activeKey_2 === 6}
                   onClick={() => setActiveKey_2(6)}
                 >
@@ -1745,7 +1777,7 @@ const TSClossure = () => {
                       </CButton>
                     </div>
                   </CCol>
-                  <CCol xs={12} md={3}>
+                  {/* <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
 
                     <CFormInput
@@ -1754,7 +1786,7 @@ const TSClossure = () => {
                       value="21 Sep 2021 12:00:00 PM"
                       readOnly
                     />
-                  </CCol>
+                  </CCol> */}
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
 
@@ -1775,9 +1807,7 @@ const TSClossure = () => {
                       readOnly
                     />
                   </CCol>
-                </CRow>
 
-                <CRow className="">
                   {/* <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
 
@@ -1820,7 +1850,7 @@ const TSClossure = () => {
                     <CFormInput size="sm" id="inputAddress" value="198625" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Closing Odometer KM</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Odometer Closing KM</CFormLabel>
 
                     <div className="d-grid gap-2">
                       <CButton
@@ -1835,9 +1865,7 @@ const TSClossure = () => {
                       </CButton>
                     </div>
                   </CCol>
-                </CRow>
 
-                <CRow className="">
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Trip KM</CFormLabel>
 
@@ -1859,9 +1887,6 @@ const TSClossure = () => {
 
                     <CFormInput size="sm" id="inputAddress" value="80" readOnly />
                   </CCol>
-                </CRow>
-
-                <CRow className="">
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="inputAddress">Idle Hrs</CFormLabel>
 
@@ -1894,7 +1919,6 @@ const TSClossure = () => {
                   </CCol>
                 </CRow> */}
               </CTabPane>
-
               <CTabPane role="tabpanel" aria-labelledby="profile-tab" visible={activeKey_2 === 2}>
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
@@ -2305,7 +2329,7 @@ const TSClossure = () => {
                   </CCol>
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
-                      Driver Name.{' '}
+                      Driver Name{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
                       )}
@@ -2329,14 +2353,114 @@ const TSClossure = () => {
                     </CFormSelect>
                   </CCol>
                   <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress"></CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Expense To Be Capture</CFormLabel>
 
                     <CTableDataCell scope="row"><input type="checkbox" name="name2" /></CTableDataCell>
                   </CCol>
                 </CRow>
+
+                <CButton color='primary'>
+                  Add
+                </CButton>
+                <hr />
+                <CRow className="mt-2" hidden>
+                  <CCol md={2}>
+                    <CFormLabel htmlFor="DefectType">
+                      STO Delivery Number{' '}
+                      {errors.STONo && (
+                        <span className="help text-danger">{errors.STONo}</span>
+                      )}
+                    </CFormLabel>
+                    <CFormSelect
+                      size="sm"
+                      name="DefectType"
+                      onFocus={onFocus}
+                      onBlur={onBlur}
+                      onChange={handleChange}
+                      value={values.STONo}
+                      className={`${errors.STONo && 'is-invalid'}`}
+                      aria-label="Small select example"
+                    >
+                      <option value="" hidden selected>
+                        Select...
+                      </option>
+                      <option value="1">11111</option>
+                      <option value="2">22222</option>
+                      <option value="3">33333</option>
+                    </CFormSelect>
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">From Location</CFormLabel>
+
+                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">To Location</CFormLabel>
+
+                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
+
+                    <CFormInput size="sm" id="inputAddress" type="" value=
+                      "" readOnly />
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">Delivery Date and Time</CFormLabel>
+
+                    <CFormInput size="sm" type="date" id="inputAddress" />
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">POD Copy</CFormLabel>
+                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
+
+                    {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
+                  </CCol>
+                  <CCol md={2}>
+                    <CFormLabel htmlFor="DefectType">
+                      Driver Name{' '}
+                      {errors.DriverName && (
+                        <span className="help text-danger">{errors.DriverName}</span>
+                      )}
+                    </CFormLabel>
+                    <CFormSelect
+                      size="sm"
+                      name="DefectType"
+                      onFocus={onFocus}
+                      onBlur={onBlur}
+                      onChange={handleChange}
+                      value={values.DriverName}
+                      className={`${errors.DriverName && 'is-invalid'}`}
+                      aria-label="Small select example"
+                    >
+                      <option value="" hidden selected>
+                        Select...
+                      </option>
+                      <option value="1">11111</option>
+                      <option value="2">22222</option>
+                      <option value="3">33333</option>
+                    </CFormSelect>
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">Expense To Be Capture</CFormLabel>
+
+                    <CTableDataCell scope="row"><input type="checkbox" name="name2" /></CTableDataCell>
+                  </CCol>
+                </CRow>
+                <CButton color='primary'>
+                  Add
+                </CButton>
+                <hr />
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 5}>
-
+                <CRow className="mt-2" hidden>
+                  <CCol xs={12} md={3}>
+                    <CFormLabel htmlFor="inputAddress" style={{
+                      backgroundColor: '#4d3227',
+                      color: 'white'
+                    }}>Diesel Filling Details : </CFormLabel>
+                  </CCol>
+                </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Diesel Vendor</CFormLabel>
@@ -2403,7 +2527,7 @@ const TSClossure = () => {
                   )}
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
-                      Driver Name.{' '}
+                      Driver Name{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
                       )}
@@ -2513,7 +2637,7 @@ const TSClossure = () => {
                   )}
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
-                      Driver Name.{' '}
+                      Driver Name{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
                       )}
@@ -2604,7 +2728,7 @@ const TSClossure = () => {
                   )}
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
-                      Driver Name.{' '}
+                      Driver Name{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
                       )}
@@ -2665,7 +2789,7 @@ const TSClossure = () => {
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
-                      Forword Journey Number{' '}
+                      Forward Journey Number{' '}
                       {errors.STONo && (
                         <span className="help text-danger">{errors.STONo}</span>
                       )}
@@ -2820,23 +2944,13 @@ const TSClossure = () => {
                         <span className="help text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
-                    <CFormSelect
-                      size="sm"
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DriverName}
-                      className={`${errors.DriverName && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="" hidden selected>
-                        Select...
-                      </option>
-                      <option value="1">11111</option>
-                      <option value="2">22222</option>
-                      <option value="3">33333</option>
-                    </CFormSelect>
+                    <Select
+                      value={deliveryNumber}
+                      onChange={selecthandleChange}
+                      options={options}
+                    />
+
+
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="DefectType">
@@ -2851,7 +2965,7 @@ const TSClossure = () => {
                       onFocus={onFocus}
                       onBlur={onBlur}
                       onChange={handleChange}
-                      value={values.DriverName}
+                      value={setSelectedDeliveryNumber}
                       className={`${errors.DriverName && 'is-invalid'}`}
                       aria-label="Small select example"
                     >
@@ -2905,8 +3019,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Return Freight Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Diverted POD</CFormLabel>
@@ -2918,9 +3031,88 @@ const TSClossure = () => {
 
                 </CRow>
               </CTabPane>
+              <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 8}>
+
+                <CRow className="mt-2" hidden>
+
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="DefectType">
+                      Gate Pass Type{' '}
+                      {errors.DriverName && (
+                        <span className="help text-danger">{errors.DriverName}</span>
+                      )}
+                    </CFormLabel>
+                    <CFormSelect
+                      size="sm"
+                      name="DefectType"
+                      onFocus={onFocus}
+                      onBlur={onBlur}
+                      onChange={handleChange}
+                      value={values.DriverName}
+                      className={`${errors.DriverName && 'is-invalid'}`}
+                      aria-label="Small select example"
+                    >
+                      <option value="" hidden selected>
+                        Select...
+                      </option>
+                      <option value="1">Returnable</option>
+                      <option value="2">Non Returnable</option>
+                    </CFormSelect>
+                  </CCol>
+                  <CCol md={2}>
+                    <CFormLabel htmlFor="DefectType">
+                      Gate Pass Number{' '}
+                      {errors.DriverName && (
+                        <span className="help text-danger">{errors.DriverName}</span>
+                      )}
+                    </CFormLabel>
+                    <CFormSelect
+                      size="sm"
+                      name="DefectType"
+                      onFocus={onFocus}
+                      onBlur={onBlur}
+                      onChange={handleChange}
+                      value={values.DriverName}
+                      className={`${errors.DriverName && 'is-invalid'}`}
+                      aria-label="Small select example"
+                    >
+                      <option value="" hidden selected>
+                        Select...
+                      </option>
+                      <option value="1">11111</option>
+                      <option value="2">22222</option>
+                      <option value="3">33333</option>
+                    </CFormSelect>
+                  </CCol>
+
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">From Loacation</CFormLabel>
+
+                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">To Loacation</CFormLabel>
+
+                    <CFormInput size="sm" id="inputAddress" type="" readOnly />
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
+
+                    <CFormInput size="sm" id="inputAddress" type="" />
+                  </CCol>
+                  <CCol xs={12} md={2}>
+                    <CFormLabel htmlFor="inputAddress">Attachment</CFormLabel>
+                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
+
+                    {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
+                  </CCol>
+
+
+                </CRow>
+              </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 3}>
-                <CTable caption="top" hover style={{ height: '140vh' }}>
-                  <CTableCaption style={{ color: 'maroon' }}>Expenses</CTableCaption>
+                <CTable caption="top" hover style={{ height: '150vh' }}>
+                  <CTableCaption style={{ color: 'maroon' }}>Expenses</CTableCaption><br />
                   <CTableHead
                     style={{
                       backgroundColor: '#4d3227',
@@ -2937,7 +3129,7 @@ const TSClossure = () => {
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        FG Delivery
+                        FJ Delivery
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -3159,6 +3351,22 @@ const TSClossure = () => {
                       <CTableHeaderCell scope="row">12</CTableHeaderCell>
                       <CTableDataCell>Loading Charges</CTableDataCell>
                       <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput size="sm" id="inputAddress" />
+                      </CTableDataCell>
+                    </CTableRow>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">13</CTableHeaderCell>
+                      <CTableDataCell>Unloading Charges</CTableDataCell>
+                      <CTableDataCell>
                         <CFormInput size="sm" id="inputAddress" readOnly />
                       </CTableDataCell>
                       <CTableDataCell>
@@ -3171,9 +3379,8 @@ const TSClossure = () => {
                         <CFormInput size="sm" id="inputAddress" readOnly />
                       </CTableDataCell>
                     </CTableRow>
-
                     <CTableRow>
-                      <CTableHeaderCell scope="row">13</CTableHeaderCell>
+                      <CTableHeaderCell scope="row">14</CTableHeaderCell>
                       <CTableDataCell>Tarpaulin Charges</CTableDataCell>
                       <CTableDataCell>
                         <CFormInput size="sm" id="inputAddress" />
@@ -3190,7 +3397,7 @@ const TSClossure = () => {
                     </CTableRow>
 
                     <CTableRow>
-                      <CTableHeaderCell scope="row">14</CTableHeaderCell>
+                      <CTableHeaderCell scope="row">15</CTableHeaderCell>
                       <CTableDataCell>Weighment Charges</CTableDataCell>
                       <CTableDataCell>
                         <CFormInput size="sm" id="inputAddress" />
@@ -3207,7 +3414,7 @@ const TSClossure = () => {
                     </CTableRow>
 
                     <CTableRow>
-                      <CTableHeaderCell scope="row">15</CTableHeaderCell>
+                      <CTableHeaderCell scope="row">16</CTableHeaderCell>
                       <CTableDataCell>Low Tonage Charges </CTableDataCell>
                       <CTableDataCell>
                         <CFormInput size="sm" id="inputAddress" />
@@ -3255,7 +3462,7 @@ const TSClossure = () => {
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        FG Delivery
+                        FJ Delivery
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -3322,7 +3529,7 @@ const TSClossure = () => {
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        FG Delivery
+                        FJ Delivery
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -3401,7 +3608,7 @@ const TSClossure = () => {
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        FG Delivery
+                        FJ Delivery
                       </CTableHeaderCell>
 
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -3649,6 +3856,103 @@ const TSClossure = () => {
                     </CTableRow> */}
                   </CTableBody>
                 </CTable>
+
+              </CTabPane>
+              <CTabPane role="tabpanel" aria-labelledby="profile-tab" visible={activeKey_2 === 7}>
+                <CTable caption="top" hover>
+                  <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
+                    <CTableRow>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        S.No
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Type
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        FJ Delivery
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        RJ Delivery
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        STO Delivery
+                      </CTableHeaderCell>
+                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
+                        Total
+                      </CTableHeaderCell>
+
+                    </CTableRow>
+                  </CTableHead>
+
+                  <CTableBody>
+
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">1</CTableHeaderCell>
+                      <CTableDataCell>Advance Amount</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">2</CTableHeaderCell>
+                      <CTableDataCell>RJ Recipt Amount</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">3</CTableHeaderCell>
+                      <CTableDataCell>Total Amount</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                    <CTableRow>
+                      <CTableHeaderCell scope="row">4</CTableHeaderCell>
+                      <CTableDataCell>Balance</CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                      <CTableDataCell>
+                        <CFormInput type="" name="divortedPod" size="sm" id="formFileSm" readOnly />
+                      </CTableDataCell>
+                    </CTableRow>
+                  </CTableBody>
+
+                </CTable>
                 <CRow className="mt-2">
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
@@ -3681,49 +3985,10 @@ const TSClossure = () => {
                   </CCol>
                 </CRow>
               </CTabPane>
-              <CTabPane role="tabpanel" aria-labelledby="profile-tab" visible={activeKey_2 === 7}>
-                <CTable caption="top" hover>
-                  <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
-                    <CTableRow>
-                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        Advance Amount
-                      </CTableHeaderCell>
-                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        RJ Recipt Amount
-                      </CTableHeaderCell>
-                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        Total Expense
-                      </CTableHeaderCell>
-                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
-                        Balance
-                      </CTableHeaderCell>
-
-                    </CTableRow>
-                  </CTableHead>
-
-                  <CTableBody>
-
-                    <CTableRow>
-                      <CTableDataCell>
-                        <CFormInput size="sm" id="inputAddress" readOnly />
-                      </CTableDataCell>
-                      <CTableDataCell>
-                        <CFormInput size="sm" id="inputAddress" readOnly />
-                      </CTableDataCell>
-                      <CTableDataCell>
-                        <CFormInput size="sm" id="inputAddress" readOnly />
-                      </CTableDataCell>
-                      <CTableDataCell>
-                        <CFormInput size="sm" id="inputAddress" readOnly />
-                      </CTableDataCell>
-
-                    </CTableRow>
-                  </CTableBody>
-                </CTable>
-              </CTabPane>
             </CTabContent>
           </CTabPane>
         </CTabContent>
+
       </CCard>
     </>
   )

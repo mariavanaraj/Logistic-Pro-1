@@ -210,24 +210,27 @@ const TripSheetCreationFG = () => {
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Advance Payment Mode
+              Advance Payment Bank*
               {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
             </CFormLabel>
-            <CFormSelect
-              size="sm"
-              name=""
-              className="form-multi-select form-multi-select-lg mb-3"
-              id="multiple-select-counter"
-              data-coreui-selection-type="tags"
-              data-coreui-search="true"
-            >
-              <option value="" hidden>
-                Select...
-              </option>
-              <option value="1">Bank</option>
-              <option value="2">Cash</option>
-              <option value="3">Diesel</option>
-            </CFormSelect>
+            <CFormInput size="sm" type="" id="inputAddress" value=""  />
+                   
+          </CCol>
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Advance Payment Diesel*
+              {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+            </CFormLabel>
+            <CFormInput size="sm" type="" id="inputAddress" value=""  />
+                   
+          </CCol>
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Advance Payment Cash*
+              {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+            </CFormLabel>
+            <CFormInput size="sm" type="" id="inputAddress" value=""  />
+                   
           </CCol>
           {/* <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -237,7 +240,29 @@ const TripSheetCreationFG = () => {
             <CFormInput size="sm" id="inputAddress" type="text" value="" />
           </CCol> */}
           <CCol xs={12} md={3}>
-            <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                        <CFormLabel htmlFor="inputAddress">
+                            Purpose
+                            {errors.Purpose && <span className="help text-danger">{errors.Purpose}</span>}
+                        </CFormLabel>
+                        <CFormSelect
+                            size="sm"
+                            name=""
+                            onFocus={onFocus}
+                            onBlur={onBlur}
+                            onChange={handleChange}
+                            value={values.Purpose}
+                            className={`${errors.Purpose && 'is-invalid'}`}
+                            aria-label="Small select example"
+                        >
+                            <option value="" hidden>
+                                Select...
+                            </option>
+                            <option value="1">FG Sales</option>
+                            <option value="2">Others</option>
+                        </CFormSelect>
+                    </CCol>
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
             <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
           </CCol>
         </CRow>

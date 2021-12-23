@@ -143,17 +143,39 @@ const AdvanceHire = () => {
                                 </CCol>
 
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="inputAddress">Advance Amount</CFormLabel>
+                                    <CFormLabel htmlFor="inputAddress">Advance Payment Bank*</CFormLabel>
 
-                                    <CFormInput type="text" size="sm" id="inputAddress" value="" />
+                                    <CFormInput type="text" size="sm" id="inputAddress" value="432" />
 
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="inputAddress">Total Freight Amount</CFormLabel>
+                                    <CFormLabel htmlFor="inputAddress">Advance Payment Diesel*</CFormLabel>
 
-                                    <CFormInput type="text" size="sm" id="inputAddress" value="" />
+                                    <CFormInput type="text" size="sm" id="inputAddress" value="5327" />
+
                                 </CCol>
                                 <CCol xs={12} md={3}>
+                                    <CFormLabel htmlFor="inputAddress">Advance Payment Cash*</CFormLabel>
+
+                                    <CFormInput type="text" size="sm" id="inputAddress" value="6443" />
+
+                                </CCol>
+                                <CCol xs={12} md={3}>
+                                    <CFormLabel htmlFor="inputAddress">Appx.Freight Amount*</CFormLabel>
+
+                                    <CFormInput type="text" size="sm" id="inputAddress" value="3543" />
+                                </CCol>
+                                <CCol xs={12} md={3}>
+                                    <CFormLabel htmlFor="inputAddress">Base Freight Amount</CFormLabel>
+
+                                    <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+                                </CCol>
+                                <CCol xs={12} md={3}>
+                                    <CFormLabel htmlFor="inputAddress">Shipment Tonnage*</CFormLabel>
+
+                                    <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+                                </CCol>
+                                {/* <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="remarks">Applicable Tax*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
@@ -168,7 +190,7 @@ const AdvanceHire = () => {
 
                                         <option value="2">GST</option>
                                     </CFormSelect>
-                                </CCol>
+                                </CCol> */}
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="inputAddress">OTP Generate</CFormLabel>
                                     <CButton

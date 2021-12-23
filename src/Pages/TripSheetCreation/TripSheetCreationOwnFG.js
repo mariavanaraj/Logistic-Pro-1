@@ -241,10 +241,8 @@ const TripSheetCreationFG = () => {
                             <option value="" hidden>
                                 Select...
                             </option>
-                            <option value="1">STO</option>
-                            <option value="2">FG</option>
-                            <option value="3">RJ</option>
-                            <option value="4">FG/STO</option>
+                            <option value="1">FG Sales</option>
+                            <option value="2">Others</option>
                         </CFormSelect>
                     </CCol>
                     <CCol xs={12} md={3}>

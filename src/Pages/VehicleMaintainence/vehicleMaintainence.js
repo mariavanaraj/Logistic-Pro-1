@@ -57,6 +57,25 @@ const VehicleMaintainence = () => {
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
             <CForm className="container p-3" onSubmit={'handleSubmit'}>
               <CRow>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vehicle No*</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
+                  <CFormSelect size="sm" name="maintenenceBy" className="">
+                    <option value="" hidden>
+                      Select ...
+                    </option>
+                    <option value="inHouse" onClick={() => setoutSide(false)}>
+                      Ram
+                    </option>
+                    <option value="outSide" onClick={() => setoutSide(true)}>
+                      Kumar
+                    </option>
+                  </CFormSelect>
+                </CCol>
                 <CCol md={3}>
                   <CFormLabel htmlFor="maintenenceType">
                     Maintenance Type *{' '}
@@ -73,7 +92,6 @@ const VehicleMaintainence = () => {
                     <option value="breakDown">Break Down Maintnenence</option>
                   </CFormSelect>
                 </CCol>
-
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="maintenenceBy">Maintenance By *</CFormLabel>
                   <CFormSelect size="sm" name="maintenenceBy" className="">
@@ -102,7 +120,7 @@ const VehicleMaintainence = () => {
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="vendorName">Vendor Name *</CFormLabel>
                   <CFormSelect size="sm" name="vendorName" className="">
-                   
+
                     <option value="" hidden>
                       Select...
                     </option>
@@ -112,7 +130,17 @@ const VehicleMaintainence = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Maintainence Start Date& Time*</CFormLabel>
+
+                  <CFormInput size="sm" id="" type="datetime-local" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Maintainence End Date& Time*</CFormLabel>
+
+                  <CFormInput size="sm" id="" type="datetime-local" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
                 </CCol>
               </CRow>
@@ -135,9 +163,29 @@ const VehicleMaintainence = () => {
                   className=""
                   xs={12}
                   sm={12}
-                  md={3}
+                  md={5}
                   style={{ display: 'flex-sm', justifyContent: 'right' }}
                 >
+                  <CButton
+                    size="sm"
+                    color="warning"
+                    disabled=""
+                    className="mx-3 text-white"
+                    type="button"
+                    hidden={outSide}
+                  >
+                    Force End
+                  </CButton>
+                  <CButton
+                    size="sm"
+                    color="warning"
+                    disabled=""
+                    className="mx-3 text-white"
+                    type="button"
+                    hidden={outSide}
+                  >
+                    Maintenence End
+                  </CButton>
                   <CButton
                     size="sm"
                     color="warning"
