@@ -228,10 +228,10 @@ const VehicleInspection = () => {
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="nonSRF">Non – SRF *</CFormLabel>
+                  <CFormLabel htmlFor="Tarpaulin">Tarpaulin *</CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="nonSRF"
+                    name="Tarpaulin"
                     className=""
                     aria-label="Small select example"
                   >
@@ -283,7 +283,7 @@ const VehicleInspection = () => {
                     <option value="2">No</option>
                   </CFormSelect>
                 </CCol>
-                </CRow>
+              </CRow>
               <CRow>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
@@ -323,7 +323,7 @@ const VehicleInspection = () => {
                   <CButton size="sm" color="warning" className="mx-1 px-2 text-white" type="submit">
                     Reject
                   </CButton>
-{/* 
+                  {/*
                   <CButton size="sm" color="warning" className="mx-1 px-2 text-white" type="submit">
                     Cancel
                   </CButton> */}

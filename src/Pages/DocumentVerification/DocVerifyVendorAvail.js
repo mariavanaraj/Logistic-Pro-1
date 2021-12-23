@@ -206,11 +206,11 @@ const DocVerifyVendorAvail = () => {
 
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="TDSfront">TDS Dec. Form - Front*</CFormLabel>
+                  <CFormLabel htmlFor="TDSfront">TDS Declaration Form - Front*</CFormLabel>
                   <CFormInput type="file" name="TDSfront" size="sm" id="" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="TDSback">TDS Dec. Form - Back* </CFormLabel>
+                  <CFormLabel htmlFor="TDSback">TDS Declaration Form - Back* </CFormLabel>
                   <CFormInput type="file" name="TDSback" size="sm" id="" />
                 </CCol>
                 <CCol xs={12} md={3}>
