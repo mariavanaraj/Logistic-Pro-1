@@ -116,7 +116,7 @@ const _nav = [
     component: CNavItem,
     name: 'Vendor Creation App.',
     to: '/VendorCreationApprovalHome',
-    icon: <CIcon icon={cilPenAlt} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilThumbUp} customClassName="nav-icon" />,
     dataToggle: 'tooltip',
     title: 'Vendor Creation Approval',
   },

@@ -213,54 +213,45 @@ const TripSheetCreationFG = () => {
               Advance Payment Bank*
               {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
             </CFormLabel>
-            <CFormInput size="sm" type="" id="inputAddress" value=""  />
-                   
+            <CFormInput size="sm" type="" id="inputAddress" value="" />
+
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Advance Payment Diesel*
               {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
             </CFormLabel>
-            <CFormInput size="sm" type="" id="inputAddress" value=""  />
-                   
+            <CFormInput size="sm" type="" id="inputAddress" value="" />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
-              Advance Payment Cash*
+              Purpose
+              {errors.Purpose && <span className="help text-danger">{errors.Purpose}</span>}
+            </CFormLabel>
+            <CFormSelect
+              size="sm"
+              name=""
+              onFocus={onFocus}
+              onBlur={onBlur}
+              onChange={handleChange}
+              value={values.Purpose}
+              className={`${errors.Purpose && 'is-invalid'}`}
+              aria-label="Small select example"
+            >
+              <option value="" hidden>
+                Select...
+              </option>
+              <option value="1">FG Sales</option>
+              <option value="2">Others</option>
+            </CFormSelect>
+          </CCol>
+          <CCol xs={12} md={3}>
+            <CFormLabel htmlFor="inputAddress">
+              Expected Delivery Date & Time*
               {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
             </CFormLabel>
-            <CFormInput size="sm" type="" id="inputAddress" value=""  />
-                   
+            <CFormInput size="sm" type="datetime-local" id="inputAddress"/>
           </CCol>
-          {/* <CCol xs={12} md={3}>
-            <CFormLabel htmlFor="inputAddress">
-              Advance Amount
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
-            </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" type="text" value="" />
-          </CCol> */}
-          <CCol xs={12} md={3}>
-                        <CFormLabel htmlFor="inputAddress">
-                            Purpose
-                            {errors.Purpose && <span className="help text-danger">{errors.Purpose}</span>}
-                        </CFormLabel>
-                        <CFormSelect
-                            size="sm"
-                            name=""
-                            onFocus={onFocus}
-                            onBlur={onBlur}
-                            onChange={handleChange}
-                            value={values.Purpose}
-                            className={`${errors.Purpose && 'is-invalid'}`}
-                            aria-label="Small select example"
-                        >
-                            <option value="" hidden>
-                                Select...
-                            </option>
-                            <option value="1">FG Sales</option>
-                            <option value="2">Others</option>
-                        </CFormSelect>
-                    </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
             <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>

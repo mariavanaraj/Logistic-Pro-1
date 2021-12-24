@@ -603,7 +603,7 @@ const VendorCreationRequest = () => {
 
       <CModal visible={adharvisible} onClose={() => setAdharVisible(false)}>
         <CModalHeader>
-          <CModalTitle>Adhar Card</CModalTitle>
+          <CModalTitle>Aadhar Card</CModalTitle>
         </CModalHeader>
         <CModalBody>
           <CCardImage

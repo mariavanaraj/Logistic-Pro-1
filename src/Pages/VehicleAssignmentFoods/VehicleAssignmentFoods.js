@@ -176,7 +176,7 @@ const ParkingYardGate = () => {
               <CTable>
                 <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
                   <CTableRow>
-                    
+
                     <CTableHeaderCell scope="col" style={{ color: 'white' }}>S.No</CTableHeaderCell>
                     <CTableHeaderCell scope="col" style={{ color: 'white' }}>SO No</CTableHeaderCell>
                     <CTableHeaderCell scope="col" style={{ color: 'white' }}>SO Date & Time</CTableHeaderCell>
@@ -193,7 +193,7 @@ const ParkingYardGate = () => {
                 </CTableHead>
                 <CTableBody>
                   <CTableRow>
-                    
+
                     <CTableDataCell>1</CTableDataCell>
                     <CTableDataCell>637534</CTableDataCell>
                     <CTableDataCell>13.12.2021</CTableDataCell>
@@ -206,30 +206,16 @@ const ParkingYardGate = () => {
                     <CTableDataCell>23</CTableDataCell>
                     <CTableDataCell>Monday</CTableDataCell>
                     <CTableDataCell>
-                      <CButton
-                        onClick={() => setVisible(!visible)}
-                        className="text-white"
-                        color="warning"
-                        size="sm"
+                      <span className="float-start" color='danger'>
+                        <CButton className="btn btn-danger" color="">
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </CButton>
+                        <CButton className="btn btn-dark" color="white">
+                          <i className="fa fa-edit" aria-hidden="true"></i>
+                        </CButton>
 
-                      >
-                        <span className="float-start">
-                          <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;
-                        </span>
-                      </CButton>
-                      <CModal visible={visible} onClose={() => setVisible(false)}>
-                        <CModalHeader>
-                          <CModalTitle>Sales Order</CModalTitle>
-                        </CModalHeader>
-                        <CModalBody>
-                        </CModalBody>
+                      </span>
 
-                        <CModalFooter>
-                          <CButton color="secondary" onClick={() => setVisible(false)}>
-                            Close
-                          </CButton>
-                        </CModalFooter>
-                      </CModal>
                     </CTableDataCell>
                   </CTableRow>
                   <CTableRow>
@@ -244,30 +230,15 @@ const ParkingYardGate = () => {
                     <CTableDataCell>Ram</CTableDataCell>
                     <CTableDataCell>20</CTableDataCell>
                     <CTableDataCell>Tuesday</CTableDataCell>
-                    <CTableDataCell><CButton
-                      onClick={() => setVisible(!visible)}
-                      className="text-white"
-                      color="warning"
-                      size="sm"
+                    <CTableDataCell><span className="float-start" color='danger'>
+                      <CButton className="btn btn-danger" color="">
+                        <i className="fa fa-trash" aria-hidden="true"></i>
+                      </CButton>
+                      <CButton className="btn btn-dark" color="white">
+                        <i className="fa fa-edit" aria-hidden="true"></i>
+                      </CButton>
 
-                    >
-                      <span className="float-start">
-                        <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;
-                      </span>
-                    </CButton>
-                      <CModal visible={visible} onClose={() => setVisible(false)}>
-                        <CModalHeader>
-                          <CModalTitle>Sales Order</CModalTitle>
-                        </CModalHeader>
-                        <CModalBody>
-                        </CModalBody>
-
-                        <CModalFooter>
-                          <CButton color="secondary" onClick={() => setVisible(false)}>
-                            Close
-                          </CButton>
-                        </CModalFooter>
-                      </CModal></CTableDataCell>
+                    </span></CTableDataCell>
                   </CTableRow>
                 </CTableBody>
               </CTable>

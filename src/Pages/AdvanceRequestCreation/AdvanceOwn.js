@@ -173,14 +173,23 @@ const AdvanceOwn = () => {
                     /> */}
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="inputAddress">Base Freight Amount</CFormLabel>
+                                    <CFormLabel htmlFor="inputAddress">Shipment Tonnage*</CFormLabel>
 
                                     <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="inputAddress">Shipment Tonnage*</CFormLabel>
-
-                                    <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+                                    <CFormLabel htmlFor="inputAddress">
+                                        Expected Delivery Date & Time*
+                                        {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+                                    </CFormLabel>
+                                    <CFormInput size="sm" type="datetime-local" id="inputAddress" readOnly/>
+                                </CCol>
+                                <CCol xs={12} md={3}>
+                                    <CFormLabel htmlFor="inputAddress">
+                                        Expected Return Date & Time*
+                                        {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+                                    </CFormLabel>
+                                    <CFormInput size="sm" type="datetime-local" id="inputAddress" readOnly/>
                                 </CCol>
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="inputAddress">OTP Generate</CFormLabel>

@@ -246,6 +246,20 @@ const TripSheetCreationFG = () => {
                         </CFormSelect>
                     </CCol>
                     <CCol xs={12} md={3}>
+                        <CFormLabel htmlFor="inputAddress">
+                            Expected Delivery Date & Time*
+                            {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+                        </CFormLabel>
+                        <CFormInput size="sm" type="datetime-local" id="inputAddress" />
+                    </CCol>
+                    <CCol xs={12} md={3}>
+                        <CFormLabel htmlFor="inputAddress">
+                            Expected Return Date & Time*
+                            {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+                        </CFormLabel>
+                        <CFormInput size="sm" type="datetime-local" id="inputAddress" />
+                    </CCol>
+                    <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                         <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
                     </CCol>

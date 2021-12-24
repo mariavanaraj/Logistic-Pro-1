@@ -94,7 +94,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress" />
             </CCol>
 
             <CCol xs={12} md={3}>
@@ -125,8 +125,8 @@ const VendorCreationRequest = () => {
                   <i
                     className="fa fa-trash"
                     aria-hidden="true"
-                    // onMouseOver={changeBackground}
-                    // onMouseLeave={changeBackground1}
+                  // onMouseOver={changeBackground}
+                  // onMouseLeave={changeBackground1}
                   ></i>
                 </span>
               </CButton>
@@ -146,7 +146,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Adhar Card Attachemnt
+                Aadhar Card Copy
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -172,15 +172,15 @@ const VendorCreationRequest = () => {
                   <i
                     className="fa fa-trash"
                     aria-hidden="true"
-                    // onMouseOver={changeBackground}
-                    // onMouseLeave={changeBackground1}
+                  // onMouseOver={changeBackground}
+                  // onMouseLeave={changeBackground1}
                   ></i>
                 </span>
               </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Adhar Card Number
+                Aadhar Card Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -418,7 +418,7 @@ const VendorCreationRequest = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                area
+                Area
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
@@ -485,7 +485,31 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CButton
+                // onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
+                className="w-100 m-0"
+                color="info"
+                size="sm"
+                id="inputAddress"
+              >
+                <span
+                  className="float-start"
+                  onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
+                >
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+
+                <span
+                  className="float-end"
+                  onClick={() => {
+                    if (window.confirm('Are you sure to remove this file?')) {
+                      setTssdel(true)
+                    }
+                  }}
+                >
+                  <i className="fa fa-trash" aria-hidden="true"></i>
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -494,7 +518,31 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CButton
+                // onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
+                className="w-100 m-0"
+                color="info"
+                size="sm"
+                id="inputAddress"
+              >
+                <span
+                  className="float-start"
+                  onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
+                >
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+
+                <span
+                  className="float-end"
+                  onClick={() => {
+                    if (window.confirm('Are you sure to remove this file?')) {
+                      setTssdel(true)
+                    }
+                  }}
+                >
+                  <i className="fa fa-trash" aria-hidden="true"></i>
+                </span>
+              </CButton>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -503,7 +551,23 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CFormSelect
+                size="sm"
+                name="DefectType"
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onChange={handleChange}
+                value={values.DefectType}
+                className={`${errors.DefectType && 'is-invalid'}`}
+                aria-label="Small select example"
+              >
+                <option value="" hidden selected>
+                  Select...
+                </option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+
+              </CFormSelect>
             </CCol>
           </CRow>
           {/* Row Seven------------------------- */}
@@ -547,6 +611,20 @@ const VendorCreationRequest = () => {
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
           </CRow>
+          <CRow className="mb-md-1">
+            <CCol className="" xs={12} sm={12} md={3}>
+              <CButton size="sm" color="primary" className="text-white" type="button">
+                <Link className="text-white" to="/VendorCreationHome">
+                  Previous
+                </Link>
+              </CButton>
+            </CCol>
+            <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>
+              <CButton size="sm" color="warning" className="mx-3 px-3 text-white" type="submit">
+                Submit
+              </CButton>
+            </CCol>
+          </CRow>
           {/* Row Eight------------------------- */}
         </CForm>
       </CCard>
@@ -555,7 +633,7 @@ const VendorCreationRequest = () => {
 
       <CModal visible={adharvisible} onClose={() => setAdharVisible(false)}>
         <CModalHeader>
-          <CModalTitle>Adhar Card</CModalTitle>
+          <CModalTitle>Aadhar Card</CModalTitle>
         </CModalHeader>
         <CModalBody>
           <CCardImage
@@ -757,7 +835,9 @@ const VendorCreationRequest = () => {
 
       {/* Modal Area */}
     </>
+
   )
+
 }
 
 export default VendorCreationRequest

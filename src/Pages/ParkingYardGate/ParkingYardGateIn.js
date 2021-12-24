@@ -186,6 +186,9 @@ const ParkingYardGate = () => {
                   <option value="hire" onClick={() => setHire(true)}>
                     Hire
                   </option>
+                  <option value="hire" onClick={() => setHire(true)}>
+                    Party Vehicle
+                  </option>
                 </CFormSelect>
               </CCol>
 
@@ -296,7 +299,7 @@ const ParkingYardGate = () => {
                 </CFormSelect>
               </CCol>
               <CCol xs={12} md={3}>
-                <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                 <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
               </CCol>
             </CRow>
@@ -307,7 +310,7 @@ const ParkingYardGate = () => {
                 xs={12}
                 sm={12}
                 md={12}
-                // style={{ display: 'flex', justifyContent: 'flex-end' }}
+              // style={{ display: 'flex', justifyContent: 'flex-end' }}
               >
                 <CButton
                   size="sm"

@@ -225,11 +225,6 @@ const DocVerifyVendorNotAvail = () => {
                   <CFormLabel htmlFor="insurance">Insurance Copy*</CFormLabel>
                   <CFormInput type="file" name="insurance" size="sm" id="" />
                 </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="transportShed">Transporter Shed Sheet*</CFormLabel>
-                  <CFormInput type="file" name="transportShed" size="sm" id="" />
-                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="TDSfront">TDS Declaration Form - Front*</CFormLabel>
                   <CFormInput type="file" name="TDSfront" size="sm" id="" />
@@ -238,6 +233,10 @@ const DocVerifyVendorNotAvail = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="TDSback">TDS Declaration Form - Back* </CFormLabel>
                   <CFormInput type="file" name="TDSback" size="sm" id="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="transportShed">Transporter Shed Sheet*</CFormLabel>
+                  <CFormInput type="file" name="transportShed" size="sm" id="" />
                 </CCol>
               </CRow>
 
@@ -254,7 +253,10 @@ const DocVerifyVendorNotAvail = () => {
                     <option value="0">Select SP</option>
                   </CFormSelect>
                 </CCol>
-
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="freigthRate">Shed Mobile Number*</CFormLabel>
+                  <CFormInput type="text" name="freigthRate" size="sm" id="" />
+                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="insuranceValid">Insurance Validity*</CFormLabel>
                   <CFormSelect
