@@ -112,7 +112,14 @@ const ParkingYardGate = () => {
                     <option value="3">South</option>
                   </CFormSelect>
                 </CCol>
-
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">PAN Number*</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Aadhar Number*</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Material Type*</CFormLabel>
                   <CFormSelect size="sm" aria-label="Small select example">
@@ -277,6 +284,20 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="inputAddress">Empty Km After Unload*</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">
+                    Expected Delivery Date & Time*
+                    {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+                  </CFormLabel>
+                  <CFormInput size="sm" type="datetime-local" id="inputAddress" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">
+                    Expected Return Date & Time*
+                    {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+                  </CFormLabel>
+                  <CFormInput size="sm" type="datetime-local" id="inputAddress" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>

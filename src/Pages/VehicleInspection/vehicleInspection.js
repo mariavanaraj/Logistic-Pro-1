@@ -28,6 +28,7 @@ import {
   CModalBody,
   CModalFooter,
   CFormTextarea,
+  CButtonGroup,
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
@@ -182,115 +183,219 @@ const VehicleInspection = () => {
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="truckClean">Truck Clean *</CFormLabel>
-                  <CFormSelect size="sm" name="truckClean" className="">
-                    <option hidden>Select...</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                  </CFormSelect>
+                  <CFormLabel htmlFor="truckClean">Truck Clean *</CFormLabel><br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio1"
+                      autoComplete="off"
+                      label="Yes"
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio2"
+                      autoComplete="off"
+                      label="No"
+
+                    />
+                  </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="badSmell">Bad Smell *</CFormLabel>
-                  <CFormSelect size="sm" name="badSmell" className="">
-                    <option hidden>Select...</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                  </CFormSelect>
+                  <br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio3"
+                      autoComplete="off"
+                      label="Yes"
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio4"
+                      autoComplete="off"
+                      label="No"
+
+                    />
+                  </CButtonGroup>
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="insectVevils">Insect or Vevils Presence *</CFormLabel>
-                  <CFormSelect
-                    size="sm"
-                    name="insectVevils"
-                    className=""
-                    aria-label="Small select example"
-                  >
-                    <option hidden>Select...</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                  </CFormSelect>
+                  <br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio5"
+                      autoComplete="off"
+                      label="Yes"
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio6"
+                      autoComplete="off"
+                      label="No"
+
+                    />
+                  </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="tarSRF">Tarpaulin – SRF</CFormLabel>
-                  <CFormSelect
-                    size="sm"
-                    name="tarSRF"
-                    className=""
-                    aria-label="Small select example"
-                  >
-                    <option hidden>Select...</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                  </CFormSelect>
+                  <br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio7"
+                      autoComplete="off"
+                      label="0"
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio8"
+                      autoComplete="off"
+                      label="1"
+
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio9"
+                      autoComplete="off"
+                      label="2"
+
+                    />
+                  </CButtonGroup>
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="Tarpaulin">Tarpaulin *</CFormLabel>
-                  <CFormSelect
-                    size="sm"
-                    name="Tarpaulin"
-                    className=""
-                    aria-label="Small select example"
-                  >
-                    <option hidden>Select...</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                  </CFormSelect>
+                  <CFormLabel htmlFor="Tarpaulin">Tarpaulin Non-SRF*</CFormLabel>
+                  <br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio10"
+                      autoComplete="off"
+                      label="0"
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio11"
+                      autoComplete="off"
+                      label="1"
+
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio12"
+                      autoComplete="off"
+                      label="2"
+
+                    />
+                  </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="tarInsectVevils">
                     Insect or Vevils Presence (Tar.) *
                   </CFormLabel>
-                  <CFormSelect
-                    size="sm"
-                    name="tarInsectVevils"
-                    className=""
-                    aria-label="Small select example"
-                  >
-                    <option hidden>Select...</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                  </CFormSelect>
+                  <br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio13"
+                      autoComplete="off"
+                      label="Yes"
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio14"
+                      autoComplete="off"
+                      label="No"
+
+                    />
+                  </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="trkPlat">Truck Platform *</CFormLabel>
-                  <CFormSelect
-                    size="sm"
-                    name="trkPlat"
-                    className="m"
-                    aria-label="Small select example"
-                  >
-                    <option hidden>Select...</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                  </CFormSelect>
+                  <br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio15"
+                      autoComplete="off"
+                      label="Yes"
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio16"
+                      autoComplete="off"
+                      label="No"
+
+                    />
+                  </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
-                  <CFormSelect
-                    size="sm"
-                    name="prevLoad"
-                    className=""
-                    aria-label="Small select example"
-                  >
-                    <option hidden>Select...</option>
-                    <option value="0">Yes</option>
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                  </CFormSelect>
+                  <br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio17"
+                      autoComplete="off"
+                      label="Yes"
+                    />
+                    <CFormCheck
+                      type="radio"
+                      button={{ color: 'primary', variant: 'outline' }}
+                      name="btnradio"
+                      id="btnradio18"
+                      autoComplete="off"
+                      label="No"
+
+                    />
+                  </CButtonGroup>
                 </CCol>
               </CRow>
               <CRow>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
-                  <CFormInput name="vFitLoad" size="sm" id="" value="No" readOnly />
+                  <CFormInput name="vFitLoad" size="sm" id="" value="No" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
                 </CCol>
               </CRow>

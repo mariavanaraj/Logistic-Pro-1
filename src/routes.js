@@ -11,6 +11,9 @@ import AdvancePayment from './Pages/AdvanceRequestCreation/AdvancePayment'
 import AdvanceOwn from './Pages/AdvanceRequestCreation/AdvanceOwn'
 import AdvanceHire from './Pages/AdvanceRequestCreation/AdvanceHire'
 import DiCreation from './Pages/DiCreation/DiCreation'
+import DieselIntentOwn from './Pages/DiCreation/DieselIntentOwn'
+import DieselIntentHire from './Pages/DiCreation/DieselIntentHire'
+import DieselIntentHome from './Pages/DiCreation/DieselIntentHome'
 import DiConfirmation from './Pages/DiConfirmation/DiConfirmation'
 import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGateIn'
 import hire from './Pages/ParkingYardGate/hire'
@@ -334,5 +337,9 @@ const routes = [
     name: 'TripSheetSettleMentNew',
     component: TripSheetSettleMentNew,
   },
+  { path: '/TripSheetSettleMentNew', exact: true, name: 'TripSheetSettleMentNew', component: TripSheetSettleMentNew },
+  { path: '/DieselIntentHome', exact: true, name: 'DieselIntentHome', component: DieselIntentHome },
+  { path: '/DieselIntentHome/DieselIntentOwn', exact: true, name: 'DieselIntentOwn', component: DieselIntentOwn },
+  { path: '/DieselIntentHome/DieselIntentHire', exact: true, name: 'DieselIntentHire', component: DieselIntentHire },
 ]
 export default routes

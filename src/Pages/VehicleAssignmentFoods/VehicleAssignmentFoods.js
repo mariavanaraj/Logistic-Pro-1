@@ -21,7 +21,12 @@ import {
   CTableRow,
   CTabPane,
   CFormFloating,
-  CFormTextarea
+  CFormTextarea,
+  CModalTitle,
+  CModalBody,
+  CModalFooter,
+  CModalHeader,
+  CModal
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
@@ -43,6 +48,7 @@ const ParkingYardGate = () => {
   function login() {
     alert('No Errors CallBack Called')
   }
+  const [visible, setVisible] = useState(false)
   return (
     <>
       <CCard>
@@ -158,7 +164,7 @@ const ParkingYardGate = () => {
 
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
+                  <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea
                     name="remarks"
                     id="exampleFormControlTextarea1"
@@ -166,7 +172,76 @@ const ParkingYardGate = () => {
                   ></CFormTextarea>
                 </CCol>
               </CRow>
+              <br />
+              <CTable>
+                <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
+                  <CTableRow>
 
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>S.No</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>SO No</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>SO Date & Time</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>Delivery No</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>Delivery Date</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>City</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>Customer</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>Route</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>TL</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>QTY in Tons</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>Calling Plan</CTableHeaderCell>
+                    <CTableHeaderCell scope="col" style={{ color: 'white' }}>Action</CTableHeaderCell>
+                  </CTableRow>
+                </CTableHead>
+                <CTableBody>
+                  <CTableRow>
+
+                    <CTableDataCell>1</CTableDataCell>
+                    <CTableDataCell>637534</CTableDataCell>
+                    <CTableDataCell>13.12.2021</CTableDataCell>
+                    <CTableDataCell>635437</CTableDataCell>
+                    <CTableDataCell>13.12.2021</CTableDataCell>
+                    <CTableDataCell>Chennai</CTableDataCell>
+                    <CTableDataCell>SSS</CTableDataCell>
+                    <CTableDataCell>Trichy</CTableDataCell>
+                    <CTableDataCell>Ram</CTableDataCell>
+                    <CTableDataCell>23</CTableDataCell>
+                    <CTableDataCell>Monday</CTableDataCell>
+                    <CTableDataCell>
+                      <span className="float-start" color='danger'>
+                        <CButton className="btn btn-danger" color="">
+                          <i className="fa fa-trash" aria-hidden="true"></i>
+                        </CButton>
+                        <CButton className="btn btn-dark" color="white">
+                          <i className="fa fa-edit" aria-hidden="true"></i>
+                        </CButton>
+
+                      </span>
+
+                    </CTableDataCell>
+                  </CTableRow>
+                  <CTableRow>
+                    <CTableDataCell>2</CTableDataCell>
+                    <CTableDataCell>980567</CTableDataCell>
+                    <CTableDataCell>14.12.2021</CTableDataCell>
+                    <CTableDataCell>635437</CTableDataCell>
+                    <CTableDataCell>14.12.2021</CTableDataCell>
+                    <CTableDataCell>Thanjavor</CTableDataCell>
+                    <CTableDataCell>SSS</CTableDataCell>
+                    <CTableDataCell>Trichy</CTableDataCell>
+                    <CTableDataCell>Ram</CTableDataCell>
+                    <CTableDataCell>20</CTableDataCell>
+                    <CTableDataCell>Tuesday</CTableDataCell>
+                    <CTableDataCell><span className="float-start" color='danger'>
+                      <CButton className="btn btn-danger" color="">
+                        <i className="fa fa-trash" aria-hidden="true"></i>
+                      </CButton>
+                      <CButton className="btn btn-dark" color="white">
+                        <i className="fa fa-edit" aria-hidden="true"></i>
+                      </CButton>
+
+                    </span></CTableDataCell>
+                  </CTableRow>
+                </CTableBody>
+              </CTable>
               <CRow className="mt-3">
                 <CCol>
                   <CButton size="sm" color="primary" className="text-white" type="button">
