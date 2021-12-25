@@ -77,6 +77,8 @@ import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
 import ShipmentCreation from './Pages/ShipmentCreation/ShipmentCreation'
 import ShipmentCreationConsumer from './Pages/ShipmentCreation/ShipmentCreationConsumer'
 import VendorCreationConfrimationOwn from './Pages/VendorCreationConfrimation/VendorCreationConfrimationOwn'
+import DiApprovalHome from './Pages/DiApproval/DiApprovalHome'
+import DiApproval from './Pages/DiApproval/DiApproval'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
@@ -134,6 +136,13 @@ const routes = [
   },
   { path: '/AdvanceRequestCreation', exact: true, name: 'Test', component: AdvanceRequestCreation },
   { path: '/DiCreation', exact: true, name: 'Test', component: DiCreation },
+  { path: '/DiApprovalHome', exact: true, name: 'Test', component: DiApprovalHome },
+  {
+    path: '/DiApprovalHome/DiApprovalConfrimation',
+    exact: true,
+    name: 'Test',
+    component: DiApproval,
+  },
   { path: '/DiConfirmation', exact: true, name: 'Test', component: DiConfirmation },
   { path: '/hire', exact: true, name: 'Test', component: hire },
 
@@ -337,9 +346,24 @@ const routes = [
     name: 'TripSheetSettleMentNew',
     component: TripSheetSettleMentNew,
   },
-  { path: '/TripSheetSettleMentNew', exact: true, name: 'TripSheetSettleMentNew', component: TripSheetSettleMentNew },
+  {
+    path: '/TripSheetSettleMentNew',
+    exact: true,
+    name: 'TripSheetSettleMentNew',
+    component: TripSheetSettleMentNew,
+  },
   { path: '/DieselIntentHome', exact: true, name: 'DieselIntentHome', component: DieselIntentHome },
-  { path: '/DieselIntentHome/DieselIntentOwn', exact: true, name: 'DieselIntentOwn', component: DieselIntentOwn },
-  { path: '/DieselIntentHome/DieselIntentHire', exact: true, name: 'DieselIntentHire', component: DieselIntentHire },
+  {
+    path: '/DieselIntentHome/DieselIntentOwn',
+    exact: true,
+    name: 'DieselIntentOwn',
+    component: DieselIntentOwn,
+  },
+  {
+    path: '/DieselIntentHome/DieselIntentHire',
+    exact: true,
+    name: 'DieselIntentHire',
+    component: DieselIntentHire,
+  },
 ]
 export default routes

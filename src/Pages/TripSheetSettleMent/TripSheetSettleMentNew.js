@@ -32,7 +32,7 @@ import {
   CCardImage,
 } from '@coreui/react'
 import { React, useEffect, useState } from 'react'
-import Select from 'react-select';
+// import Select from 'react-select'
 // import CModal from '@coreui/react/src/components/modal/CModal'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
@@ -65,16 +65,16 @@ const TSClossure = () => {
     { value: 'chocolate', label: 'Chocolate' },
     { value: 'strawberry', label: 'Strawberry' },
     { value: 'vanilla', label: 'Vanilla' },
-  ];
-  const [deliveryNumber, setSelectedDeliveryNumber] = useState([]);
+  ]
+  const [deliveryNumber, setSelectedDeliveryNumber] = useState([])
 
   const selecthandleChange = (e) => {
-    console.log(e.value);
+    console.log(e.value)
     // setSelectedDeliveryNumber({[...deliveryNumber, e.value]});
   }
 
   useEffect(() => {
-    console.log(deliveryNumber);
+    console.log(deliveryNumber)
   }, [deliveryNumber])
   return (
     <>
@@ -168,7 +168,6 @@ const TSClossure = () => {
                   Expenses / Income
                 </CNavLink>
               </CNavItem>
-
             </CNav>
 
             <CTabContent>
@@ -323,8 +322,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -412,8 +411,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -439,7 +438,9 @@ const TSClossure = () => {
                       <option value="" hidden selected>
                         Select...
                       </option>
-                      <option value="1" readOnly>Shortage</option>
+                      <option value="1" readOnly>
+                        Shortage
+                      </option>
                       <option value="2">Rain Damage</option>
                       <option value="3">Sales Diversion</option>
                       <option value="4">Sales Return</option>
@@ -458,9 +459,7 @@ const TSClossure = () => {
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
                       STO Delivery Number{' '}
-                      {errors.STONo && (
-                        <span className="help text-danger">{errors.STONo}</span>
-                      )}
+                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
                   </CCol>
@@ -477,8 +476,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "12344" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="12344" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Delivery Date and Time</CFormLabel>
@@ -513,13 +511,12 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
                   </CCol>
-
                 </CRow>
               </CTabPane>
               <br />
@@ -550,7 +547,6 @@ const TSClossure = () => {
                   </CTableHead>
 
                   <CTableBody>
-
                     <CTableRow>
                       <CTableDataCell>
                         <CFormInput size="sm" id="inputAddress" Value="15" readOnly />
@@ -575,7 +571,6 @@ const TSClossure = () => {
                 </CTable>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey === 5}>
-
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Diesel Vendor</CFormLabel>
@@ -595,14 +590,12 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Invoice Date & Time</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="datetime-local" value=
-                      "" />
+                    <CFormInput size="sm" id="inputAddress" type="datetime-local" value="" />
                   </CCol>
                   {!adhardel && (
                     <CCol xs={12} md={2}>
@@ -619,7 +612,10 @@ const TSClossure = () => {
                         size="sm"
                         id="inputAddress"
                       >
-                        <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                        <span
+                          className="float-start"
+                          onClick={() => setAdharVisible(!adharvisible)}
+                        >
                           <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                         </span>
                         <span
@@ -633,8 +629,8 @@ const TSClossure = () => {
                           <i
                             className="fa fa-trash"
                             aria-hidden="true"
-                          // onMouseOver={changeBackground}
-                          // onMouseLeave={changeBackground1}
+                            // onMouseOver={changeBackground}
+                            // onMouseLeave={changeBackground1}
                           ></i>
                         </span>
                       </CButton>
@@ -646,12 +642,9 @@ const TSClossure = () => {
                       <CFormInput type="file" name="AadharCard" size="sm" id="" />
                     </CCol>
                   )}
-
                 </CRow>
-
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey === 6}>
-
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
@@ -739,8 +732,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Return Rate Per Ton</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Return Freight Amount</CFormLabel>
@@ -775,13 +767,12 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
                   </CCol>
-
                 </CRow>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey === 3}>
@@ -933,8 +924,6 @@ const TSClossure = () => {
                         <CFormInput size="sm" id="inputAddress" />
                       </CTableDataCell>
                     </CTableRow>
-
-
                   </CTableBody>
                 </CTable>
                 <CTable caption="top" style={{ height: '30vh' }} hover>
@@ -983,8 +972,6 @@ const TSClossure = () => {
                       </CTableDataCell>
                     </CTableRow>
 
-
-
                     <CTableRow>
                       <CTableHeaderCell scope="row">2</CTableHeaderCell>
                       <CTableDataCell>Additional Freight</CTableDataCell>
@@ -1001,7 +988,6 @@ const TSClossure = () => {
                         <CFormInput size="sm" id="inputAddress" />
                       </CTableDataCell>
                     </CTableRow>
-
                   </CTableBody>
                 </CTable>
                 <CTable caption="top" style={{ height: '40vh' }} hover>
@@ -1033,7 +1019,6 @@ const TSClossure = () => {
                   </CTableHead>
 
                   <CTableBody>
-
                     <CTableRow>
                       <CTableHeaderCell scope="row">1</CTableHeaderCell>
                       <CTableDataCell>Income</CTableDataCell>
@@ -1114,7 +1099,6 @@ const TSClossure = () => {
                   </CTableHead>
 
                   <CTableBody>
-
                     <CTableRow>
                       <CTableHeaderCell scope="row">1</CTableHeaderCell>
                       <CTableDataCell>Halt Days*</CTableDataCell>
@@ -1142,7 +1126,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -1156,12 +1143,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -1171,7 +1157,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -1185,12 +1174,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -1200,7 +1188,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -1214,12 +1205,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -1229,7 +1219,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -1243,12 +1236,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                     </CTableRow>
                     <CTableRow>
@@ -1262,7 +1254,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -1276,12 +1271,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -1291,7 +1285,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -1305,12 +1302,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -1320,7 +1316,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -1334,12 +1333,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -1349,7 +1347,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -1363,15 +1364,13 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                     </CTableRow>
-
                   </CTableBody>
                 </CTable>
                 <CRow className="mt-2">
@@ -1735,8 +1734,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -1831,8 +1830,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -1927,8 +1926,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -2023,8 +2022,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -2115,8 +2114,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -2156,17 +2155,13 @@ const TSClossure = () => {
                     <CFormInput size="sm" id="inputAddress" readOnly />
                   </CCol>
                 </CRow>
-
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 4}>
-
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
                       STO Delivery Number{' '}
-                      {errors.STONo && (
-                        <span className="help text-danger">{errors.STONo}</span>
-                      )}
+                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
                   </CCol>
@@ -2183,8 +2178,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Delivery Date and Time</CFormLabel>
@@ -2219,8 +2213,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -2253,21 +2247,19 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Expense To Be Capture</CFormLabel>
 
-                    <CTableDataCell scope="row"><input type="checkbox" name="name2" /></CTableDataCell>
+                    <CTableDataCell scope="row">
+                      <input type="checkbox" name="name2" />
+                    </CTableDataCell>
                   </CCol>
                 </CRow>
 
-                <CButton color='primary'>
-                  Add
-                </CButton>
+                <CButton color="primary">Add</CButton>
                 <hr />
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
                       STO Delivery Number{' '}
-                      {errors.STONo && (
-                        <span className="help text-danger">{errors.STONo}</span>
-                      )}
+                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
                   </CCol>
@@ -2284,8 +2276,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Delivery Date and Time</CFormLabel>
@@ -2320,8 +2311,8 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
@@ -2354,21 +2345,26 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Expense To Be Capture</CFormLabel>
 
-                    <CTableDataCell scope="row"><input type="checkbox" name="name2" /></CTableDataCell>
+                    <CTableDataCell scope="row">
+                      <input type="checkbox" name="name2" />
+                    </CTableDataCell>
                   </CCol>
                 </CRow>
-                <CButton color='primary'>
-                  Add
-                </CButton>
+                <CButton color="primary">Add</CButton>
                 <hr />
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 5}>
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress" style={{
-                      backgroundColor: '#4d3227',
-                      color: 'white'
-                    }}>Diesel Filling Details : </CFormLabel>
+                    <CFormLabel
+                      htmlFor="inputAddress"
+                      style={{
+                        backgroundColor: '#4d3227',
+                        color: 'white',
+                      }}
+                    >
+                      Diesel Filling Details :{' '}
+                    </CFormLabel>
                   </CCol>
                 </CRow>
                 <CRow className="mt-2" hidden>
@@ -2390,8 +2386,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                   {!adhardel && (
                     <CCol xs={12} md={2}>
@@ -2408,7 +2403,10 @@ const TSClossure = () => {
                         size="sm"
                         id="inputAddress"
                       >
-                        <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                        <span
+                          className="float-start"
+                          onClick={() => setAdharVisible(!adharvisible)}
+                        >
                           <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                         </span>
                         <span
@@ -2422,8 +2420,8 @@ const TSClossure = () => {
                           <i
                             className="fa fa-trash"
                             aria-hidden="true"
-                          // onMouseOver={changeBackground}
-                          // onMouseLeave={changeBackground1}
+                            // onMouseOver={changeBackground}
+                            // onMouseLeave={changeBackground1}
                           ></i>
                         </span>
                       </CButton>
@@ -2500,8 +2498,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                   {!adhardel && (
                     <CCol xs={12} md={2}>
@@ -2518,7 +2515,10 @@ const TSClossure = () => {
                         size="sm"
                         id="inputAddress"
                       >
-                        <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                        <span
+                          className="float-start"
+                          onClick={() => setAdharVisible(!adharvisible)}
+                        >
                           <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                         </span>
                         <span
@@ -2532,8 +2532,8 @@ const TSClossure = () => {
                           <i
                             className="fa fa-trash"
                             aria-hidden="true"
-                          // onMouseOver={changeBackground}
-                          // onMouseLeave={changeBackground1}
+                            // onMouseOver={changeBackground}
+                            // onMouseLeave={changeBackground1}
                           ></i>
                         </span>
                       </CButton>
@@ -2576,7 +2576,6 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="inputAddress">Unregistered Vendor</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" value="" />
-
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Diesel Liter</CFormLabel>
@@ -2591,8 +2590,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                   {!adhardel && (
                     <CCol xs={12} md={2}>
@@ -2609,7 +2607,10 @@ const TSClossure = () => {
                         size="sm"
                         id="inputAddress"
                       >
-                        <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                        <span
+                          className="float-start"
+                          onClick={() => setAdharVisible(!adharvisible)}
+                        >
                           <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                         </span>
                         <span
@@ -2623,8 +2624,8 @@ const TSClossure = () => {
                           <i
                             className="fa fa-trash"
                             aria-hidden="true"
-                          // onMouseOver={changeBackground}
-                          // onMouseLeave={changeBackground1}
+                            // onMouseOver={changeBackground}
+                            // onMouseLeave={changeBackground1}
                           ></i>
                         </span>
                       </CButton>
@@ -2665,10 +2666,13 @@ const TSClossure = () => {
 
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress" style={{
-                      backgroundColor: '#4d3227',
-                      color: 'white'
-                    }}></CFormLabel>
+                    <CFormLabel
+                      htmlFor="inputAddress"
+                      style={{
+                        backgroundColor: '#4d3227',
+                        color: 'white',
+                      }}
+                    ></CFormLabel>
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Diesel Liter</CFormLabel>
@@ -2683,26 +2687,28 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Diesel Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                 </CRow>
                 <hr />
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress" style={{
-                      backgroundColor: '#4d3227',
-                      color: 'white'
-                    }}>Diesel Consumption : </CFormLabel>
+                    <CFormLabel
+                      htmlFor="inputAddress"
+                      style={{
+                        backgroundColor: '#4d3227',
+                        color: 'white',
+                      }}
+                    >
+                      Diesel Consumption :{' '}
+                    </CFormLabel>
                   </CCol>
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
                       Forward Journey Number{' '}
-                      {errors.STONo && (
-                        <span className="help text-danger">{errors.STONo}</span>
-                      )}
+                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
                   </CCol>
@@ -2720,12 +2726,11 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Diesel Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
 
                   <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress" >Opening KM</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Opening KM</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" readOnly />
                   </CCol>
@@ -2749,9 +2754,7 @@ const TSClossure = () => {
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
                       Return Journey Number{' '}
-                      {errors.STONo && (
-                        <span className="help text-danger">{errors.STONo}</span>
-                      )}
+                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="inputAddress" value="15423426" readOnly />
                   </CCol>
@@ -2769,12 +2772,11 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Diesel Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
 
                   <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress" >Opening KM</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Opening KM</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" readOnly />
                   </CCol>
@@ -2798,9 +2800,7 @@ const TSClossure = () => {
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
                       STO Delivery Number{' '}
-                      {errors.STONo && (
-                        <span className="help text-danger">{errors.STONo}</span>
-                      )}
+                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
                   </CCol>
@@ -2818,12 +2818,11 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Total Diesel Amount</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
 
                   <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress" >Opening KM</CFormLabel>
+                    <CFormLabel htmlFor="inputAddress">Opening KM</CFormLabel>
 
                     <CFormInput size="sm" id="inputAddress" readOnly />
                   </CCol>
@@ -2845,7 +2844,6 @@ const TSClossure = () => {
                 </CRow>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 6}>
-
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
                     <CFormLabel htmlFor="DefectType">
@@ -2859,8 +2857,6 @@ const TSClossure = () => {
                       onChange={selecthandleChange}
                       options={options}
                     />
-
-
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="DefectType">
@@ -2923,8 +2919,7 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Return Rate Per Ton</CFormLabel>
 
-                    <CFormInput size="sm" id="inputAddress" type="" value=
-                      "" readOnly />
+                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
                   </CCol>
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress">Return Freight Amount</CFormLabel>
@@ -2959,20 +2954,16 @@ const TSClossure = () => {
                         <i
                           className="fa fa-trash"
                           aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                          // onMouseOver={changeBackground}
+                          // onMouseLeave={changeBackground1}
                         ></i>
                       </span>
                     </CButton>
                   </CCol>
-
-
                 </CRow>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 8}>
-
                 <CRow className="mt-2" hidden>
-
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="DefectType">
                       Gate Pass Type{' '}
@@ -3044,20 +3035,19 @@ const TSClossure = () => {
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>
-
-
                 </CRow>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 3}>
                 <CTable caption="top" hover style={{ height: '150vh' }}>
-                  <CTableCaption style={{ color: 'maroon' }}>Expenses</CTableCaption><br />
+                  <CTableCaption style={{ color: 'maroon' }}>Expenses</CTableCaption>
+                  <br />
                   <CTableHead
                     style={{
                       backgroundColor: '#4d3227',
                       color: 'white',
                     }}
                   >
-                    <CTableRow >
+                    <CTableRow>
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
                         S.No
                       </CTableHeaderCell>
@@ -3082,7 +3072,7 @@ const TSClossure = () => {
                     </CTableRow>
                   </CTableHead>
 
-                  <CTableBody >
+                  <CTableBody>
                     <CTableRow>
                       <CTableHeaderCell scope="row"></CTableHeaderCell>
                       <CTableDataCell>Division</CTableDataCell>
@@ -3383,8 +3373,6 @@ const TSClossure = () => {
                         <CFormInput size="sm" id="inputAddress" readOnly />
                       </CTableDataCell>
                     </CTableRow>
-
-
                   </CTableBody>
                 </CTable>
                 <CTable caption="top" hover style={{ height: '30vh' }}>
@@ -3433,8 +3421,6 @@ const TSClossure = () => {
                       </CTableDataCell>
                     </CTableRow>
 
-
-
                     <CTableRow>
                       <CTableHeaderCell scope="row">2</CTableHeaderCell>
                       <CTableDataCell>Additional Freight</CTableDataCell>
@@ -3456,7 +3442,6 @@ const TSClossure = () => {
                 <CTable caption="top" hover style={{ height: '40vh' }}>
                   <CTableCaption style={{ color: 'maroon' }}>Profit and Loss</CTableCaption>
                   <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
-
                     <CTableRow>
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
                         S.No
@@ -3530,7 +3515,6 @@ const TSClossure = () => {
                         <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
                       </CTableDataCell>
                     </CTableRow>
-
                   </CTableBody>
                 </CTable>
                 <CTable caption="top" hover style={{ height: '40vh' }}>
@@ -3590,7 +3574,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -3604,12 +3591,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -3619,7 +3605,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -3633,12 +3622,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -3648,7 +3636,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -3662,12 +3653,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -3677,7 +3667,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -3691,12 +3684,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                     </CTableRow>
                     <CTableRow>
@@ -3710,7 +3702,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -3724,12 +3719,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -3739,7 +3733,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -3753,12 +3750,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -3768,7 +3764,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -3782,12 +3781,11 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                       <CTableDataCell>
                         <CButton
@@ -3797,7 +3795,10 @@ const TSClossure = () => {
                           size="sm"
                           id="inputAddress"
                         >
-                          <span className="float-start" onClick={() => setAdharVisible(!adharvisible)}>
+                          <span
+                            className="float-start"
+                            onClick={() => setAdharVisible(!adharvisible)}
+                          >
                             <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                           </span>
                           <span
@@ -3811,19 +3812,15 @@ const TSClossure = () => {
                             <i
                               className="fa fa-trash"
                               aria-hidden="true"
-                            // onMouseOver={changeBackground}
-                            // onMouseLeave={changeBackground1}
+                              // onMouseOver={changeBackground}
+                              // onMouseLeave={changeBackground1}
                             ></i>
                           </span>
                         </CButton>
-
                       </CTableDataCell>
                     </CTableRow>
-
-
                   </CTableBody>
                 </CTable>
-
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="profile-tab" visible={activeKey_2 === 7}>
                 <CTable caption="top" hover>
@@ -3847,12 +3844,10 @@ const TSClossure = () => {
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
                         Total
                       </CTableHeaderCell>
-
                     </CTableRow>
                   </CTableHead>
 
                   <CTableBody>
-
                     <CTableRow>
                       <CTableHeaderCell scope="row">1</CTableHeaderCell>
                       <CTableDataCell>Advance Amount</CTableDataCell>
@@ -3918,7 +3913,6 @@ const TSClossure = () => {
                       </CTableDataCell>
                     </CTableRow>
                   </CTableBody>
-
                 </CTable>
                 <CRow className="mt-2">
                   <CCol xs={12} md={3}>
@@ -3955,7 +3949,6 @@ const TSClossure = () => {
             </CTabContent>
           </CTabPane>
         </CTabContent>
-
       </CCard>
       <CModal visible={adharvisible} onClose={() => setAdharVisible(false)}>
         <CModalHeader>
@@ -3975,7 +3968,6 @@ const TSClossure = () => {
         </CModalFooter>
       </CModal>
     </>
-
   )
 }
 export default TSClossure

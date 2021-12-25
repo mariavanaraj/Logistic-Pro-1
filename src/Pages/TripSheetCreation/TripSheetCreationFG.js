@@ -16,7 +16,6 @@ import {
   CRow,
   CFormTextarea,
   CFormSelect,
-
 } from '@coreui/react'
 import useForm from 'src/Hooks/useForm'
 import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
@@ -27,6 +26,7 @@ const TripSheetCreationFG = () => {
     vehicleType: '',
     OdometerKm: '',
     odometerPhoto: '',
+    Purpose: '',
   }
   const [OdometerPhoto, setOdometerPhoto] = useState(false)
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
@@ -34,7 +34,8 @@ const TripSheetCreationFG = () => {
     VendorRequestValidation,
     formValues
   )
-
+  console.log(values.Purpose)
+  console.log(values)
   function login() {
     alert('No Errors CallBack Called')
   }
@@ -173,7 +174,7 @@ const TripSheetCreationFG = () => {
             </CFormSelect>
           </CCol>
           <CCol xs={12} md={3}>
-            <CFormLabel htmlFor="inputAddress" >
+            <CFormLabel htmlFor="inputAddress">
               Freight Rate Per TON
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
@@ -189,7 +190,9 @@ const TripSheetCreationFG = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Trip Advance Eligibility
-              {errors.AdvanceEligibility && <span className="help text-danger">{errors.AdvanceEligibility}</span>}
+              {errors.AdvanceEligibility && (
+                <span className="help text-danger">{errors.AdvanceEligibility}</span>
+              )}
             </CFormLabel>
             <CFormSelect
               size="sm"
@@ -211,15 +214,18 @@ const TripSheetCreationFG = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Advance Payment Bank*
-              {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+              {errors.AdvancePaymentMode && (
+                <span className="help text-danger">{errors.AdvancePaymentMode}</span>
+              )}
             </CFormLabel>
             <CFormInput size="sm" type="" id="inputAddress" value="" />
-
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Advance Payment Diesel*
-              {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+              {errors.AdvancePaymentMode && (
+                <span className="help text-danger">{errors.AdvancePaymentMode}</span>
+              )}
             </CFormLabel>
             <CFormInput size="sm" type="" id="inputAddress" value="" />
           </CCol>
@@ -230,7 +236,7 @@ const TripSheetCreationFG = () => {
             </CFormLabel>
             <CFormSelect
               size="sm"
-              name=""
+              name="Purpose"
               onFocus={onFocus}
               onBlur={onBlur}
               onChange={handleChange}
@@ -242,15 +248,44 @@ const TripSheetCreationFG = () => {
                 Select...
               </option>
               <option value="1">FG Sales</option>
-              <option value="2">Others</option>
+              <option value="2">STO</option>
+              <option value="3">Others</option>
             </CFormSelect>
           </CCol>
+
+          {values.Purpose == 2 && (
+            <CCol xs={12} md={3}>
+              <CFormLabel htmlFor="inputAddress">
+                Vehicle sourced by
+                {errors.Purpose && <span className="help text-danger">{errors.Purpose}</span>}
+              </CFormLabel>
+              <CFormSelect
+                size="sm"
+                name="Vehicle_sourced_by"
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onChange={handleChange}
+                value={values.Vehicle_sourced_by}
+                className={`${errors.Vehicle_sourced_by && 'is-invalid'}`}
+                aria-label="Small select example"
+              >
+                <option value="" hidden>
+                  Select...
+                </option>
+                <option value="1">Logistics</option>
+                <option value="2">WM-Team</option>
+                <option value="3">WM-Team</option>
+              </CFormSelect>
+            </CCol>
+          )}
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Expected Delivery Date & Time*
-              {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+              {errors.AdvancePaymentMode && (
+                <span className="help text-danger">{errors.AdvancePaymentMode}</span>
+              )}
             </CFormLabel>
-            <CFormInput size="sm" type="datetime-local" id="inputAddress"/>
+            <CFormInput size="sm" type="datetime-local" id="inputAddress" />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
