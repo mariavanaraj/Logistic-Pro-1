@@ -152,6 +152,32 @@ const _nav = [
     dataToggle: 'tooltip',
     title: 'Return Journey Sales Order Creation',
   },
+
+  {
+    component: CNavItem,
+    name: 'RJ Customer Creation',
+    to: '/RJcustomerCreationHome',
+    icon: <CIcon icon={cilChevronDoubleLeft} customClassName="nav-icon" />,
+    dataToggle: 'tooltip',
+    title: 'Return Journey Customer Creation',
+  },
+
+  {
+    component: CNavItem,
+    name: 'RJ Customer Creation Confrimation',
+    to: '/RJcustomerCreationConfrimationHome',
+    icon: <CIcon icon={cilChevronDoubleLeft} customClassName="nav-icon" />,
+    dataToggle: 'tooltip',
+    title: 'RJ Customer Creation Confrimation',
+  },
+  {
+    component: CNavItem,
+    name: 'RJ Customer Creation Approval',
+    to: '/RJcustomerCreationApprovalHome',
+    icon: <CIcon icon={cilChevronDoubleLeft} customClassName="nav-icon" />,
+    dataToggle: 'tooltip',
+    title: 'RJ Customer Creation Approval',
+  },
   // {
   //   component: CNavItem,
   //   name: 'VH. Assign',

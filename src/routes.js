@@ -79,6 +79,12 @@ import ShipmentCreationConsumer from './Pages/ShipmentCreation/ShipmentCreationC
 import VendorCreationConfrimationOwn from './Pages/VendorCreationConfrimation/VendorCreationConfrimationOwn'
 import DiApprovalHome from './Pages/DiApproval/DiApprovalHome'
 import DiApproval from './Pages/DiApproval/DiApproval'
+import RJcustomerCreationHome from './Pages/RJcustomerCreation/RJcustomerCreationHome'
+import RJcustomerCreation from './Pages/RJcustomerCreation/RJcustomerCreation'
+import RJcustomerCreationConfrimationHome from './Pages/RJcustomerCreation/RJcustomerCreationConfrimationHome'
+import RJcustomerCreationConfrimation from './Pages/RJcustomerCreation/RJcustomerCreationConfrimation'
+import RJcustomerCreationApprovalHome from './Pages/RJcustomerCreation/RJcustomerCreationApprovalHome'
+import RJcustomerCreationApproval from './Pages/RJcustomerCreation/RJcustomerCreationApproval'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
@@ -127,6 +133,37 @@ const routes = [
     component: DocVerifyVendorNotAvail,
   },
   { path: '/RjSalesOrderCreation', exact: true, name: 'Test', component: RjSalesOrderCreation },
+  { path: '/RJcustomerCreationHome', exact: true, name: 'Test', component: RJcustomerCreationHome },
+  {
+    path: '/RJcustomerCreationHome/RJcustomerCreation',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreation,
+  },
+  {
+    path: '/RJcustomerCreationConfrimationHome',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreationConfrimationHome,
+  },
+  {
+    path: '/RJcustomerCreationConfrimationHome/RJcustomerCreationConfrimation',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreationConfrimation,
+  },
+  {
+    path: '/RJcustomerCreationApprovalHome',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreationApprovalHome,
+  },
+  {
+    path: '/RJcustomerCreationApprovalHome/RJcustomerCreationApproval',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreationApproval,
+  },
   { path: '/VehicleAssignmentFoods', exact: true, name: 'Test', component: VehicleAssignmentFoods },
   {
     path: '/VehicleAssignmentConsumer',
