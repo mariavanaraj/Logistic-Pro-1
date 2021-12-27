@@ -152,6 +152,32 @@ const _nav = [
     dataToggle: 'tooltip',
     title: 'Return Journey Sales Order Creation',
   },
+
+  {
+    component: CNavItem,
+    name: 'RJ Customer Creation',
+    to: '/RJcustomerCreationHome',
+    icon: <CIcon icon={cilChevronDoubleLeft} customClassName="nav-icon" />,
+    dataToggle: 'tooltip',
+    title: 'Return Journey Customer Creation',
+  },
+
+  {
+    component: CNavItem,
+    name: 'RJ Customer Creation Confrimation',
+    to: '/RJcustomerCreationConfrimationHome',
+    icon: <CIcon icon={cilChevronDoubleLeft} customClassName="nav-icon" />,
+    dataToggle: 'tooltip',
+    title: 'RJ Customer Creation Confrimation',
+  },
+  {
+    component: CNavItem,
+    name: 'RJ Customer Creation Approval',
+    to: '/RJcustomerCreationApprovalHome',
+    icon: <CIcon icon={cilChevronDoubleLeft} customClassName="nav-icon" />,
+    dataToggle: 'tooltip',
+    title: 'RJ Customer Creation Approval',
+  },
   // {
   //   component: CNavItem,
   //   name: 'VH. Assign',
@@ -191,6 +217,15 @@ const _nav = [
     icon: <CIcon icon={cilPenNib} customClassName="nav-icon" />,
     dataToggle: 'tooltip',
     title: 'Diesel Indent Creation',
+  },
+
+  {
+    component: CNavItem,
+    name: 'DI Aprroval',
+    to: '/DiApprovalHome',
+    icon: <CIcon icon={cilPenNib} customClassName="nav-icon" />,
+    dataToggle: 'tooltip',
+    title: 'Diesel Indent Approval',
   },
   {
     component: CNavItem,
@@ -314,7 +349,7 @@ const _nav = [
             component: CNavItem,
             name: 'Unit of Measurement',
             to: '/UOMTable',
-            title: 'UOM'
+            title: 'UOM',
           },
           {
             component: CNavItem,
@@ -326,19 +361,19 @@ const _nav = [
             component: CNavItem,
             name: 'Other Charges',
             to: '/OtherChargesTable',
-            title: 'Other Charges'
+            title: 'Other Charges',
           },
           {
             component: CNavItem,
             name: 'Previous Load Details',
             to: '/PreviousLoadDetailsTable',
-            title: 'Previous Load Details'
+            title: 'Previous Load Details',
           },
           {
             component: CNavItem,
             name: 'Status',
             to: '/StatusTable',
-            title: 'Status'
+            title: 'Status',
           },
         ],
       },

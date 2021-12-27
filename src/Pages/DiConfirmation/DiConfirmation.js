@@ -168,6 +168,11 @@ const ParkingYardGate = () => {
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bunk Reading</CFormLabel>
+
+                  <CFormInput type="file" size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea
                     name="remarks"

@@ -258,6 +258,10 @@ const DocVerifyVendorNotAvail = () => {
                   <CFormInput type="text" name="freigthRate" size="sm" id="" />
                 </CCol>
                 <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="freigthRate">Shed WhatsApp Number</CFormLabel>
+                  <CFormInput type="text" name="freigthRate" size="sm" id="" />
+                </CCol>
+                <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="insuranceValid">Insurance Validity*</CFormLabel>
                   <CFormSelect
                     size="sm"

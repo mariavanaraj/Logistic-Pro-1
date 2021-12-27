@@ -77,6 +77,14 @@ import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
 import ShipmentCreation from './Pages/ShipmentCreation/ShipmentCreation'
 import ShipmentCreationConsumer from './Pages/ShipmentCreation/ShipmentCreationConsumer'
 import VendorCreationConfrimationOwn from './Pages/VendorCreationConfrimation/VendorCreationConfrimationOwn'
+import DiApprovalHome from './Pages/DiApproval/DiApprovalHome'
+import DiApproval from './Pages/DiApproval/DiApproval'
+import RJcustomerCreationHome from './Pages/RJcustomerCreation/RJcustomerCreationHome'
+import RJcustomerCreation from './Pages/RJcustomerCreation/RJcustomerCreation'
+import RJcustomerCreationConfrimationHome from './Pages/RJcustomerCreation/RJcustomerCreationConfrimationHome'
+import RJcustomerCreationConfrimation from './Pages/RJcustomerCreation/RJcustomerCreationConfrimation'
+import RJcustomerCreationApprovalHome from './Pages/RJcustomerCreation/RJcustomerCreationApprovalHome'
+import RJcustomerCreationApproval from './Pages/RJcustomerCreation/RJcustomerCreationApproval'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
@@ -125,6 +133,37 @@ const routes = [
     component: DocVerifyVendorNotAvail,
   },
   { path: '/RjSalesOrderCreation', exact: true, name: 'Test', component: RjSalesOrderCreation },
+  { path: '/RJcustomerCreationHome', exact: true, name: 'Test', component: RJcustomerCreationHome },
+  {
+    path: '/RJcustomerCreationHome/RJcustomerCreation',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreation,
+  },
+  {
+    path: '/RJcustomerCreationConfrimationHome',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreationConfrimationHome,
+  },
+  {
+    path: '/RJcustomerCreationConfrimationHome/RJcustomerCreationConfrimation',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreationConfrimation,
+  },
+  {
+    path: '/RJcustomerCreationApprovalHome',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreationApprovalHome,
+  },
+  {
+    path: '/RJcustomerCreationApprovalHome/RJcustomerCreationApproval',
+    exact: true,
+    name: 'Test',
+    component: RJcustomerCreationApproval,
+  },
   { path: '/VehicleAssignmentFoods', exact: true, name: 'Test', component: VehicleAssignmentFoods },
   {
     path: '/VehicleAssignmentConsumer',
@@ -134,6 +173,13 @@ const routes = [
   },
   { path: '/AdvanceRequestCreation', exact: true, name: 'Test', component: AdvanceRequestCreation },
   { path: '/DiCreation', exact: true, name: 'Test', component: DiCreation },
+  { path: '/DiApprovalHome', exact: true, name: 'Test', component: DiApprovalHome },
+  {
+    path: '/DiApprovalHome/DiApprovalConfrimation',
+    exact: true,
+    name: 'Test',
+    component: DiApproval,
+  },
   { path: '/DiConfirmation', exact: true, name: 'Test', component: DiConfirmation },
   { path: '/hire', exact: true, name: 'Test', component: hire },
 
@@ -337,9 +383,24 @@ const routes = [
     name: 'TripSheetSettleMentNew',
     component: TripSheetSettleMentNew,
   },
-  { path: '/TripSheetSettleMentNew', exact: true, name: 'TripSheetSettleMentNew', component: TripSheetSettleMentNew },
+  {
+    path: '/TripSheetSettleMentNew',
+    exact: true,
+    name: 'TripSheetSettleMentNew',
+    component: TripSheetSettleMentNew,
+  },
   { path: '/DieselIntentHome', exact: true, name: 'DieselIntentHome', component: DieselIntentHome },
-  { path: '/DieselIntentHome/DieselIntentOwn', exact: true, name: 'DieselIntentOwn', component: DieselIntentOwn },
-  { path: '/DieselIntentHome/DieselIntentHire', exact: true, name: 'DieselIntentHire', component: DieselIntentHire },
+  {
+    path: '/DieselIntentHome/DieselIntentOwn',
+    exact: true,
+    name: 'DieselIntentOwn',
+    component: DieselIntentOwn,
+  },
+  {
+    path: '/DieselIntentHome/DieselIntentHire',
+    exact: true,
+    name: 'DieselIntentHire',
+    component: DieselIntentHire,
+  },
 ]
 export default routes

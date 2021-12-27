@@ -70,14 +70,26 @@ const VendorCreationApproval = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
-                Owner Mobile Number
+                Shed Mobile Number
                 {errors.vehicleType && (
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress" readOnly />
             </CCol>
-
+            <CCol xs={12} md={3}>
+              <CFormLabel htmlFor="inputAddress">
+                Shed Whatsapp Number
+                {errors.vehicleType && (
+                  <span className="help text-danger">{errors.vehicleType}</span>
+                )}
+              </CFormLabel>
+              <CFormInput size="sm" id="inputAddress" readOnly />
+            </CCol>
+          </CRow>
+          {/* Row One------------------------- */}
+          {/* Row Two------------------------- */}
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 PAN Card Attatchment
@@ -99,16 +111,12 @@ const VendorCreationApproval = () => {
                   <i
                     className="fa fa-trash"
                     aria-hidden="true"
-                  // onMouseOver={changeBackground}
-                  // onMouseLeave={changeBackground1}
+                    // onMouseOver={changeBackground}
+                    // onMouseLeave={changeBackground1}
                   ></i>
                 </span>
               </CButton>
             </CCol>
-          </CRow>
-          {/* Row One------------------------- */}
-          {/* Row Two------------------------- */}
-          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 PAN Card Number*
@@ -139,8 +147,8 @@ const VendorCreationApproval = () => {
                   <i
                     className="fa fa-trash"
                     aria-hidden="true"
-                  // onMouseOver={changeBackground}
-                  // onMouseLeave={changeBackground1}
+                    // onMouseOver={changeBackground}
+                    // onMouseLeave={changeBackground1}
                   ></i>
                 </span>
               </CButton>
@@ -154,6 +162,10 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
+          </CRow>
+          {/* Row Two------------------------- */}
+          {/* Row Three------------------------- */}
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 License Copy
@@ -176,10 +188,6 @@ const VendorCreationApproval = () => {
                 </span>
               </CButton>
             </CCol>
-          </CRow>
-          {/* Row Two------------------------- */}
-          {/* Row Three------------------------- */}
-          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 RC Copy -Front
@@ -246,6 +254,10 @@ const VendorCreationApproval = () => {
                 </span>
               </CButton>
             </CCol>
+          </CRow>
+          {/* Row Three------------------------- */}
+          {/* Row Four------------------------- */}
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Transporter Shed Sheet
@@ -272,10 +284,6 @@ const VendorCreationApproval = () => {
                 </span>
               </CButton>
             </CCol>
-          </CRow>
-          {/* Row Three------------------------- */}
-          {/* Row Four------------------------- */}
-          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Bank Pass Book
@@ -307,14 +315,14 @@ const VendorCreationApproval = () => {
               <CFormLabel htmlFor="TransporterShedSheet">Bank Branch</CFormLabel>
               <CFormInput type="text" name="TransporterShedSheet" size="sm" id="" readOnly />
             </CCol>
-            <CCol xs={12} md={3}>
-              <CFormLabel htmlFor="TransporterShedSheet">Bank IFSC Code</CFormLabel>
-              <CFormInput type="text" name="TransporterShedSheet" size="sm" id="" readOnly />
-            </CCol>
           </CRow>
           {/* Row Four------------------------- */}
           {/* Row Five------------------------- */}
           <CRow className="">
+            <CCol xs={12} md={3}>
+              <CFormLabel htmlFor="TransporterShedSheet">Bank IFSC Code</CFormLabel>
+              <CFormInput type="text" name="TransporterShedSheet" size="sm" id="" readOnly />
+            </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Bank Account Number*
@@ -342,6 +350,10 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
+          </CRow>
+          {/* Row Five------------------------- */}
+          {/* Row Six------------------------- */}
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Area
@@ -351,10 +363,6 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
-          </CRow>
-          {/* Row Five------------------------- */}
-          {/* Row Six------------------------- */}
-          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 City
@@ -382,6 +390,10 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
+          </CRow>
+          {/* Row Six------------------------- */}
+          {/* Row Seven------------------------- */}
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Postal Code
@@ -391,10 +403,6 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
-          </CRow>
-          {/* Row Six------------------------- */}
-          {/* Row Seven------------------------- */}
-          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Region
@@ -450,20 +458,20 @@ const VendorCreationApproval = () => {
                 </span>
               </CButton>
             </CCol>
-            <CCol xs={12} md={3}>
-              <CFormLabel htmlFor="inputAddress">
-                GST Registeration
-                {errors.vehicleType && (
-                  <span className="help text-danger" >{errors.vehicleType}</span>
-                )}
-              </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
-            </CCol>
           </CRow>
           {/* Row Seven------------------------- */}
 
           {/* Row Eight------------------------- */}
           <CRow className="">
+            <CCol xs={12} md={3}>
+              <CFormLabel htmlFor="inputAddress">
+                GST Registeration
+                {errors.vehicleType && (
+                  <span className="help text-danger">{errors.vehicleType}</span>
+                )}
+              </CFormLabel>
+              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+            </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 GST Registration Number*
@@ -473,7 +481,15 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
-
+            <CCol xs={12} md={3}>
+              <CFormLabel htmlFor="inputAddress">
+                GST Tax Code
+                {errors.vehicleType && (
+                  <span className="help text-danger">{errors.vehicleType}</span>
+                )}
+              </CFormLabel>
+              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+            </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Payment Terms 3Days
@@ -483,6 +499,10 @@ const VendorCreationApproval = () => {
               </CFormLabel>
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
+          </CRow>
+          {/* Row Eight------------------------- */}
+          {/* Row Nine------------------------- */}
+          <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
                 Remarks
@@ -493,6 +513,7 @@ const VendorCreationApproval = () => {
               <CFormInput size="sm" id="inputAddress" value="" readOnly />
             </CCol>
           </CRow>
+          {/* Row Nine------------------------- */}
           <CRow className="mb-md-1">
             <CCol className="" xs={12} sm={12} md={3}>
               <CButton size="sm" color="primary" className="text-white" type="button">

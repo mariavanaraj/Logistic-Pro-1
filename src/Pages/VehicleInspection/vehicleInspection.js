@@ -183,8 +183,9 @@ const VehicleInspection = () => {
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="truckClean">Truck Clean *</CFormLabel><br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                  <CFormLabel htmlFor="truckClean">Truck Clean *</CFormLabel>
+                  <br />
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
                     <CFormCheck
                       type="radio"
                       button={{ color: 'primary', variant: 'outline' }}
@@ -200,14 +201,13 @@ const VehicleInspection = () => {
                       id="btnradio2"
                       autoComplete="off"
                       label="No"
-
                     />
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="badSmell">Bad Smell *</CFormLabel>
                   <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
                     <CFormCheck
                       type="radio"
                       button={{ color: 'primary', variant: 'outline' }}
@@ -223,7 +223,6 @@ const VehicleInspection = () => {
                       id="btnradio4"
                       autoComplete="off"
                       label="No"
-
                     />
                   </CButtonGroup>
                 </CCol>
@@ -231,7 +230,7 @@ const VehicleInspection = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="insectVevils">Insect or Vevils Presence *</CFormLabel>
                   <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
                     <CFormCheck
                       type="radio"
                       button={{ color: 'primary', variant: 'outline' }}
@@ -247,14 +246,13 @@ const VehicleInspection = () => {
                       id="btnradio6"
                       autoComplete="off"
                       label="No"
-
                     />
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="tarSRF">Tarpaulin – SRF</CFormLabel>
                   <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
                     <CFormCheck
                       type="radio"
                       button={{ color: 'primary', variant: 'outline' }}
@@ -270,7 +268,6 @@ const VehicleInspection = () => {
                       id="btnradio8"
                       autoComplete="off"
                       label="1"
-
                     />
                     <CFormCheck
                       type="radio"
@@ -279,7 +276,6 @@ const VehicleInspection = () => {
                       id="btnradio9"
                       autoComplete="off"
                       label="2"
-
                     />
                   </CButtonGroup>
                 </CCol>
@@ -288,7 +284,7 @@ const VehicleInspection = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="Tarpaulin">Tarpaulin Non-SRF*</CFormLabel>
                   <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
                     <CFormCheck
                       type="radio"
                       button={{ color: 'primary', variant: 'outline' }}
@@ -304,7 +300,6 @@ const VehicleInspection = () => {
                       id="btnradio11"
                       autoComplete="off"
                       label="1"
-
                     />
                     <CFormCheck
                       type="radio"
@@ -313,7 +308,6 @@ const VehicleInspection = () => {
                       id="btnradio12"
                       autoComplete="off"
                       label="2"
-
                     />
                   </CButtonGroup>
                 </CCol>
@@ -322,7 +316,7 @@ const VehicleInspection = () => {
                     Insect or Vevils Presence (Tar.) *
                   </CFormLabel>
                   <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
                     <CFormCheck
                       type="radio"
                       button={{ color: 'primary', variant: 'outline' }}
@@ -338,21 +332,20 @@ const VehicleInspection = () => {
                       id="btnradio14"
                       autoComplete="off"
                       label="No"
-
                     />
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="trkPlat">Truck Platform *</CFormLabel>
                   <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
                     <CFormCheck
                       type="radio"
                       button={{ color: 'primary', variant: 'outline' }}
                       name="btnradio"
                       id="btnradio15"
                       autoComplete="off"
-                      label="Yes"
+                      label="Good"
                     />
                     <CFormCheck
                       type="radio"
@@ -360,15 +353,14 @@ const VehicleInspection = () => {
                       name="btnradio"
                       id="btnradio16"
                       autoComplete="off"
-                      label="No"
-
+                      label="Bad"
                     />
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
                   <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group" >
+                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
                     <CFormCheck
                       type="radio"
                       button={{ color: 'primary', variant: 'outline' }}
@@ -384,7 +376,6 @@ const VehicleInspection = () => {
                       id="btnradio18"
                       autoComplete="off"
                       label="No"
-
                     />
                   </CButtonGroup>
                 </CCol>
