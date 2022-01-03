@@ -141,13 +141,7 @@ const DiApproval = () => {
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vendor Name*</CFormLabel>
-                  <CFormSelect size="sm" className="" aria-label="Small select example">
-                    <option hidden>Select...</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
               </CRow>
               <CRow className="">
@@ -175,6 +169,21 @@ const DiApproval = () => {
                   <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
 
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
+
+                  {/* <CFormInput size="sm" id="inputAddress" value="" readOnly /> */}
+                  <CButton
+                    // onClick={() => setVisible(!visible)}
+                    className="w-100"
+                    color="info"
+                    size="sm"
+                  >
+                    <span className="float-start">
+                      <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                    </span>
+                  </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Bunk Reading</CFormLabel>

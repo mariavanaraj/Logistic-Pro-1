@@ -150,7 +150,7 @@ const ShedMaster = () => {
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">PAN Number*</CFormLabel>
+                                    <CFormLabel htmlFor="vNum">PAN Number</CFormLabel>
                                     <CFormInput
                                         name="vNum"
                                         size="sm"
@@ -160,8 +160,17 @@ const ShedMaster = () => {
                                 </CCol>
                             </CRow>
                             <CRow className="">
+                            <CCol md={3}>
+                                    <CFormLabel htmlFor="vNum">Aadhar Number</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+                                        placeholder=""
+                                    />
+                                </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">GST No*</CFormLabel>
+                                    <CFormLabel htmlFor="vNum">GST Number</CFormLabel>
                                     <CFormInput
                                         name="vNum"
                                         size="sm"

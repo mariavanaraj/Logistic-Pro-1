@@ -92,10 +92,6 @@ const DocVerifyVendorAvail = () => {
 
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dName">Vendor Code</CFormLabel>
-                  <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
                   <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
                 </CCol>
@@ -156,9 +152,14 @@ const DocVerifyVendorAvail = () => {
                     <option value="2">ASAS3DFS</option>
                   </CFormSelect>
                 </CCol>
-              </CRow>
-
-              <CRow className="">
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="dName">Vendor Code</CFormLabel>
+                  <CFormInput name="dName" size="sm" id="" value="20009" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="dName">Vendor Code</CFormLabel>
+                  <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
+                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerName">Owner Name</CFormLabel>
                   <CFormInput name="ownerName" size="sm" id="" value="Mari Muthu" readOnly />
@@ -182,9 +183,6 @@ const DocVerifyVendorAvail = () => {
                   <CFormLabel htmlFor="bankAcc">Bank Account Number</CFormLabel>
                   <CFormInput name="bankAcc" size="sm" id="" value="SBI506980963214" readOnly />
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="license">License Copy*</CFormLabel>
                   <CFormInput type="file" name="license" size="sm" id="" />
@@ -202,9 +200,6 @@ const DocVerifyVendorAvail = () => {
                   <CFormLabel htmlFor="insurance">Insurance Copy*</CFormLabel>
                   <CFormInput type="file" name="insurance" size="sm" id="" />
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="insuranceValid">Insurance Validity*</CFormLabel>
                   <CFormSelect
@@ -232,9 +227,6 @@ const DocVerifyVendorAvail = () => {
                   <CFormLabel htmlFor="transportShed">Transporter Shed Sheet*</CFormLabel>
                   <CFormInput type="file" name="transportShed" size="sm" id="" />
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="shedName">Shed Name*</CFormLabel>
                   <CFormSelect

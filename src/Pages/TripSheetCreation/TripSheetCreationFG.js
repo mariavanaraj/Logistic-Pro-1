@@ -274,7 +274,7 @@ const TripSheetCreationFG = () => {
                 </option>
                 <option value="1">Logistics</option>
                 <option value="2">WM-Team</option>
-                <option value="3">WM-Team</option>
+                <option value="3">Inventry Team</option>
               </CFormSelect>
             </CCol>
           )}

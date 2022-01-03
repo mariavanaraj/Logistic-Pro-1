@@ -33,7 +33,6 @@ const ParkingYardGate = () => {
     OdometerKm: '',
     odometerPhoto: '',
   }
-
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
     login,
     validate,
@@ -70,37 +69,56 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Topay / Shed*</CFormLabel>
-                  <CFormSelect size="sm" aria-label="Small select example">
-                    <option hidden>Select...</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
+                  <CFormLabel htmlFor="inputAddress">
+                    Payment Terms
+                    {errors.Payment && <span className="help text-danger">{errors.Payment}</span>}
+                  </CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    name="Payment"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.Payment}
+                    className={`${errors.Payment && 'is-invalid'}`}
+                    aria-label="Small select example"
+                  >
+                    <option value="" hidden>
+                      Select...
+                    </option>
+                    <option value="1">Shed</option>
+                    <option value="2">To pay</option>
                   </CFormSelect>
                 </CCol>
+                {values.Payment == 2 && (
+                  <CCol xs={12} md={3}>
+                    <CFormLabel htmlFor="inputAddress">To Pay Customer Name</CFormLabel>
+                    <CFormInput size="sm" id="inputAddress" value="" />
+                  </CCol>
 
+                )}
+                {values.Payment == 2 && (
+                  <CCol xs={12} md={3}>
+                    <CFormLabel htmlFor="inputAddress">Customer Mobile Number</CFormLabel>
+                    <CFormInput size="sm" id="inputAddress" value="" />
+                  </CCol>
+                )}
+                {values.Payment == 2 && (
+                  <CCol xs={12} md={3}>
+                    <CFormLabel htmlFor="inputAddress">Customer PAN Number</CFormLabel>
+                    <CFormInput size="sm" id="inputAddress" value="" />
+                  </CCol>
+                )}
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Customer Name*</CFormLabel>
-                  <CFormSelect size="sm" aria-label="Small select example">
-                    <option hidden>Select...</option>
-
-                    <option value="1">Mari Muthu</option>
-
-                    <option value="2">Mani Kandan</option>
-
-                    <option value="3">Velu Chamy</option>
-                  </CFormSelect>
+                  <CFormLabel htmlFor="inputAddress">Shed PAN Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
-
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Customer Code</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormLabel htmlFor="inputAddress">Shed Aadhar Number*</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
-
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Shed*</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Shed Name*</CFormLabel>
 
                   <CFormSelect size="sm" aria-label="Small select example">
                     <option hidden>Select...</option>
@@ -111,14 +129,6 @@ const ParkingYardGate = () => {
 
                     <option value="3">South</option>
                   </CFormSelect>
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">PAN Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Aadhar Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Material Type*</CFormLabel>
@@ -225,61 +235,6 @@ const ParkingYardGate = () => {
                     <option value="2">select Lp</option>
                   </CFormSelect>
                 </CCol>
-
-                {/* <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Material Code</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol> */}
-
-                {/* <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Rate Base*</CFormLabel>
-                  <CFormSelect size="sm" aria-label="Small select example">
-                    <option hidden>Select...</option>
-
-                    <option value="1">select</option>
-
-                    <option value="2">select Lp</option>
-                  </CFormSelect>
-                </CCol> */}
-
-                {/* <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
-                    Advance Amount*
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
-                    )}
-                  </CFormLabel>
-                  <CFormInput
-                    name="Order Qty"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    className={`${errors.OdometerKm && 'is-invalid'}`}
-                    size="sm"
-                    id="inputAddress"
-                    placeholder=""
-                  />
-                </CCol> */}
-
-                {/* <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Loading Point</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Load KM</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Unloading Point</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol> */}
-
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Empty Km After Unload*</CFormLabel>
 
@@ -356,5 +311,4 @@ const ParkingYardGate = () => {
     </>
   )
 }
-
 export default ParkingYardGate

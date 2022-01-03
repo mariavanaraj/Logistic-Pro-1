@@ -93,10 +93,7 @@ const DocVerifyVendorNotAvail = () => {
               </CRow>
 
               <CRow className="">
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dName">Vendor Code</CFormLabel>
-                  <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
-                </CCol>
+
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
                   <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
@@ -106,54 +103,6 @@ const DocVerifyVendorNotAvail = () => {
                   <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
                   <CFormInput name="dMob" size="sm" id="" value="9135362456" readOnly />
                 </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="odoMeter">Odometer KM</CFormLabel>
-                  <CFormInput name="odoMeter" size="sm" id="" value="558" readOnly />
-                </CCol>
-              </CRow>
-
-              <CRow className="">
-                <CCol xs={12} md={3}>
-                  {/* <CFormInput name="odoImg" size="sm" id="" value="view" readOnly /> */}
-                  {/* <CButton color="primary d-grid" >
-                    Small button
-                  </CButton> */}
-                  <CFormLabel htmlFor="odoImg">Odometer Photo</CFormLabel>
-
-                  <CButton
-                    onClick={() => setVisible(!visible)}
-                    className="w-100 m-0"
-                    color="info"
-                    size="sm"
-                  >
-                    <span className="float-start">
-                      <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
-                    </span>
-                  </CButton>
-
-                  <CModal alignment="center" visible={visible} onClose={() => setVisible(false)}>
-                    <CModalHeader>
-                      <CModalTitle>Odometer Photo</CModalTitle>
-                    </CModalHeader>
-
-                    <CModalBody>
-                      <img
-                        src="https://media-exp1.licdn.com/dms/image/C560BAQEhfRQblzW2Jw/company-logo_200_200/0/1597849191912?e=2159024400&v=beta&t=GfooSG4SaLjwT3-7D7uTYkhI_3ZT8q64wR-d0e_Ti_s"
-                        alt=""
-                      />
-                    </CModalBody>
-
-                    <CModalFooter>
-                      <CButton color="secondary" onClick={() => setVisible(false)}>
-                        Close
-                      </CButton>
-
-                      {/* <CButton color="primary">Save changes</CButton> */}
-                    </CModalFooter>
-                  </CModal>
-                </CCol>
-
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
                   <CFormInput
@@ -178,9 +127,6 @@ const DocVerifyVendorNotAvail = () => {
                   <CFormLabel htmlFor="panNum">PAN Card Number*</CFormLabel>
                   <CFormInput name="panNum" size="sm" id="" value="" />
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerName">Owner Name*</CFormLabel>
                   <CFormInput name="ownerName" size="sm" id="" value="" />
@@ -198,9 +144,6 @@ const DocVerifyVendorNotAvail = () => {
                   <CFormLabel htmlFor="bankPass">Bank Pass Book*</CFormLabel>
                   <CFormInput type="file" name="bankPass" size="sm" id="" />
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="panCard">Pan Card*</CFormLabel>
                   <CFormInput type="file" name="panCard" size="sm" id="" />
@@ -218,9 +161,6 @@ const DocVerifyVendorNotAvail = () => {
                   <CFormLabel htmlFor="rcBack">RC Copy - Back*</CFormLabel>
                   <CFormInput type="file" name="rcBack" size="sm" id="" />
                 </CCol>
-              </CRow>
-
-              <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="insurance">Insurance Copy*</CFormLabel>
                   <CFormInput type="file" name="insurance" size="sm" id="" />
@@ -238,9 +178,6 @@ const DocVerifyVendorNotAvail = () => {
                   <CFormLabel htmlFor="transportShed">Transporter Shed Sheet*</CFormLabel>
                   <CFormInput type="file" name="transportShed" size="sm" id="" />
                 </CCol>
-              </CRow>
-
-              <CRow className="mb-md-3">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="shedName">Shed Name*</CFormLabel>
                   <CFormSelect

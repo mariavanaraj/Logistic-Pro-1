@@ -191,7 +191,6 @@ const ParkingYardGate = () => {
                   </option>
                 </CFormSelect>
               </CCol>
-
               <CCol md={3}>
                 <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
                 {hire ? (
@@ -344,5 +343,4 @@ const ParkingYardGate = () => {
     </>
   )
 }
-
 export default ParkingYardGate

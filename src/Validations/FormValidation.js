@@ -12,7 +12,5 @@ export default function validate(values, isTouched) {
   if (isTouched.OdometerKm && !values.OdometerKm) {
     errors.OdometerKm = 'required'
   }
-
-
   return errors
 }

@@ -44,8 +44,8 @@ const RJcustomerCreationApproval = () => {
                       <i
                         className="fa fa-trash"
                         aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                      // onMouseOver={changeBackground}
+                      // onMouseLeave={changeBackground1}
                       ></i>
                     </span>
                   </CButton>
@@ -57,7 +57,7 @@ const RJcustomerCreationApproval = () => {
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Adhar Card</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Aadhar Card</CFormLabel>
                   <CButton
                     // onClick={() => setAdharVisible(!adharvisible)}
                     className="w-100 m-0"
@@ -72,14 +72,14 @@ const RJcustomerCreationApproval = () => {
                       <i
                         className="fa fa-trash"
                         aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                      // onMouseOver={changeBackground}
+                      // onMouseLeave={changeBackground1}
                       ></i>
                     </span>
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Adhar Number</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Aadhar Number</CFormLabel>
                   <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
 
@@ -99,8 +99,8 @@ const RJcustomerCreationApproval = () => {
                       <i
                         className="fa fa-trash"
                         aria-hidden="true"
-                        // onMouseOver={changeBackground}
-                        // onMouseLeave={changeBackground1}
+                      // onMouseOver={changeBackground}
+                      // onMouseLeave={changeBackground1}
                       ></i>
                     </span>
                   </CButton>
@@ -171,7 +171,7 @@ const RJcustomerCreationApproval = () => {
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Remarks</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
               </CRow>
               <CRow className="mt-3">

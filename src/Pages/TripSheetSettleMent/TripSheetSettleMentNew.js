@@ -2852,7 +2852,7 @@ const TSClossure = () => {
                         <span className="help text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
-                    <Select
+                    <CFormSelect
                       value={deliveryNumber}
                       onChange={selecthandleChange}
                       options={options}
@@ -3157,7 +3157,6 @@ const TSClossure = () => {
                         <CFormInput size="sm" id="inputAddress" />
                       </CTableDataCell>
                     </CTableRow>
-
                     <CTableRow>
                       <CTableHeaderCell scope="row">5</CTableHeaderCell>
                       <CTableDataCell>Registerd Diesel Amount</CTableDataCell>

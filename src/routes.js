@@ -16,9 +16,11 @@ import DieselIntentHire from './Pages/DiCreation/DieselIntentHire'
 import DieselIntentHome from './Pages/DiCreation/DieselIntentHome'
 import DiConfirmation from './Pages/DiConfirmation/DiConfirmation'
 import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGateIn'
+import GateIn from './Pages/ParkingYardGate/GateIn'
 import hire from './Pages/ParkingYardGate/hire'
 import vInspection from './Pages/VehicleInspection/vInspection'
 import vehicleInspection from './Pages/VehicleInspection/vehicleInspection'
+import VehicleInspectionHire from './Pages/VehicleInspection/VehicleInspectionHire'
 import vehicleMaintainence from './Pages/VehicleMaintainence/vehicleMaintainence'
 import VMain from './Pages/VehicleMaintainence/VMain'
 import DocVerify from './Pages/DocumentVerification/DocsVerify'
@@ -85,9 +87,13 @@ import RJcustomerCreationConfrimationHome from './Pages/RJcustomerCreation/RJcus
 import RJcustomerCreationConfrimation from './Pages/RJcustomerCreation/RJcustomerCreationConfrimation'
 import RJcustomerCreationApprovalHome from './Pages/RJcustomerCreation/RJcustomerCreationApprovalHome'
 import RJcustomerCreationApproval from './Pages/RJcustomerCreation/RJcustomerCreationApproval'
+import FIScreen from './Pages/FIScreen/FIScreen'
+import ChangeVehicleHome from './Pages/ChangeVehicle/ChangeVehicleHome'
+import ChangeVehicle from './Pages/ChangeVehicle/ChangeVehicle'
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
+  { path: '/GateIn', exact: true, name: 'GateIn', component: GateIn },
   { path: '/Gateout', exact: true, name: 'Test', component: Gateout },
   { path: '/AllCommonTable', exact: true, name: 'Test', component: AllCommonTable },
   {
@@ -101,6 +107,12 @@ const routes = [
     exact: true,
     name: 'vehicleInspection',
     component: vehicleInspection,
+  },
+  {
+    path: '/vInspection/VehicleInspectionHire',
+    exact: true,
+    name: 'vehicleInspection',
+    component: VehicleInspectionHire,
   },
   {
     path: '/VMain',
@@ -401,6 +413,24 @@ const routes = [
     exact: true,
     name: 'DieselIntentHire',
     component: DieselIntentHire,
+  },
+  {
+    path: '/FIScreen',
+    exact: true,
+    name: 'FIScreen',
+    component: FIScreen,
+  },
+  {
+    path: '/ChangeVehicleHome',
+    exact: true,
+    name: 'ChangeVehicleHome',
+    component: ChangeVehicleHome,
+  },
+  {
+    path: '/ChangeVehicleHome/ChangeVehicle',
+    exact: true,
+    name: 'ChangeVehicle',
+    component: ChangeVehicle,
   },
 ]
 export default routes

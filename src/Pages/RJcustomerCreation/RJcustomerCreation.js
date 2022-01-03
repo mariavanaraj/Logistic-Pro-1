@@ -36,16 +36,16 @@ const RJcustomerCreation = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">PAN Number</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Adhar Card</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Aadhar Card</CFormLabel>
                   <CFormInput size="sm" type="file" id="inputAddress" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Adhar Number</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Aadhar Number</CFormLabel>
                   <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
 
@@ -65,7 +65,7 @@ const RJcustomerCreation = () => {
                   <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Bank IFCS Code</CFormLabel>
+                  <CFormLabel htmlFor="inputAddress">Bank IFSC Code</CFormLabel>
                   <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>

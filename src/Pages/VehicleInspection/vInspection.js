@@ -79,7 +79,7 @@ const DocsVerify = () => {
       Action: (
         <CButton className="badge text-white" color="warning">
           <Link className="text-white" to="/vInspection/vehicleInspection">
-          Vehicle Inspection
+            Vehicle Inspection
           </Link>
         </CButton>
       ),
@@ -92,18 +92,18 @@ const DocsVerify = () => {
       Vehicle_No: 'TN54AT8417',
       Driver_Name: 'David',
       Driver_Cell: '9952159806',
-      Waiting_At: <span className="badge rounded-pill bg-info">Vehicle Inspection</span>,
+      Waiting_At: <span className="badge rounded-pill bg-info">Vehicle Inspection Hire</span>,
       Screen_Duration: '0 Hrs 07 Mins',
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
         <CButton className="badge text-white" color="warning">
-          <Link className="text-white" to="/vInspection/vehicleInspection">
-          Vehicle Inspection
+          <Link className="text-white" to="/vInspection/VehicleInspectionHire">
+            Vehicle Inspection Hire
           </Link>
         </CButton>
       ),
     },
-    
+
   ]
   return (
     <CCard className="mt-4">
