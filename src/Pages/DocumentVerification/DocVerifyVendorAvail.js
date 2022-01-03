@@ -100,25 +100,6 @@ const DocVerifyVendorAvail = () => {
                   <CFormInput name="dMob" size="sm" id="" value="9135362456" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="odoMeter">Odometer KM</CFormLabel>
-                  <CFormInput name="odoMeter" size="sm" id="" value="275" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="odoImg">Odometer Photo</CFormLabel>
-
-                  <CButton
-                    onClick={() => setVisible(!visible)}
-                    className="w-100 m-0"
-                    color="info"
-                    size="sm"
-                  >
-                    <span className="float-start">
-                      <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
-                    </span>
-                  </CButton>
-                </CCol>
-
-                <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
                   <CFormInput
                     name="gateInDateTime"

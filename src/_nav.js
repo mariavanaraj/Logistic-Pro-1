@@ -64,7 +64,7 @@ import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 const _nav = [
   {
     component: CNavItem,
-    name: 'Yard Gate-In',
+    name: 'Yard Gate-In / Out',
     to: '/GateIn',
     icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
     dataToggle: 'tooltip',
